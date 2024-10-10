@@ -108,9 +108,9 @@
 
 .burger-menu .line {
     width: 25px; /* Lunghezza delle linee del menu */
-    height: 3px; /* Spessore delle linee del menu */
+    height: 5px; /* Spessore delle linee del menu */
     background-color: #2c3e50; /* Colore delle linee */
-    margin: 4px 0;
+    margin: 6px 0;
     transition: transform 0.3s ease, opacity 0.3s ease; /* Animazioni per l'effetto di apertura */
 }
 
