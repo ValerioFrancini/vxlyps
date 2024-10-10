@@ -6,7 +6,25 @@ window.addEventListener('load', () => {
     logo.classList.add('loaded'); // Aggiunge la classe 'loaded' al logo per attivare l'animazione
 });
 
-// script.js
+// Funzione per il preloading delle immagini
+function preloadImages() {
+    const imageUrls = [
+        'img/img_10.JPG',
+        'img/img_2.JPG',
+        'img/img_3.JPG',
+        'img/img_4.JPG',
+        'img/img_5.JPG',
+        'img/img_6.JPG',
+        'img/img_7.JPG',
+        'img/img_8.JPG',
+        'img/img_9.JPG'
+    ];
+
+    imageUrls.forEach((url) => {
+        const img = new Image();
+        img.src = url;
+    });
+}
 
 // Codice per lo slider con transizione di scorrimento
 let currentIndex = 0;
