@@ -21,7 +21,7 @@ p {
 /* Stile per il logo */
 .logo-container {
     text-align: center;
-    margin: 20px 0;
+    margin: 10px 0; /* Ridotto il margine per ridurre lo spazio */
 }
 
 .logo-image {
