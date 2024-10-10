@@ -225,6 +225,33 @@
     line-height: 1.5; /* Migliora la leggibilità del testo */
 }
 
+/* Stili per l'icona di Instagram */
+.instagram-icon {
+    width: 30px; /* Dimensione dell'icona */
+    height: 30px;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Transizione per l'effetto hover */
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #FF5A5F, #FF7E82); /* Gradiente di Airbnb */
+    border-radius: 50%; /* Rende lo sfondo circolare */
+    padding: 8px;
+    transition: background 0.3s ease, transform 0.3s ease; /* Effetti di transizione per l'hover */
+}
+
+.social-link:hover {
+    background: linear-gradient(135deg, #FF7E82, #FF5A5F); /* Inverte il gradiente al passaggio del mouse */
+    transform: scale(1.1); /* Ingrandisce leggermente l'icona al passaggio del mouse */
+}
+
+.instagram-icon:hover {
+    filter: brightness(1.2); /* Schiarisce l'icona al passaggio del mouse */
+}
+
+
 /* Stili per il footer */
 .footer {
     background-color: #2c3e50; /* Colore di sfondo scuro */
