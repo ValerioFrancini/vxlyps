@@ -1,6 +1,5 @@
 /* styles.css */
 
-/* styles.css */
 
 /* Stili per il pulsante "Prenota su Airbnb" */
 .airbnb-button-container {
@@ -226,53 +225,12 @@
     line-height: 1.5; /* Migliora la leggibilità del testo */
 }
 
-/* Stili per il footer */
-.footer {
-    background-color: #2c3e50; /* Colore di sfondo scuro */
-    color: #ffffff; /* Colore del testo chiaro */
-    padding: 20px 0;
-    text-align: center;
-}
-
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-
-.social-icons {
-    margin-bottom: 10px;
-}
-
-.social-link {
-    color: #FF5A5F; /* Colore rosso di Airbnb per il link */
-    text-decoration: none;
-    font-size: 1.1rem;
-}
-
-.social-link:hover {
-    color: #FF7E82; /* Cambia colore al passaggio del mouse */
-}
-
-.footer-language {
-    margin: 10px 0;
-    color: #ffffff;
-}
-
-.footer-language select {
-    background-color: #ffffff;
-    color: #2c3e50;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    cursor: pointer;
-    font-size: 0.9rem;
-}
-
-.footer-bottom {
-    margin-top: 10px;
-    font-size: 0.9rem;
-    color: #d1d1d1; /* Colore grigio chiaro per il testo dei diritti riservati */
+// Funzione per cambiare la lingua del sito
+function changeLanguage(language) {
+    if (language === 'it') {
+        window.location.href = 'index.html'; // Cambia alla versione italiana del sito
+    } else if (language === 'en') {
+        window.location.href = 'index-en.html'; // Cambia alla versione inglese del sito
+    }
 }
 
