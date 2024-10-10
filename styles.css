@@ -72,7 +72,7 @@
 .slider-container {
     position: relative;
     max-width: 100%;
-    height: 600px; /* Altezza ridotta per un aspetto più allungato */
+    height: 1000px; /* Altezza ridotta per un aspetto più allungato */
     margin: auto;
     overflow: hidden;
     border-radius: 10px;
