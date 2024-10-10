@@ -26,6 +26,19 @@ function preloadImages() {
     });
 }
 
+// Attiva l'animazione del logo e del titolo al caricamento della pagina
+window.addEventListener('load', () => {
+    const logo = document.querySelector('.logo-image');
+    const title = document.querySelector('.site-title');
+    if (logo) {
+        logo.classList.add('loaded'); // Aggiunge la classe 'loaded' al logo per attivare l'animazione
+    }
+    if (title) {
+        title.classList.add('loaded'); // Aggiunge la classe 'loaded' al titolo per attivare l'animazione
+    }
+});
+
+
 /* Stili aggiornati per lo slider con altezza ridotta */
 .slider-container {
     position: relative;
