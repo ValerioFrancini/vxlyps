@@ -4,48 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contatti - Il Moro</title>
-    <link rel="stylesheet" href="style.css"> <!-- Collegamento al CSS -->
+    <link rel="stylesheet" href="styles.css"> <!-- Collegamento al CSS -->
 </head>
 <body>
-    <div class="menu-icon" onclick="toggleMenu()">
-        &#9776; <!-- Icona del menu (tre linee) -->
-    </div>
-    <nav id="navbar" class="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="mappa.html">Mappa</a></li>
-            <li><a href="recensioni.html">Recensioni</a></li>
-            <li><a href="contatti.html">Contatti</a></li>
-        </ul>
-    </nav>
 
     <!-- Inizio del Header -->
-    <div class="header" style="display: flex; align-items: center;">
-        <img src="img/logo_il_moro.png" alt="Logo Il Moro" class="logo-image" style="margin-right: 15px;">
-        <h1 style="margin: 0;">Il Moro - Appartamento nel centro Storico di Tuscania</h1>
-    </div>
+    <header class="header">
+        <div class="logo-title">
+            <img src="img/logo_il_moro.png" alt="Logo Il Moro" class="logo-image">
+            <h1 class="site-title">Il Moro - Appartamento nel centro Storico di Tuscania</h1>
+        </div>
+
+        <!-- Checkbox nascosto per controllare lo stato del menù burger -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        
+        <!-- Burger Menu -->
+        <label for="menu-toggle" class="burger-menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </label>
+
+        <!-- Menu a tendina per la navigazione -->
+        <nav id="nav-menu" class="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mappa.html">Mappa</a></li>
+                <li><a href="recensioni.html">Recensioni</a></li>
+                <li><a href="contatti.html">Contatti</a></li>
+            </ul>
+        </nav>
+    </header>
     <!-- Fine del Header -->
 
+    <!-- Contenuto della pagina Contatti -->
     <div class="description">
-        <div class="card" style="display: flex; align-items: center;">
-            <img src="img/profile_pic.png" alt="Valerio" class="profile-pic" onclick="openModal();"> <!-- Cliccando sull'immagine -->
-            <div>
-                <h2 style="margin: 0;">Ciao! Sono Valerio</h2>
+        <div class="card">
+            <img src="img/profile_pic.png" alt="Valerio" class="profile-pic" onclick="openModal();">
+            <div class="contact-info">
+                <h2>Ciao! Sono Valerio</h2>
                 <p>Ho 24 anni e in questa casa sono cresciuto. Tanti dei miei ricordi da bambino sono legati a queste mura, ai mobili di legno che non raccontano più una casa moderna e ristrutturata come ce ne sono tante, ma che per me, raccontano una storia, la mia e della mia famiglia.</p>
                 <p>Oggi sono uno studente di filosofia a Roma e la possibilità che questa casa possa essere ospite di tante nuove storie mi rende davvero contento.</p>
             </div>
         </div>
 
         <!-- Card per l'email -->
-        <div class="card" style="text-align: center; margin-top: 20px;">
+        <div class="card email-card">
             <p>Per qualsiasi informazione, questa è la mia email:</p>
             <a href="mailto:valerio.hostairbnb@gmail.com" class="airbnb-button">valerio.hostairbnb@gmail.com</a>
         </div>
     </div>
 
+    <!-- Footer della pagina -->
     <footer class="footer">
         <div class="footer-content">
-            <div class="language-selector">
+            <div class="footer-language">
                 <label for="language">Lingua:</label>
                 <select id="language" onchange="changeLanguage(this.value)">
                     <option value="it">Italiano</option>
@@ -53,7 +66,9 @@
                 </select>
             </div>
             <div class="social-icons">
-                <img src="img/instagram-icon.png" alt="Instagram" class="social-icon">
+                <a href="https://instagram.com/appartamento_ilmoro" target="_blank" class="social-link">
+                    <img src="img/instagram-icon.png" alt="Instagram" class="instagram-icon">
+                </a>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2024 Il Moro Tuscania. All rights reserved.</p>
@@ -68,6 +83,7 @@
         <div id="caption"></div>
     </div>
 
+    <!-- Script JavaScript per le interazioni -->
     <script>
         function toggleMenu() {
             const navbar = document.getElementById("navbar");
@@ -86,6 +102,15 @@
             const modal = document.getElementById("modal");
             modal.style.display = "none";
         }
+
+        function changeLanguage(language) {
+            if (language === 'it') {
+                window.location.href = 'contatti.html'; // Cambia alla versione italiana
+            } else if (language === 'en') {
+                window.location.href = 'contatti-en.html'; // Cambia alla versione inglese
+            }
+        }
     </script>
+
 </body>
 </html>
