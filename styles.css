@@ -30,7 +30,7 @@ h1, h2, h3 {
 }
 
 .logo-image {
-    width: 50px;
+    width: 80px; /* Aumenta la dimensione del logo */
     margin-right: 15px;
 }
 
@@ -139,7 +139,7 @@ h1, h2, h3 {
 
 @media (max-width: 768px) {
     .logo-image {
-        width: 40px;
+        width: 60px; /* Riduce leggermente la dimensione del logo su dispositivi mobili */
     }
 
     .airbnb-button {
