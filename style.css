@@ -31,7 +31,8 @@ h1, h2, h3 {
     width: 100px; /* Dimensione dell'immagine profilo */
     height: 100px; /* Dimensione dell'immagine profilo */
     border-radius: 50%; /* Forma circolare */
-    margin-right: 20px;
+    margin-right: 20px; /* Spazio a destra dell'immagine */
+    margin-bottom: 20px; /* Spazio sotto l'immagine per separarla dal testo */
 }
 
 .airbnb-button {
