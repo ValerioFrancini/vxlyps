@@ -78,16 +78,29 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Riduce l'ombreggiatura quando il pulsante viene cliccato */
 }
 
-/* Stili aggiornati per lo slider con altezza ridotta */
+/* Stili aggiornati per lo slider */
 .slider-container {
     position: relative;
     max-width: 100%;
-    height: 1000px; /* Altezza ridotta per un aspetto più allungato */
+    height: 500px; /* Altezza ridotta per un aspetto più compatto */
     margin: auto;
     overflow: hidden;
     border-radius: 10px;
     background-color: #f0f0f0; /* Colore di sfondo per evitare spazi vuoti durante il caricamento */
 }
+
+.slider {
+    display: flex; /* Disposizione delle immagini in linea orizzontale */
+    transition: transform 0.8s ease; /* Aggiunge la transizione di scorrimento */
+}
+
+.slider-image {
+    min-width: 100%; /* Ogni immagine occupa l'intera larghezza del contenitore */
+    height: 100%; /* Adatta l'immagine all'altezza del contenitore */
+    object-fit: cover; /* Copre completamente l'area dello slider mantenendo le proporzioni */
+    display: block; /* Elimina eventuali margini o spazi vuoti */
+}
+
 
 /* Posiziona il pulsante Airbnb centrato in basso nello slider */
 .slider-button-container {
