@@ -85,7 +85,7 @@
     min-width: 100%; /* Ogni immagine occupa l'intera larghezza del contenitore */
     height: 100%; /* Adatta l'immagine all'altezza del contenitore */
     object-fit: cover; /* Mantiene le proporzioni corrette, riempendo il contenitore senza distorcere l'immagine */
-    position: relative;
+    display: block; /* Evita spazi vuoti intorno all'immagine */
 }
 
 
