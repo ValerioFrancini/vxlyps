@@ -5,7 +5,29 @@
     <link rel="stylesheet" href="style.css"> <!-- Collegamento al CSS -->
     <link rel="icon" href="img/favicon.png" type="image/png"> <!-- Favicon -->
 </head>
-<body>
+<body class="light-mode"> <!-- Aggiunta della classe light-mode per la modalità scura/chiara -->
+
+    <!-- Menu Hamburger -->
+    <div class="menu-icon" onclick="toggleMenu()">
+        &#9776; <!-- Icona del menu (tre linee) -->
+    </div>
+    <nav id="navbar" class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="mappa.html">Mappa</a></li>
+            <li><a href="recensioni.html">Recensioni</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
+        </ul>
+    </nav>
+
+    <!-- Switch modalità dark/light -->
+    <div class="mode-switch-container">
+        <label class="switch">
+            <input type="checkbox" id="mode-switch" onclick="toggleMode()">
+            <span class="slider-switch"></span>
+        </label>
+        <span id="mode-label">🌞</span>
+    </div>
 
     <!-- Inizio del logo -->
     <div class="logo-container">
@@ -23,59 +45,51 @@
             <img src="img/img_3.jpg" alt="Foto 3">
             <img src="img/img_4.jpg" alt="Foto 4">
             <img src="img/img_5.jpg" alt="Foto 5">
-            <img src="img/img_6.jpg" alt="Foto 6">
-            <img src="img/img_7.jpg" alt="Foto 7">
-            <img src="img/img_8.jpg" alt="Foto 8">
-            <img src="img/img_9.jpg" alt="Foto 9">
-            <img src="img/img_10.jpg" alt="Foto 10">
         </div>
         <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
         <button class="next" onclick="moveSlide(1)">&#10095;</button>
     </div>
-    <!-- Fine dello slider -->
 
     <a href="https://www.airbnb.it/rooms/971046443266957060" target="_blank" class="airbnb-button">Prenota su Airbnb</a>
 
-    <!-- Inizio descrizione spazi -->
+    <!-- Inizio descrizione spazi con le card -->
     <div class="description">
-        <h2>INFORMAZIONI SULLA CASA</h2>
-        <p>La casa è immersa nel paesaggio suggestivo del grazioso borgo medievale. Perfetto per passare del tempo lontano dalle distrazioni della città e dedicarsi alle passeggiate nei vicoli del centro e assaporare le specialità del posto. Allontanandosi dal piccolo borgo sono facilmente raggiungibili boschi e luoghi naturalistici perfetti per piccole escursioni in famiglia.</p>
-
-        <h3>LO SPAZIO</h3>
-        <p>L’appartamento si trova all’interno delle mura di Tuscania, nel cuore del centro storico, punto di partenza ideale per esplorare la città. L’appartamento è composto da una cucina dotata di tutto l’essenziale per rendere la vostra esperienza qui come se foste a casa vostra: troverete pentole e padelle per preparare pietanze deliziose, piatti e posate per gustarle, calici di vino per accompagnare i vostri piatti e, immancabile, una moka per prepararvi un ottimo caffè.</p>
-
-        <p>Il salotto è arredato con mobili di legno che creano un’atmosfera calda e tranquilla. Qui troverete un tavolo da pranzo, ideale per condividere pasti deliziosi, ma anche perfetto come spazio per lavorare al computer grazie alla connessione WI-FI che metto a vostra disposizione.</p>
-
-        <p>La cucina si affaccia su un piccolo balcone per godere della vista sulla meravigliosa basilica di San Pietro di Tuscania, dove registi come Pier Paolo Pasolini, Andrej Tarkovskij e Orson Welles hanno scelto di girare alcune scene dei loro capolavori cinematografici.</p>
-
-        <h3>ALTRE COSE DA TENERE A MENTE</h3>
-        <p>Al vostro arrivo troverete in camera da letto asciugamani (corpo, viso e bidet) e lenzuola fresche; in bagno avrete a disposizione un asciugacapelli, la lavatrice con del detersivo monodose e uno stendino per il bucato; avrete un badge da mettere in macchina per il parcheggio gratuito.</p>
-
-        <p>Dall’appartamento si possono raggiungere a piedi ottimi ristoranti e bar per fare colazione dopo una splendida camminata all’interno del borgo medioevale, ma anche le principali attrazioni turistiche come la chiesa di Santa Maria Maggiore, la Torre di Lavello e il parco adiacente. Personalmente consiglio vivamente di vedere l’antica Via Clodia: un meraviglioso pezzo di strada Romana. Sempre a piedi è facilmente raggiungibile il teatro per una serata speciale magari insieme ai vostri bambini.</p>
-
-        <p>Se invece si vuole esplorare la zona avendo a disposizione un’auto per spostarsi, consiglio di visitare il lago di Bolsena, il bosco della rosa crepante, o le tombe etrusche, magari contattando una delle splendide guide turistiche del posto!</p>
-    </div>
-    <!-- Fine descrizione spazi -->
-
-   <!-- Inizio del Footer -->
-<footer class="footer">
-    <div class="footer-content">
-        <div class="language-selector">
-            <label for="language">Lingua:</label>
-            <select id="language" onchange="changeLanguage(this.value)">
-                <option value="it">Italiano</option>
-                <option value="en">English</option>
-            </select>
-        </div>
-        <div class="social-icons">
-            <img src="img/instagram-icon.png" alt="Instagram" class="social-icon"> <!-- Logo di Instagram -->
+        <div class="card">
+            <h2>INFORMAZIONI SULLA CASA</h2>
+            <p>La casa è immersa nel paesaggio suggestivo del grazioso borgo medievale...</p>
         </div>
     </div>
-    <div class="footer-bottom">
-        <p>&copy; 2024 Il Moro Tuscania. All rights reserved.</p>
-    </div>
-</footer>
 
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="language-selector">
+                <label for="language">Lingua:</label>
+                <select id="language" onchange="changeLanguage(this.value)">
+                    <option value="it">Italiano</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+            <div class="social-icons">
+                <img src="img/instagram-icon.png" alt="Instagram" class="social-icon">
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Il Moro Tuscania. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById("navbar");
+            navbar.classList.toggle("active");
+        }
+
+        function toggleMode() {
+            document.body.classList.toggle("dark-mode");
+            document.body.classList.toggle("light-mode");
+            const modeLabel = document.getElementById("mode-label");
+            modeLabel.textContent = document.body.classList.contains("dark-mode") ? "🌜" : "🌞";
+        }
+    </script>
 </body>
 </html>
