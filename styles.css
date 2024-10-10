@@ -15,53 +15,38 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.burger-menu {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    padding: 10px;
-    transition: transform 0.3s ease; /* Aggiunge un'animazione al clic */
+.logo-title {
+    display: flex;
+    align-items: center;
 }
 
-.burger-menu .line {
-    width: 30px;
-    height: 3px;
-    background-color: #2c3e50; /* Colore blu/grigio elegante */
-    margin: 5px 0;
-    transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+.logo-image {
+    width: 60px; /* Dimensione del logo */
+    margin-right: 10px; /* Spazio tra il logo e il titolo */
 }
 
-/* Effetto animazione quando il menù burger è attivo */
-.menu-toggle:checked + .burger-menu .line:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
+.site-title {
+    font-size: 1.2rem;
+    color: #2c3e50; /* Colore del titolo */
 }
 
-.menu-toggle:checked + .burger-menu .line:nth-child(2) {
-    opacity: 0; /* Nasconde la linea centrale */
-}
+/* Nascondi il titolo su dispositivi mobili */
+@media (max-width: 768px) {
+    .site-title {
+        display: none; /* Nasconde il titolo sui dispositivi mobili */
+    }
 
-.menu-toggle:checked + .burger-menu .line:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
+    .logo-image {
+        width: 50px; /* Riduce leggermente il logo su mobile per migliorare l'aspetto */
+        margin-right: 0; /* Rimuove il margine per centrare meglio il logo */
+    }
+
+    .logo-title {
+        justify-content: center; /* Centra il logo quando il titolo è nascosto */
+    }
 }
 
 /* Stile del menù di navigazione */
-.nav-menu {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 30px;
-    background-color: #ffffff;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.menu-toggle:checked + .burger-menu + .nav-menu {
-    display: flex;
-}
-
-/* Migliora la posizione del menù a tendina */
 .nav-menu {
     display: none;
     flex-direction: column;
@@ -97,33 +82,6 @@
     background-color: #f0f0f5; /* Colore di sfondo chiaro quando si passa sopra */
 }
 
-/* Animazione di ingresso per il titolo */
-.site-title {
-    opacity: 0; /* Inizia nascosto */
-    transform: translateY(-20px); /* Posizione iniziale più alta */
-    transition: opacity 0.8s ease, transform 0.8s ease; /* Transizione fluida */
-    transition-delay: 0.3s; /* Ritardo di 0.3 secondi per iniziare dopo il logo */
-}
-
-/* Attiva l'animazione quando la pagina viene caricata */
-.site-title.loaded {
-    opacity: 1; /* Mostra il titolo */
-    transform: translateY(0); /* Riporta il titolo alla posizione originale */
-}
-
-/* Animazione del logo durante il caricamento della pagina */
-.logo-image {
-    width: 80px;
-    opacity: 0; /* Inizia nascosto */
-    transform: translateY(-20px); /* Posizione iniziale */
-    transition: opacity 1s ease, transform 1s ease; /* Animazione di ingresso */
-}
-
-.logo-image.loaded {
-    opacity: 1; /* Mostra il logo */
-    transform: translateY(0); /* Riporta il logo alla posizione originale */
-}
-
 /* Stili aggiornati per lo slider */
 .slider-container {
     position: relative;
@@ -142,7 +100,7 @@
 
 .slider-image {
     min-width: 100%; /* Ogni immagine occupa l'intera larghezza del contenitore */
-    height: 100%; /* Altezza dell'immagine che si adatta al contenitore */
+    height: 100%; /* Adatta l'immagine all'altezza del contenitore */
     object-fit: cover; /* Mantiene le proporzioni corrette */
 }
 
@@ -173,7 +131,6 @@
 .next {
     right: 10px;
 }
-
 
 /* Stili per le card */
 .card-container {
@@ -209,47 +166,3 @@
     color: #555555; /* Colore grigio chiaro per il testo */
     line-height: 1.5; /* Migliora la leggibilità del testo */
 }
-
-/* Stile per l'header su desktop */
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Distribuisce il logo e il titolo a sinistra e il burger menu a destra */
-    background-color: #ffffff;
-    padding: 15px 30px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.logo-title {
-    display: flex;
-    align-items: center;
-}
-
-.logo-image {
-    width: 60px; /* Dimensione del logo */
-    margin-right: 10px; /* Spazio tra il logo e il titolo */
-}
-
-.site-title {
-    font-size: 1.2rem;
-    color: #2c3e50; /* Colore del titolo */
-}
-
-/* Nascondi il titolo su dispositivi mobili */
-@media (max-width: 768px) {
-    .site-title {
-        display: none; /* Nasconde il titolo sui dispositivi mobili */
-    }
-
-    .logo-image {
-        width: 50px; /* Riduce leggermente il logo su mobile per migliorare l'aspetto */
-        margin-right: 0; /* Rimuove il margine per centrare meglio il logo */
-    }
-
-    .logo-title {
-        justify-content: center; /* Centra il logo quando il titolo è nascosto */
-    }
-}
-
-
-
