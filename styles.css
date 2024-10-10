@@ -237,7 +237,7 @@
     }
 
     .logo-image {
-        width: 110px; /* Dimensione del logo su mobile */
+        width: 144px; /* Dimensione del logo su mobile */
         margin-right: 0; /* Rimuove il margine per centrare meglio il logo */
     }
 }
