@@ -1,5 +1,13 @@
 /* styles.css */
 
+/* Rimuove lo stile standard del link per il logo e il titolo */
+.home-link {
+    text-decoration: none; /* Rimuove la sottolineatura */
+    color: inherit; /* Mantiene il colore originale del testo */
+    display: flex; /* Mantiene il layout flex per il logo e il titolo */
+    align-items: center; /* Allinea il logo e il titolo verticalmente */
+}
+
 /* Stili per l'header */
 .header {
     display: flex;
