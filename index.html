@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
 <head>
-    <title>Il Moro - Benvenuti</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Il Moro</title>
     <link rel="stylesheet" href="style.css"> <!-- Collegamento al CSS -->
     <link rel="icon" href="img/favicon.png" type="image/png"> <!-- Favicon -->
 </head>
-<body class="light-mode"> <!-- Aggiunta della classe light-mode per la modalità scura/chiara -->
-
-    <!-- Menu Hamburger -->
+<body>
     <div class="menu-icon" onclick="toggleMenu()">
         &#9776; <!-- Icona del menu (tre linee) -->
     </div>
@@ -20,14 +20,12 @@
         </ul>
     </nav>
 
-
-    <!-- Inizio del logo -->
-    <div class="logo-container">
+    <!-- Inizio del Header -->
+    <div class="header">
         <img src="img/logo_il_moro.png" alt="Logo Il Moro" class="logo-image">
+        <h1>Il Moro - Appartamento nel centro Storico di Tuscania</h1>
     </div>
-    <!-- Fine del logo -->
-
-    <h1>Il Moro - Appartamento nel centro Storico di Tuscania</h1>
+    <!-- Fine del Header -->
 
     <!-- Inizio dello slider -->
     <div class="slider-container">
@@ -41,6 +39,7 @@
         <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
         <button class="next" onclick="moveSlide(1)">&#10095;</button>
     </div>
+    <!-- Fine dello slider -->
 
     <a href="https://www.airbnb.it/rooms/971046443266957060" target="_blank" class="airbnb-button">Prenota su Airbnb</a>
 
@@ -48,9 +47,10 @@
     <div class="description">
         <div class="card">
             <h2>INFORMAZIONI SULLA CASA</h2>
-            <p>La casa è immersa nel paesaggio suggestivo del grazioso borgo medievale...</p>
+            <p>La casa è immersa nel paesaggio suggestivo del grazioso borgo medievale. Perfetto per passare del tempo lontano dalle distrazioni della città e dedicarsi alle passeggiate nei vicoli del centro e assaporare le specialità del posto. Allontanandosi dal piccolo borgo sono facilmente raggiungibili boschi e luoghi naturalistici perfetti per piccole escursioni in famiglia.</p>
         </div>
     </div>
+    <!-- Fine descrizione spazi -->
 
     <footer class="footer">
         <div class="footer-content">
@@ -76,12 +76,17 @@
             navbar.classList.toggle("active");
         }
 
-        function toggleMode() {
-            document.body.classList.toggle("dark-mode");
-            document.body.classList.toggle("light-mode");
-            const modeLabel = document.getElementById("mode-label");
-            modeLabel.textContent = document.body.classList.contains("dark-mode") ? "🌜" : "🌞";
+        let currentIndex = 0;
+        const slides = document.querySelector('.slider');
+        const totalImages = slides.children.length;
+
+        function moveSlide(direction) {
+            currentIndex = (currentIndex + direction + totalImages) % totalImages;
+            slides.style.transform = `translateX(-${currentIndex * 100}%)`;
         }
+
+        setInterval(() => moveSlide(1), 5000); // Transizione automatica ogni 5 secondi
     </script>
 </body>
 </html>
+
