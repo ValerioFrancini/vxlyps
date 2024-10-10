@@ -17,7 +17,7 @@
     padding: 15px 30px;
     border: none;
     border-radius: 30px; /* Angoli arrotondati per un look moderno */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2);
     transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Effetti al passaggio del mouse */
     cursor: pointer;
 }
@@ -79,12 +79,12 @@
 }
 
 .logo-image {
-    width: 60px; /* Dimensione del logo */
-    margin-right: 10px; /* Spazio tra il logo e il titolo */
+    width: 100px; /* Dimensione del logo */
+    margin-right: 15px; /* Spazio tra il logo e il titolo */
 }
 
 .site-title {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     color: #2c3e50; /* Colore del titolo */
 }
 
@@ -95,7 +95,7 @@
     }
 
     .logo-image {
-        width: 50px; /* Riduce leggermente il logo su mobile per migliorare l'aspetto */
+        width: 90px; /* Riduce leggermente il logo su mobile per migliorare l'aspetto */
         margin-right: 0; /* Rimuove il margine per centrare meglio il logo */
     }
 
