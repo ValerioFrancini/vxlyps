@@ -19,7 +19,7 @@
     align-items: center;
     padding: 10px;
     position: absolute; /* Posizionamento assoluto per controllare la posizione */
-    right: 20px; /* Sposta il burger menu più a destra */
+    right: 50px; /* Sposta il burger menu più a destra */
     z-index: 1001; /* Assicura che sia sopra altri elementi */
 }
 
