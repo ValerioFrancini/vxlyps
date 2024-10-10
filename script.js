@@ -57,19 +57,15 @@ const slides = document.querySelectorAll('.slider-image');
 const sliderContainer = document.querySelector('.slider');
 
 function moveSlide(direction) {
+    slides[currentIndex].classList.remove('active'); // Rimuove l'effetto di dissolvenza dall'immagine corrente
     currentIndex = (currentIndex + direction + slides.length) % slides.length; // Calcola l'indice della prossima immagine
+    slides[currentIndex].classList.add('active'); // Applica l'effetto di dissolvenza alla nuova immagine
     sliderContainer.style.transform = `translateX(-${currentIndex * 100}%)`; // Sposta lo slider alla nuova immagine
 }
 
-// Funzione per far avanzare automaticamente le immagini
-function autoSlide() {
-    currentIndex = (currentIndex + 1) % slides.length;
-    sliderContainer.style.transform = `translateX(-${currentIndex * 100}%)`; // Sposta lo slider alla nuova immagine
-}
-
-// Inizializza l'effetto di transizione automatica ogni 5 secondi
-setInterval(autoSlide, 5000);
+// Inizializza l'effetto di transizione automatica ogni 4 secondi
+setInterval(autoSlide, 4000);
 
 // Inizializza il primo slide come attivo
-sliderContainer.style.transform = `translateX(0)`;
+slides[currentIndex].classList.add('active');
 
