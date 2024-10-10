@@ -131,13 +131,41 @@
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 65px; /* Posiziona il menu più in basso rispetto al burger menu */
-    right: 30px;
+    top: 70px; /* Posiziona il menu più in basso rispetto al burger menu */
+    right: 20px;
     background-color: #ffffff;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     overflow: hidden;
     z-index: 1000; /* Assicura che il menu sia sopra agli altri elementi */
+    padding: 10px; /* Spazio interno per le voci del menu */
+}
+
+/* Migliora lo stile delle voci del menu */
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu ul li {
+    margin: 10px 0; /* Spaziatura tra le voci del menu */
+}
+
+.nav-menu ul li a {
+    padding: 12px 20px; /* Spazio interno per rendere le voci del menu più cliccabili */
+    text-decoration: none;
+    font-size: 1.1rem; /* Aumenta la dimensione del testo per migliorare la leggibilità */
+    color: #2c3e50; /* Colore elegante per il testo */
+    background-color: #f0f0f0; /* Colore di sfondo chiaro per le voci del menu */
+    border-radius: 5px; /* Bordi arrotondati per un look moderno */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transizioni al passaggio del mouse */
+}
+
+/* Effetto hover per le voci del menu */
+.nav-menu ul li a:hover {
+    background-color: #FF5A5F; /* Colore di sfondo al passaggio del mouse */
+    color: white; /* Colore del testo quando si passa sopra */
 }
 
 /* Mostra il menu a tendina quando il burger menu è attivo */
