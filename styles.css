@@ -259,7 +259,7 @@
 }
 
 .logo-image {
-    width: 140px; /* Dimensione del logo */
+    width: 170px; /* Dimensione del logo */
     margin-right: 10px; /* Spazio tra il logo e il titolo */
 }
 
@@ -282,7 +282,7 @@
     }
 
     .logo-image {
-        width: 144px; /* Dimensione del logo su mobile */
+        width: 170px; /* Dimensione del logo su mobile */
         margin-right: 0; /* Rimuove il margine per centrare meglio il logo */
     }
 }
