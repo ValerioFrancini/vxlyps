@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Il Moro</title>
+    <title>Il Moro - Appartamento nel centro Storico di Tuscania</title>
     <link rel="stylesheet" href="style.css"> <!-- Collegamento al CSS -->
     <link rel="icon" href="img/favicon.png" type="image/png"> <!-- Favicon -->
 </head>
 <body>
+
+    <!-- Inizio del menu -->
     <div class="menu-icon" onclick="toggleMenu()">
         &#9776; <!-- Icona del menu (tre linee) -->
     </div>
@@ -19,6 +21,7 @@
             <li><a href="contatti.html">Contatti</a></li>
         </ul>
     </nav>
+    <!-- Fine del menu -->
 
     <!-- Inizio del Header -->
     <div class="header" style="display: flex; align-items: center;">
@@ -30,11 +33,16 @@
     <!-- Inizio dello slider -->
     <div class="slider-container">
         <div class="slider" id="slider">
-            <img src="img/img_1.jpg" alt="Foto 1">
-            <img src="img/img_2.jpg" alt="Foto 2">
-            <img src="img/img_3.jpg" alt="Foto 3">
-            <img src="img/img_4.jpg" alt="Foto 4">
-            <img src="img/img_5.jpg" alt="Foto 5">
+            <img src="img/img_1.jpg" alt="Foto 1" class="slider-image">
+            <img src="img/img_2.jpg" alt="Foto 2" class="slider-image">
+            <img src="img/img_3.jpg" alt="Foto 3" class="slider-image">
+            <img src="img/img_4.jpg" alt="Foto 4" class="slider-image">
+            <img src="img/img_5.jpg" alt="Foto 5" class="slider-image">
+            <img src="img/img_6.jpg" alt="Foto 6" class="slider-image">
+            <img src="img/img_7.jpg" alt="Foto 7" class="slider-image">
+            <img src="img/img_8.jpg" alt="Foto 8" class="slider-image">
+            <img src="img/img_9.jpg" alt="Foto 9" class="slider-image">
+            <img src="img/img_10.jpg" alt="Foto 10" class="slider-image">
         </div>
         <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
         <button class="next" onclick="moveSlide(1)">&#10095;</button>
@@ -43,29 +51,12 @@
 
     <a href="https://www.airbnb.it/rooms/971046443266957060" target="_blank" class="airbnb-button">Prenota su Airbnb</a>
 
-    <!-- Inizio descrizione spazi con le card -->
     <div class="description">
         <div class="card">
             <h2>INFORMAZIONI SULLA CASA</h2>
             <p>La casa è immersa nel paesaggio suggestivo del grazioso borgo medievale. Perfetto per passare del tempo lontano dalle distrazioni della città e dedicarsi alle passeggiate nei vicoli del centro e assaporare le specialità del posto. Allontanandosi dal piccolo borgo sono facilmente raggiungibili boschi e luoghi naturalistici perfetti per piccole escursioni in famiglia.</p>
         </div>
-
-        <div class="card">
-            <h2>LO SPAZIO</h2>
-            <p>L’appartamento si trova all’interno delle mura di Tuscania, nel cuore del centro storico, punto di partenza ideale per esplorare la città. L’appartamento è composto da una cucina dotata di tutto l’essenziale per rendere la vostra esperienza qui come se foste a casa vostra: troverete pentole e padelle per preparare pietanze deliziose, piatti e posate per gustarle, calici di vino per accompagnare i vostri piatti e, immancabile, una moka per prepararvi un ottimo caffè.</p>
-        </div>
-
-        <div class="card">
-            <h2>ACCESSO PER GLI OSPITI</h2>
-            <p>Avrete a disposizione l’intero appartamento.</p>
-        </div>
-
-        <div class="card">
-            <h2>ALTRE COSE DA TENERE A MENTE</h2>
-            <p>Al vostro arrivo troverete in camera da letto asciugamani (corpo, viso e bidet) e lenzuola fresche; in bagno avrete a disposizione un asciugacapelli, la lavatrice con del detersivo monodose e uno stendino per il bucato; avrete un badge da mettere in macchina per il parcheggio gratuito.</p>
-        </div>
     </div>
-    <!-- Fine descrizione spazi -->
 
     <footer class="footer">
         <div class="footer-content">
@@ -86,21 +77,18 @@
     </footer>
 
     <script>
-        function toggleMenu() {
-            const navbar = document.getElementById("navbar");
-            navbar.classList.toggle("active");
-        }
-
         let currentIndex = 0;
-        const slides = document.querySelector('.slider');
-        const totalImages = slides.children.length;
+        const slides = document.querySelectorAll('.slider-image');
+        const totalImages = slides.length;
 
         function moveSlide(direction) {
-            currentIndex = (currentIndex + direction + totalImages) % totalImages;
-            slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+            slides[currentIndex].classList.remove('active'); // Nasconde l'immagine attuale
+            currentIndex = (currentIndex + direction + totalImages) % totalImages; // Calcola l'indice dell'immagine successiva
+            slides[currentIndex].classList.add('active'); // Mostra l'immagine successiva
         }
 
-        setInterval(() => moveSlide(1), 5000); // Transizione automatica ogni 5 secondi
+        // Inizializza il primo slide come attivo
+        slides[currentIndex].classList.add('active');
     </script>
 </body>
 </html>
