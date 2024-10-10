@@ -22,6 +22,7 @@ h1, h2, h3 {
 
 .header {
     display: flex;
+    flex-wrap: wrap; /* Permette di adattare i contenuti su più righe */
     align-items: center;
     justify-content: space-between;
     background-color: #ffffff;
@@ -38,19 +39,20 @@ h1, h2, h3 {
     color: #2c3e50; /* Colore blu/grigio elegante */
 }
 
-/* Stili per il menù burger e mobile */
-.burger-menu {
-    cursor: pointer;
-    display: inline-block;
-    padding: 10px;
-}
+/* Ottimizzazione per dispositivi mobili */
+@media (max-width: 768px) {
+    .header {
+        justify-content: center;
+        text-align: center;
+    }
 
-.burger-menu .line {
-    width: 30px;
-    height: 3px;
-    background-color: #2c3e50; /* Colore blu/grigio elegante */
-    margin: 5px 0;
-    transition: all 0.3s ease;
+    .site-title {
+        font-size: 1.5em;
+    }
+
+    .burger-menu {
+        margin-top: 10px;
+    }
 }
 
 /* Pulsante Prenota */
@@ -96,30 +98,48 @@ h1, h2, h3 {
 
 .slider-image {
     min-width: 100%;
-    display: none;
+    opacity: 0;
+    transition: opacity 1s ease; /* Effetto dissolvenza */
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .slider-image.active {
-    display: block;
+    opacity: 1; /* Mostra solo l'immagine attiva */
 }
 
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
+/* Footer personalizzato */
+.footer {
+    background-color: #2c3e50;
     color: white;
-    border: none;
-    border-radius: 3px;
-    transform: translateY(-50%);
-    user-select: none;
-    transition: background-color 0.3s ease;
+    padding: 20px 40px;
+    text-align: center;
 }
 
-.prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.prev { left: 15px; }
-.next { right: 15px; }
+.social-icons {
+    margin: 10px 0;
+}
+
+.social-icons a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #a5b1c2; /* Colore neutro elegante */
+}
+
+.footer-bottom {
+    margin-top: 10px;
+    font-size: 0.9em;
+}
