@@ -73,8 +73,8 @@ p {
     transition: background-color 0.3s ease;
     display: inline-block;
     margin-top: 15px;
+    border: none;
 }
 
 .airbnb-button:hover {
-    background-color: #E2474B; /* Colore rosso scuro per l'effetto hover */
-}
+    back
