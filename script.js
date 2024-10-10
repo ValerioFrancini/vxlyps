@@ -26,11 +26,11 @@ function preloadImages() {
     });
 }
 
-/* Stili aggiornati per lo slider con altezza fissa */
+/* Stili aggiornati per lo slider con altezza ridotta */
 .slider-container {
     position: relative;
     max-width: 100%;
-    height: 400px; /* Imposta un'altezza fissa per mantenere la stabilità del layout */
+    height: 250px; /* Altezza ridotta per un aspetto più allungato */
     margin: auto;
     overflow: hidden;
     border-radius: 10px;
@@ -44,10 +44,11 @@ function preloadImages() {
 
 .slider-image {
     min-width: 100%; /* Ogni immagine occupa l'intera larghezza del contenitore */
-    height: 100%; /* Adatta l'immagine all'altezza fissa del contenitore */
-    object-fit: cover; /* Mantiene le proporzioni corrette e riempie il contenitore */
+    height: 100%; /* Adatta l'immagine all'altezza del contenitore */
+    object-fit: cover; /* Mantiene le proporzioni corrette, riempendo il contenitore senza distorcere l'immagine */
     position: relative;
 }
+
 
 
 // Codice per lo slider con transizione di scorrimento
