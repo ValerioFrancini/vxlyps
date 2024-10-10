@@ -3,6 +3,7 @@
 <head>
     <title>Il Moro - Benvenuti</title>
     <link rel="stylesheet" href="style.css"> <!-- Collegamento al CSS -->
+    <link rel="icon" href="img/favicon.png" type="image/png"> <!-- Favicon -->
 </head>
 <body>
 
@@ -47,9 +48,6 @@
 
         <p>La cucina si affaccia su un piccolo balcone per godere della vista sulla meravigliosa basilica di San Pietro di Tuscania, dove registi come Pier Paolo Pasolini, Andrej Tarkovskij e Orson Welles hanno scelto di girare alcune scene dei loro capolavori cinematografici.</p>
 
-        <h3>ACCESSO PER GLI OSPITI</h3>
-        <p>Avrete a disposizione l’intero appartamento.</p>
-
         <h3>ALTRE COSE DA TENERE A MENTE</h3>
         <p>Al vostro arrivo troverete in camera da letto asciugamani (corpo, viso e bidet) e lenzuola fresche; in bagno avrete a disposizione un asciugacapelli, la lavatrice con del detersivo monodose e uno stendino per il bucato; avrete un badge da mettere in macchina per il parcheggio gratuito.</p>
 
@@ -59,7 +57,34 @@
     </div>
     <!-- Fine descrizione spazi -->
 
+    <!-- Inizio del Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="language-selector">
+                <label for="language">Lingua:</label>
+                <select id="language" onchange="changeLanguage(this.value)">
+                    <option value="it">Italiano</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+            <div class="social-icons">
+                <img src="img/instagram-icon.png" alt="Instagram" class="social-icon"> <!-- Logo di Instagram -->
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Il Moro Tuscania. All rights reserved.</p>
+        </div>
+    </footer>
+
     <script>
+        function changeLanguage(language) {
+            if (language === 'en') {
+                window.location.href = 'index_en.html'; // Redireziona alla pagina in inglese
+            } else {
+                window.location.href = 'index.html'; // Redireziona alla pagina in italiano
+            }
+        }
+
         let currentIndex = 0;
         const slides = document.querySelector('.slider');
         const totalImages = slides.children.length;
@@ -69,5 +94,7 @@
             slides.style.transform = `translateX(-${currentIndex * 100}%)`;
         }
     </script>
+    <!-- Fine del Footer -->
+
 </body>
 </html>
