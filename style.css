@@ -18,6 +18,17 @@ p {
     text-align: justify; /* Testo giustificato */
 }
 
+/* Stile per il logo */
+.logo-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.logo-image {
+    max-width: 120px; /* Ridotta la larghezza del logo */
+    height: auto;
+}
+
 /* Stile per lo slider */
 .slider-container {
     position: relative;
@@ -81,6 +92,7 @@ p {
     background: linear-gradient(90deg, #D93B3E, #C1282D); /* Gradiente scuro per l'effetto hover */
 }
 
+/* Stile per la descrizione degli spazi */
 .description {
     max-width: 800px; /* Larghezza limitata */
     margin: 20px auto;
