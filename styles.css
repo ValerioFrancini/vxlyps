@@ -197,4 +197,46 @@
     line-height: 1.5; /* Migliora la leggibilità del testo */
 }
 
+/* Stile per l'header su desktop */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribuisce il logo e il titolo a sinistra e il burger menu a destra */
+    background-color: #ffffff;
+    padding: 15px 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    width: 60px; /* Dimensione del logo */
+    margin-right: 10px; /* Spazio tra il logo e il titolo */
+}
+
+.site-title {
+    font-size: 1.2rem;
+    color: #2c3e50; /* Colore del titolo */
+}
+
+/* Nascondi il titolo su dispositivi mobili */
+@media (max-width: 768px) {
+    .site-title {
+        display: none; /* Nasconde il titolo sui dispositivi mobili */
+    }
+
+    .logo-image {
+        width: 50px; /* Riduce leggermente il logo su mobile per migliorare l'aspetto */
+        margin-right: 0; /* Rimuove il margine per centrare meglio il logo */
+    }
+
+    .logo-title {
+        justify-content: center; /* Centra il logo quando il titolo è nascosto */
+    }
+}
+
+
 
