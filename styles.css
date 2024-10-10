@@ -41,3 +41,23 @@
     opacity: 1; /* Mostra il logo */
     transform: translateY(0); /* Riporta il logo alla posizione originale */
 }
+
+/* Stili aggiornati per lo slider di immagini */
+.slider-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slider-image {
+    width: 100%; /* Rende l'immagine sempre larga quanto il contenitore */
+    height: auto; /* Mantiene le proporzioni corrette */
+    display: none; /* Nasconde le immagini di default */
+}
+
+.slider-image.active {
+    display: block; /* Mostra solo l'immagine attiva */
+}
+
