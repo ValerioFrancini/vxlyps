@@ -9,6 +9,7 @@ body {
 h1 {
     color: #2c3e50;
     font-size: 2.5em;
+    margin-top: 5px; /* Ridotto il margine superiore per avvicinare il titolo al logo */
     margin-bottom: 20px;
 }
 
@@ -21,7 +22,7 @@ p {
 /* Stile per il logo */
 .logo-container {
     text-align: center;
-    margin: 10px 0; /* Ridotto il margine per ridurre lo spazio */
+    margin: 5px 0; /* Ridotto ulteriormente il margine per ridurre lo spazio tra logo e titolo */
 }
 
 .logo-image {
@@ -79,13 +80,14 @@ p {
 .airbnb-button {
     background: linear-gradient(90deg, #FF5A5F, #D93B3E); /* Gradiente dal rosso al rosso scuro */
     color: white;
-    padding: 10px 20px;
+    padding: 20px 40px; /* Aumentato padding per desktop */
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 8px;
     transition: background 0.3s ease;
     display: inline-block;
-    margin-top: 15px;
+    margin-top: 20px;
     border: none;
+    font-size: 1.4em; /* Testo più grande per migliorare la leggibilità */
 }
 
 .airbnb-button:hover {
@@ -132,6 +134,11 @@ p {
 
     .logo-image {
         max-width: 180px; /* Ingrandisce il logo per schermi mobili */
+    }
+
+    .airbnb-button {
+        padding: 15px 30px; /* Ingrandisce il pulsante per dispositivi mobili */
+        font-size: 1.2em; /* Dimensione del testo per migliorare la leggibilità su mobile */
     }
 
     .description {
