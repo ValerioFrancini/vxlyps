@@ -1,16 +1,8 @@
 body {
     font-family: Arial, sans-serif;
     transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-body.light-mode {
-    background-color: #f5f5f5;
-    color: #333;
-}
-
-body.dark-mode {
-    background-color: #1a1a1a;
-    color: #fff;
+    background-color: #f5f5f5; /* Colore di sfondo chiaro */
+    color: #333; /* Colore del testo */
 }
 
 /* Stile per il menu hamburger */
