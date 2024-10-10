@@ -25,7 +25,7 @@ p {
 }
 
 .logo-image {
-    max-width: 120px; /* Ridotta la larghezza del logo */
+    max-width: 250px; /* Aumentata la larghezza del logo su desktop */
     height: auto;
 }
 
@@ -106,6 +106,7 @@ p {
 .description h2, .description h3 {
     color: #2c3e50;
     text-transform: uppercase; /* Sottotitoli in capslock */
+    text-align: center; /* Testo centrato per il titolo */
 }
 
 .description h2 {
@@ -130,7 +131,7 @@ p {
     }
 
     .logo-image {
-        max-width: 150px; /* Ingrandisce il logo per schermi mobili */
+        max-width: 180px; /* Ingrandisce il logo per schermi mobili */
     }
 
     .description {
