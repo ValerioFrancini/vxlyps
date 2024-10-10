@@ -88,24 +88,28 @@
     transform: translateY(0); /* Riporta il logo alla posizione originale */
 }
 
-/* Stili aggiornati per lo slider di immagini */
+/* Stili aggiornati per lo slider */
 .slider-container {
     position: relative;
     max-width: 100%;
+    height: 400px; /* Altezza fissa per mantenere la consistenza dello slider */
     margin: auto;
     overflow: hidden;
     border-radius: 10px;
+    background-color: #f0f0f0; /* Colore di sfondo per evitare spazi vuoti durante il caricamento */
+}
+
+.slider {
+    display: flex; /* Disposizione delle immagini in linea orizzontale */
+    transition: transform 0.8s ease; /* Aggiunge la transizione di scorrimento */
 }
 
 .slider-image {
-    width: 100%; /* Rende l'immagine sempre larga quanto il contenitore */
-    height: auto; /* Mantiene le proporzioni corrette */
-    display: none; /* Nasconde le immagini di default */
+    min-width: 100%; /* Ogni immagine occupa l'intera larghezza del contenitore */
+    height: 100%; /* Altezza dell'immagine che si adatta al contenitore */
+    object-fit: cover; /* Mantiene le proporzioni corrette */
 }
 
-.slider-image.active {
-    display: block; /* Mostra solo l'immagine attiva */
-}
 
 /* Stili per le card */
 .card-container {
