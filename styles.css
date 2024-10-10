@@ -32,7 +32,34 @@
     margin-left: auto; /* Spinge il burger menu a destra completamente */
 }
 
+/* Posiziona il pulsante Airbnb centrato in basso nello slider */
+.booking-buttons-container {
+    position: absolute;
+    bottom: 20px; /* Posiziona il pulsante 20px sopra il bordo inferiore dello slider */
+    left: 50%;
+    transform: translateX(-50%); /* Centra orizzontalmente il pulsante */
+    display: flex;
+    justify-content: center; /* Centra il contenuto all'interno del contenitore */
+    z-index: 1000; /* Assicura che i pulsanti siano sopra gli altri elementi */
+    width: 100%; /* Assicura che il contenitore riempia tutta la larghezza per un migliore posizionamento */
+    pointer-events: none; /* Evita che interferisca con altri elementi */
+}
 
+/* Regole specifiche per dispositivi mobili */
+@media (max-width: 768px) {
+    .booking-buttons-container {
+        position: static; /* Imposta il posizionamento statico su mobile per evitare problemi di overflow */
+        transform: none; /* Rimuove la trasformazione per il posizionamento */
+        bottom: 0; /* Resetta la posizione */
+        width: auto; /* Adatta la larghezza per mobile */
+        justify-content: center; /* Centra il pulsante anche su mobile */
+    }
+
+    .airbnb-button {
+        width: 90%; /* Ridimensiona il pulsante su mobile per adattarlo meglio allo schermo */
+        margin: 0 auto; /* Centra il pulsante */
+    }
+}
 
 /* Stili per il pulsante "Prenota su Airbnb" */
 .airbnb-button-container {
