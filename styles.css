@@ -121,5 +121,64 @@ h1, h2, h3 {
     border-bottom: 2px solid #FF5A5F; /* Sottolinea con un colore rosso */
     color: #FF5A5F; /* Cambia il colore del testo al passaggio */
 }
+    /* Stili per lo slider di foto */
+.slider-card {
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    text-align: center;
+}
 
+.slider-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slider-image {
+    min-width: 100%;
+    height: auto;
+    display: none; /* Nasconde tutte le immagini di default */
+}
+
+.slider-image.active {
+    display: block; /* Mostra solo l'immagine attiva */
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 3px;
+    user-select: none;
+    transition: background-color 0.3s ease;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+ }
 }
