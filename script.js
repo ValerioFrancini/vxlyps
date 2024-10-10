@@ -56,10 +56,11 @@ let currentIndex = 0;
 const slides = document.querySelectorAll('.slider-image');
 const sliderContainer = document.querySelector('.slider');
 
+// Funzione per muovere lo slider manualmente con le frecce
 function moveSlide(direction) {
-    slides[currentIndex].classList.remove('active'); // Rimuove l'effetto di dissolvenza dall'immagine corrente
+    slides[currentIndex].classList.remove('active'); // Nasconde l'immagine attuale
     currentIndex = (currentIndex + direction + slides.length) % slides.length; // Calcola l'indice della prossima immagine
-    slides[currentIndex].classList.add('active'); // Applica l'effetto di dissolvenza alla nuova immagine
+    slides[currentIndex].classList.add('active'); // Mostra la nuova immagine con effetto dissolvenza
     sliderContainer.style.transform = `translateX(-${currentIndex * 100}%)`; // Sposta lo slider alla nuova immagine
 }
 
