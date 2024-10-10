@@ -102,6 +102,7 @@
     opacity: 0; /* Inizia nascosto */
     transform: translateY(-20px); /* Posizione iniziale più alta */
     transition: opacity 0.8s ease, transform 0.8s ease; /* Transizione fluida */
+    transition-delay: 0.3s; /* Ritardo di 0.3 secondi per iniziare dopo il logo */
 }
 
 /* Attiva l'animazione quando la pagina viene caricata */
