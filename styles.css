@@ -47,13 +47,14 @@ h1, h2, h3 {
     }
 
     .site-title {
-        font-size: 1.5em;
+        display: none; /* Nasconde il titolo del sito sui dispositivi mobili */
     }
 
-    .burger-menu {
-        margin-top: 10px;
+    .logo-image {
+        width: 80px; /* Aumenta leggermente la dimensione del logo per migliorare la visibilità su mobile */
     }
 }
+
 
 /* Pulsante Prenota */
 .airbnb-button {
