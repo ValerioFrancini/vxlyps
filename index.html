@@ -57,44 +57,25 @@
     </div>
     <!-- Fine descrizione spazi -->
 
-    <!-- Inizio del Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="language-selector">
-                <label for="language">Lingua:</label>
-                <select id="language" onchange="changeLanguage(this.value)">
-                    <option value="it">Italiano</option>
-                    <option value="en">English</option>
-                </select>
-            </div>
-            <div class="social-icons">
-                <img src="img/instagram-icon.png" alt="Instagram" class="social-icon"> <!-- Logo di Instagram -->
-            </div>
+   <!-- Inizio del Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="language-selector">
+            <label for="language">Lingua:</label>
+            <select id="language" onchange="changeLanguage(this.value)">
+                <option value="it">Italiano</option>
+                <option value="en">English</option>
+            </select>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Il Moro Tuscania. All rights reserved.</p>
+        <div class="social-icons">
+            <img src="img/instagram-icon.png" alt="Instagram" class="social-icon"> <!-- Logo di Instagram -->
         </div>
-    </footer>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Il Moro Tuscania. All rights reserved.</p>
+    </div>
+</footer>
 
-    <script>
-        function changeLanguage(language) {
-            if (language === 'en') {
-                window.location.href = 'index_en.html'; // Redireziona alla pagina in inglese
-            } else {
-                window.location.href = 'index.html'; // Redireziona alla pagina in italiano
-            }
-        }
-
-        let currentIndex = 0;
-        const slides = document.querySelector('.slider');
-        const totalImages = slides.children.length;
-
-        function moveSlide(direction) {
-            currentIndex = (currentIndex + direction + totalImages) % totalImages;
-            slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-        }
-    </script>
-    <!-- Fine del Footer -->
 
 </body>
 </html>
