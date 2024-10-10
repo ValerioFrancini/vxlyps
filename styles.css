@@ -73,6 +73,34 @@ h1, h2, h3 {
     display: block;
 }
 
+/* Card */
+.card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    text-align: left;
+}
+
+/* Pulsante Airbnb */
+.airbnb-button {
+    background-color: #FF5A5F;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 15px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.airbnb-button:hover {
+    background-color: #E2474B;
+    transform: scale(1.05);
+}
+
 /* Pulsante Instagram */
 .social-icon {
     color: white;
@@ -86,7 +114,29 @@ h1, h2, h3 {
     background-color: #e2474b;
 }
 
-/* Responsive */
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-bottom {
+    margin-top: 10px;
+}
+
 @media (max-width: 768px) {
     .logo-image {
         width: 40px;
