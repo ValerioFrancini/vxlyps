@@ -6,26 +6,26 @@ window.addEventListener('load', () => {
     logo.classList.add('loaded'); // Aggiunge la classe 'loaded' al logo per attivare l'animazione
 });
 
-// Codice per lo slider delle immagini
+// script.js
+
+// Codice per lo slider con transizione di scorrimento
 let currentIndex = 0;
 const slides = document.querySelectorAll('.slider-image');
-const totalImages = slides.length;
+const sliderContainer = document.querySelector('.slider');
 
 function moveSlide(direction) {
-    slides[currentIndex].classList.remove('active'); // Nasconde l'immagine attuale
-    currentIndex = (currentIndex + direction + totalImages) % totalImages; // Calcola l'indice della prossima immagine
-    slides[currentIndex].classList.add('active'); // Mostra l'immagine successiva
+    currentIndex = (currentIndex + direction + slides.length) % slides.length; // Calcola l'indice della prossima immagine
+    sliderContainer.style.transform = `translateX(-${currentIndex * 100}%)`; // Sposta lo slider alla nuova immagine
 }
 
 // Funzione per far avanzare automaticamente le immagini
 function autoSlide() {
-    slides[currentIndex].classList.remove('active');
-    currentIndex = (currentIndex + 1) % totalImages;
-    slides[currentIndex].classList.add('active');
+    currentIndex = (currentIndex + 1) % slides.length;
+    sliderContainer.style.transform = `translateX(-${currentIndex * 100}%)`; // Sposta lo slider alla nuova immagine
 }
 
 // Inizializza l'effetto di transizione automatica ogni 5 secondi
 setInterval(autoSlide, 5000);
 
 // Inizializza il primo slide come attivo
-slides[currentIndex].classList.add('active');
+sliderContainer.style.transform = `translateX(0)`;
