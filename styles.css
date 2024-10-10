@@ -241,3 +241,11 @@
     border-radius: 10px;
     text-align: center;
 }
+
+/* Assicurati che entrambe le card abbiano lo stesso comportamento su mobile */
+@media (max-width: 768px) {
+    .contact-card, .email-card {
+        width: 90%; /* Rendi la larghezza delle card coerente su dispositivi mobili */
+        margin: 0 auto; /* Centra le card all'interno del contenitore */
+    }
+}
