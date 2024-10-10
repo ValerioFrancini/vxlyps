@@ -427,5 +427,31 @@
     color: #d1d1d1; /* Colore grigio chiaro per il testo dei diritti riservati */
 }
 
+/* Centra la card e imposta la foto come circolare */
+.contact-card {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra la card */
+    gap: 20px; /* Spazio tra la foto e il testo */
+    margin: 20px auto; /* Margine automatico per centrare la card */
+    max-width: 800px; /* Limita la larghezza della card */
+    background-color: #ffffff; /* Colore di sfondo della card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombreggiatura leggera */
+    padding: 20px;
+    border-radius: 10px; /* Angoli arrotondati per un aspetto moderno */
+}
+
+.profile-pic {
+    width: 100px; /* Dimensione della foto */
+    height: 100px;
+    border-radius: 50%; /* Rende la foto circolare */
+    object-fit: cover; /* Mantiene le proporzioni della foto */
+    cursor: pointer; /* Mostra il cursore di puntatore per indicare che è cliccabile */
+}
+
+.contact-info {
+    flex: 1; /* Permette al testo di occupare il restante spazio */
+}
+
 
 
