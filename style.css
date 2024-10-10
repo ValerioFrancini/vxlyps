@@ -1,225 +1,208 @@
-/* Stile generale */
+/* Stili generali */
 body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
     color: #333;
-    text-align: center;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
-/* Header */
+/* Header con logo e titolo */
 .header {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin: 20px 0; /* Spazio sopra e sotto */
+    margin: 20px 0;
 }
 
-/* Logo */
+.logo-container {
+    margin-bottom: 10px;
+}
+
 .logo-image {
-    width: 80px; /* Regola la larghezza del logo */
-    margin-right: 15px; /* Spazio a destra del logo */
+    width: 100px;
+    height: auto;
 }
 
-/* Titolo */
 h1 {
     color: #2c3e50;
     font-size: 2.5em;
-    margin: 0; /* Rimuovi margine per evitare spazi non necessari */
+}
+
+/* Menu Hamburger */
+.menu-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.navbar {
+    display: none;
+    background-color: #2c3e50;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    border-radius: 8px;
+}
+
+.navbar.active {
+    display: block;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+}
+
+.navbar ul li {
+    margin: 5px 0;
+}
+
+.navbar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 16px;
+    display: block;
 }
 
 /* Slider */
 .slider-container {
     position: relative;
-    max-width: 800px; /* Larghezza massima dello slider */
-    margin: auto; /* Centratura dello slider */
-    border-radius: 15px; /* Bordo stondato */
-    overflow: hidden; /* Nasconde parti dell'immagine che escono dallo slider */
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 15px;
 }
 
 .slider {
-    display: flex; /* Mostra le immagini in linea */
-    transition: transform 0.5s ease; /* Animazione per il movimento dello slider */
+    display: flex;
+    transition: transform 0.5s ease-in-out;
 }
 
 .slider-image {
-    min-width: 100%; /* Mostra solo un'immagine alla volta */
-    border-radius: 15px; /* Bordo stondato per le immagini */
+    width: 100%;
+    border-radius: 15px;
 }
 
-/* Pulsanti dello slider */
 .prev, .next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: #ff5a5f;
     border: none;
-    border-radius: 50%;
+    color: white;
+    padding: 10px;
     cursor: pointer;
-    font-size: 20px; /* Dimensione dei pulsanti */
-    padding: 10px; /* Spaziatura interna */
-    z-index: 1; /* Posizionamento sopra le immagini */
+    border-radius: 50%;
 }
 
 .prev {
-    left: 10px; /* Distanza dal lato sinistro */
+    left: 10px;
 }
 
 .next {
-    right: 10px; /* Distanza dal lato destro */
+    right: 10px;
 }
 
-/* Pulsante Prenota su Airbnb */
+/* Pulsante Airbnb */
 .airbnb-button {
     background-color: #FF5A5F; /* Colore rosso di Airbnb */
     color: white;
-    padding: 15px 30px; /* Spaziatura interna */
+    padding: 10px 20px;
     text-decoration: none;
-    border-radius: 5px; /* Bordo stondato */
+    border-radius: 5px;
     transition: background-color 0.3s ease;
-    display: inline-block; /* Mostra come un blocco */
-    margin: 20px 0; /* Margine sopra e sotto */
+    display: inline-block;
+    margin: 20px 0;
 }
 
 .airbnb-button:hover {
     background-color: #E2474B; /* Colore rosso scuro per l'effetto hover */
 }
 
-/* Sezione descrizione */
+/* Descrizione degli spazi */
 .description {
-    margin: 20px; /* Margine per la descrizione */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 800px;
 }
 
 .card {
-    background-color: white; /* Colore di sfondo della card */
-    border-radius: 10px; /* Bordo stondato */
-    padding: 20px; /* Padding interno */
-    margin-bottom: 20px; /* Spazio tra le card */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombra per le card */
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 10px 0;
+    text-align: left;
+    width: 100%;
+}
+
+.card h2 {
+    font-size: 1.5em;
+    color: #2c3e50;
 }
 
 /* Footer */
 .footer {
-    background-color: #333; /* Colore di sfondo del footer */
-    color: white; /* Colore del testo del footer */
-    padding: 20px; /* Spaziatura interna */
-    position: relative; /* Posizione relativa per il footer */
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
 }
 
 .footer-content {
-    display: flex; /* Mostra contenuto in linea */
-    justify-content: space-between; /* Spazio tra gli elementi */
-    align-items: center; /* Allinea verticalmente al centro */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .language-selector {
-    color: white; /* Colore del testo della selezione lingua */
+    margin: 10px;
 }
 
 .social-icons {
-    display: flex; /* Mostra le icone dei social in linea */
+    margin: 10px;
 }
 
 .social-icon {
-    width: 30px; /* Dimensione dell'icona */
-    margin-left: 10px; /* Spazio tra le icone */
+    width: 24px;
+    height: 24px;
+    margin: 0 10px;
 }
 
 .footer-bottom {
-    text-align: center; /* Testo centrato nella parte inferiore */
+    margin-top: 10px;
 }
 
-/* Stili per l'immagine del profilo */
-.profile-pic {
-    width: 80px; /* Dimensione dell'immagine del profilo */
-    height: 80px; /* Altezza dell'immagine del profilo */
-    border-radius: 50%; /* Bordo rotondo per l'immagine del profilo */
-    margin-right: 15px; /* Spazio a destra dell'immagine */
-}
-
-/* Animazione per il menu */
-.menu-icon {
-    font-size: 30px; /* Dimensione dell'icona del menu */
-    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
-}
-
-.navbar {
-    display: none; /* Nascondi il menu di default */
-    flex-direction: column; /* Orientamento verticale per il menu */
-    position: absolute; /* Posizione assoluta per il menu */
-    top: 50px; /* Spazio sopra */
-    right: 10px; /* Distanza dal lato destro */
-    background-color: #fff; /* Colore di sfondo del menu */
-    border-radius: 10px; /* Bordo stondato per il menu */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombra per il menu */
-    transition: all 0.3s ease; /* Transizione per un'apertura fluida */
-}
-
-.navbar.active {
-    display: flex; /* Mostra il menu se attivo */
-}
-
-/* Stili per i link del menu */
-.navbar ul {
-    list-style: none; /* Rimuovi i puntini */
-    padding: 0; /* Rimuovi il padding */
-    margin: 0; /* Rimuovi il margine */
-}
-
-.navbar li {
-    padding: 10px 20px; /* Padding per ogni voce */
-}
-
-.navbar a {
-    text-decoration: none; /* Rimuovi la sottolineatura */
-    color: #333; /* Colore del testo */
-}
-
-/* Hover per il menu */
-.navbar a:hover {
-    background-color: #f0f0f0; /* Colore di sfondo al passaggio del mouse */
-    border-radius: 5px; /* Bordo stondato */
-}
-
-/* Stile per il pulsante di contatto */
-.contact-button {
-    background-color: #FF5A5F; /* Colore rosso di Airbnb */
-    color: white;
-    padding: 10px 20px; /* Spaziatura interna */
-    text-decoration: none;
-    border-radius: 5px; /* Bordo stondato */
-    transition: background-color 0.3s ease;
-}
-
-/* Hover per il pulsante di contatto */
-.contact-button:hover {
-    background-color: #E2474B; /* Colore rosso scuro per l'effetto hover */
-}
-
-/* Media Queries per dispositivi mobili */
-@media (max-width: 600px) {
-    .menu-icon {
-        font-size: 24px; /* Dimensione dell'icona del menu su mobile */
-    }
-
-    .navbar {
-        position: relative; /* Posizione relativa su mobile */
-        top: auto; /* Rimuove il posizionamento verticale */
-        right: auto; /* Rimuove il posizionamento orizzontale */
+/* Responsive */
+@media (max-width: 768px) {
+    .slider-container {
+        width: 90%;
     }
 
     .airbnb-button {
-        font-size: 1.2em; /* Dimensione del pulsante su mobile */
-        padding: 15px 30px; /* Spaziatura interna su mobile */
+        width: 80%;
+        font-size: 1.2em;
     }
 
-    .profile-pic {
-        width: 60px; /* Dimensione dell'immagine del profilo su mobile */
-        height: 60px; /* Altezza dell'immagine del profilo su mobile */
+    .navbar {
+        width: 100%;
+        right: 0;
     }
 
-    .language-selector {
-        font-size: 1em; /* Dimensione della selezione lingua su mobile */
+    .menu-icon {
+        font-size: 30px;
     }
 }
