@@ -4,7 +4,7 @@
 .header {
     display: flex;
     align-items: center;
-    justify-content: center; /* Distribuisce lo spazio tra il logo e il menù */
+    justify-content: space-between; /* Distribuisce lo spazio tra il logo e il menù */
     background-color: #ffffff;
     padding: 15px 30px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -19,7 +19,7 @@
     align-items: center;
     padding: 10px;
     position: absolute; /* Posizionamento assoluto per controllare la posizione */
-    right: 50px; /* Sposta il burger menu più a destra */
+    right: 20px; /* Sposta il burger menu più a destra */
     z-index: 1001; /* Assicura che sia sopra altri elementi */
 }
 
