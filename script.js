@@ -55,3 +55,14 @@ setInterval(autoSlide, 4000);
 
 // Inizializza il primo slide come attivo
 slides[currentIndex].classList.add('active');
+
+
+// Funzione per cambiare la lingua del sito
+function changeLanguage(language) {
+    if (language === 'it') {
+        window.location.href = 'index.html'; // Cambia alla versione italiana del sito
+    } else if (language === 'en') {
+        window.location.href = 'index-en.html'; // Cambia alla versione inglese del sito
+    }
+}
+
