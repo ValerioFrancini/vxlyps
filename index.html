@@ -4,89 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Il Moro - Appartamento nel centro Storico di Tuscania</title>
-    <link rel="stylesheet" href="style.css"> <!-- Collegamento al CSS -->
-    <link rel="icon" href="img/favicon.png" type="image/png"> <!-- Favicon -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <!-- Header con logo e titolo -->
-    <header class="header">
-        <div class="logo-container">
-            <img src="img/logo_il_moro.png" alt="Logo Il Moro" class="logo-image">
+    <header>
+        <div class="logo-title">
+            <img src="img/logo.png" alt="Logo Il Moro" class="logo">
+            <h1>Il Moro - Appartamento nel centro Storico di Tuscania</h1>
         </div>
-        <h1>Il Moro - Appartamento nel centro Storico di Tuscania</h1>
+        <div class="burger-menu" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav id="nav-menu" class="nav-menu">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#info">Informazioni</a></li>
+                <li><a href="#contact">Contatti</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Menu Hamburger -->
-    <div class="menu-icon" onclick="toggleMenu()">
-        &#9776; <!-- Icona del menu (tre linee) -->
-    </div>
-    <nav id="navbar" class="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="mappa.html">Mappa</a></li>
-            <li><a href="recensioni.html">Recensioni</a></li>
-            <li><a href="contatti.html">Contatti</a></li>
-        </ul>
-    </nav>
-
-    <!-- Inizio dello slider -->
-    <div class="slider-container">
-        <div class="slider" id="slider">
-            <img src="img/img_1.jpg" alt="Foto 1" class="slider-image">
-            <img src="img/img_2.JPG" alt="Foto 2" class="slider-image">
-            <img src="img/img_3.JPG" alt="Foto 3" class="slider-image">
-            <img src="img/img_4.JPG" alt="Foto 4" class="slider-image">
-            <img src="img/img_5.JPG" alt="Foto 5" class="slider-image">
+    <section id="home" class="slider-section">
+        <div class="slider">
+            <img src="img/img_1.jpg" class="slider-image" alt="Immagine 1">
+            <img src="img/img_2.jpg" class="slider-image" alt="Immagine 2">
+            <img src="img/img_3.jpg" class="slider-image" alt="Immagine 3">
         </div>
-        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-        <button class="next" onclick="moveSlide(1)">&#10095;</button>
-    </div>
-    <!-- Fine dello slider -->
+        <button class="book-button">Prenota su Airbnb</button>
+    </section>
 
-    <a href="https://www.airbnb.it/rooms/971046443266957060" target="_blank" class="airbnb-button">Prenota su Airbnb</a>
-
-    <!-- Inizio descrizione spazi -->
-    <div class="description">
+    <section id="info" class="info-section">
         <div class="card">
             <h2>INFORMAZIONI SULLA CASA</h2>
-            <p>La casa è immersa nel paesaggio suggestivo del grazioso borgo medievale. Perfetto per passare del tempo lontano dalle distrazioni della città e dedicarsi alle passeggiate nei vicoli del centro e assaporare le specialità del posto. Allontanandosi dal piccolo borgo sono facilmente raggiungibili boschi e luoghi naturalistici perfetti per piccole escursioni in famiglia.</p>
+            <p>La casa è immersa nel paesaggio suggestivo del grazioso borgo medievale...</p>
         </div>
-    </div>
-    <!-- Fine descrizione spazi -->
+        <div class="card">
+            <h2>SERVIZI INCLUSI</h2>
+            <p>WiFi gratuito, parcheggio riservato, cucina attrezzata, aria condizionata...</p>
+        </div>
+        <div class="card">
+            <h2>ATTRAZIONI VICINE</h2>
+            <p>Centro storico di Tuscania, parco naturale, sentieri per escursioni...</p>
+        </div>
+    </section>
 
-    <footer class="footer">
+    <footer>
         <div class="footer-content">
-            <div class="language-selector">
-                <label for="language">Lingua:</label>
-                <select id="language" onchange="changeLanguage(this.value)">
-                    <option value="it">Italiano</option>
-                    <option value="en">English</option>
-                </select>
-            </div>
-            <div class="social-icons">
-                <img src="img/instagram-icon.png" alt="Instagram" class="social-icon">
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Il Moro Tuscania. All rights reserved.</p>
-            </div>
+            <p>&copy; 2024 Il Moro Tuscania. All rights reserved.</p>
         </div>
     </footer>
 
-    <script>
-        function toggleMenu() {
-            const navbar = document.getElementById("navbar");
-            navbar.classList.toggle("active");
-        }
-
-        let currentIndex = 0;
-        const slides = document.querySelector('.slider');
-        const totalImages = slides.children.length;
-
-        function moveSlide(direction) {
-            currentIndex = (currentIndex + direction + totalImages) % totalImages;
-            slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
