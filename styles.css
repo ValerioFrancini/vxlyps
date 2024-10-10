@@ -1,5 +1,27 @@
 /* styles.css */
 
+/* Stili per l'header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribuisce lo spazio tra il logo e il menù */
+    background-color: #ffffff;
+    padding: 15px 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.burger-menu {
+    cursor: pointer;
+    display: flex; /* Imposta il display a flex per allineare correttamente le linee */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    position: relative; /* Assicura che il menu burger sia posizionato correttamente */
+    z-index: 1001; /* Mettilo sopra altri elementi */
+    margin-left: auto; /* Spinge il menu burger verso destra */
+}
+
 
 /* Stili per il pulsante "Prenota su Airbnb" */
 .airbnb-button-container {
