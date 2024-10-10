@@ -18,9 +18,9 @@
     justify-content: center;
     align-items: center;
     padding: 10px;
-    position: relative; /* Assicura che il menu burger sia posizionato correttamente */
-    z-index: 1001; /* Mettilo sopra altri elementi */
-    margin-left: auto; /* Spinge il menu burger verso destra */
+    position: absolute; /* Posizionamento assoluto per controllare la posizione */
+    right: 20px; /* Sposta il burger menu più a destra */
+    z-index: 1001; /* Assicura che sia sopra altri elementi */
 }
 
 
