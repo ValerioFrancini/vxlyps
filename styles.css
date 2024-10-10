@@ -1,119 +1,89 @@
-/* styles.css */
-
-/* Generali */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
-    margin: 0;
-    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+    text-align: center;
+    margin: 20px;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #fff;
-    border-bottom: 1px solid #ccc;
+h1 {
+    color: #2c3e50;
+    font-size: 2.5em;
+    margin-top: 5px; /* Ridotto il margine superiore per avvicinare il titolo al logo */
+    margin-bottom: 20px;
 }
 
-.logo-title {
-    display: flex;
-    align-items: center;
+p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    text-align: justify; /* Testo giustificato */
 }
 
-.logo {
-    width: 50px;
+/* Stile per il logo */
+.logo-container {
+    text-align: center;
+    margin: 5px 0; /* Ridotto ulteriormente il margine per ridurre lo spazio tra logo e titolo */
+}
+
+.logo-image {
+    max-width: 250px; /* Aumentata la larghezza del logo su desktop */
     height: auto;
-    margin-right: 10px;
 }
 
-.burger-menu {
-    cursor: pointer;
-}
-
-.burger-menu .line {
-    width: 25px;
-    height: 3px;
-    background-color: #333;
-    margin: 4px 0;
-    transition: 0.4s;
-}
-
-/* Animazione menù burger */
-.nav-menu {
-    display: none;
-    flex-direction: column;
-    background-color: #fff;
-    position: absolute;
-    right: 20px;
-    top: 60px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.nav-menu.open {
-    display: flex;
-}
-
-.slider-section {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.slider {
-    display: flex;
-    overflow: hidden;
-    width: 90%;
-    max-width: 1200px;
-}
-
-.slider-image {
-    width: 100%;
-    object-fit: cover;
-}
-
-.book-button {
-    margin-top: 20px;
-    padding: 12px 24px;
-    background-color: #ff5a5f;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 0 10px rgba(255, 90, 95, 0.6);
-}
-
-.book-button:hover {
-    background-color: #e74c3c;
-    transform: scale(1.1);
-}
-
-/* Stile delle card */
-.card, .contact-card {
-    background-color: white;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 15px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    width: 80%;
+/* Stile per ogni singola "card" */
+.card {
+    background-color: #ffffff; /* Colore di sfondo bianco per le card */
+    padding: 15px;
+    margin: 20px auto;
     max-width: 800px;
-    text-align: center;
+    border-radius: 10px; /* Bordo stondato */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Allineamento del testo a sinistra */
 }
 
-.map iframe {
-    width: 100%;
-    height: 300px;
-    border: none;
-    border-radius: 10px;
-    margin-top: 15px;
+.card h2, .card h3 {
+    color: #2c3e50;
+    text-transform: uppercase; /* Sottotitoli in capslock */
+    text-align: center; /* Testo centrato per il titolo */
 }
 
-footer {
-    background-color: #333;
-    color: white;
+.card p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Stile per il footer */
+.footer {
+    background-color: #1a1a1a; /* Colore di sfondo scuro simile all'esempio */
+    color: #fff;
+    padding: 20px 0;
     text-align: center;
-    padding: 10px;
+    font-size: 0.9em;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Allinea il contenuto a sinistra e a destra */
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.language-selector select {
+    font-size: 1.2em; /* Aumenta la dimensione del selettore della lingua su mobile */
+    padding: 10px; /* Aumenta il padding per rendere il pulsante più grande e cliccabile */
+}
+
+.social-icon {
+    width: 24px; /* Ridotta dimensione dell'icona di Instagram */
+    height: 24px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* Media query per migliorare il layout sui dispositivi mobili */
+@media (max-width: 768px) {
+    .card {
+        max-width: 90%; /* Consente al testo di occupare più spazio sullo schermo */
+    }
 }
