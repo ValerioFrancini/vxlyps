@@ -31,6 +31,17 @@
     margin: 20px 0;
 }
 
+/* Pulsante "Prenota su Airbnb" aggiornato per dispositivi mobili */
+@media (max-width: 768px) {
+    .airbnb-button {
+        font-size: 1rem; /* Riduci leggermente la dimensione del testo su mobile */
+        padding: 10px 20px; /* Riduci il padding per adattare meglio il testo */
+        min-width: 180px; /* Imposta una larghezza minima per evitare che il testo vada a capo */
+        text-align: center; /* Centra il testo all'interno del pulsante */
+    }
+}
+
+
 .airbnb-button {
     background: linear-gradient(135deg, #FF5A5F, #FF7E82); /* Gradiente con i colori di Airbnb */
     color: white;
