@@ -20,21 +20,26 @@
     </nav>
 
     <!-- Inizio del Header -->
-    <div class="header">
-        <img src="img/logo_il_moro.png" alt="Logo Il Moro" class="logo-image">
-        <h1>Il Moro - Appartamento nel centro Storico di Tuscania</h1>
+    <div class="header" style="display: flex; align-items: center;">
+        <img src="img/logo_il_moro.png" alt="Logo Il Moro" class="logo-image" style="margin-right: 15px;">
+        <h1 style="margin: 0;">Il Moro - Appartamento nel centro Storico di Tuscania</h1>
     </div>
     <!-- Fine del Header -->
 
-    <h1>Contatti</h1>
     <div class="description">
         <div class="card" style="display: flex; align-items: center;">
-            <img src="img/profile_pic.png" alt="Valerio" class="profile-pic" style="margin-right: 15px;"> <!-- Immagine a sinistra -->
+            <img src="img/profile_pic.png" alt="Valerio" class="profile-pic" onclick="openModal();"> <!-- Cliccando sull'immagine -->
             <div>
-                <h2>Ciao! Sono Valerio</h2>
+                <h2 style="margin: 0;">Ciao! Sono Valerio</h2>
                 <p>Ho 24 anni e in questa casa sono cresciuto. Tanti dei miei ricordi da bambino sono legati a queste mura, ai mobili di legno che non raccontano più una casa moderna e ristrutturata come ce ne sono tante, ma che per me, raccontano una storia, la mia e della mia famiglia.</p>
                 <p>Oggi sono uno studente di filosofia a Roma e la possibilità che questa casa possa essere ospite di tante nuove storie mi rende davvero contento.</p>
             </div>
+        </div>
+
+        <!-- Card per l'email -->
+        <div class="card" style="text-align: center; margin-top: 20px;">
+            <p>Per qualsiasi informazione, questa è la mia email:</p>
+            <a href="mailto:valerio.hostairbnb@gmail.com" class="airbnb-button">valerio.hostairbnb@gmail.com</a>
         </div>
     </div>
 
@@ -56,10 +61,30 @@
         </div>
     </footer>
 
+    <!-- Modale per l'immagine profilo -->
+    <div id="modal" class="modal" onclick="closeModal()">
+        <span class="close" onclick="closeModal();">&times;</span>
+        <img class="modal-content" id="modalImg">
+        <div id="caption"></div>
+    </div>
+
     <script>
         function toggleMenu() {
             const navbar = document.getElementById("navbar");
             navbar.classList.toggle("active");
+        }
+
+        function openModal() {
+            const modal = document.getElementById("modal");
+            const img = document.querySelector(".profile-pic");
+            const modalImg = document.getElementById("modalImg");
+            modal.style.display = "block";
+            modalImg.src = img.src;
+        }
+
+        function closeModal() {
+            const modal = document.getElementById("modal");
+            modal.style.display = "none";
         }
     </script>
 </body>
