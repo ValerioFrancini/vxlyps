@@ -98,16 +98,16 @@
 
 /* Stile del menu a tendina */
 .nav-menu {
-    display: none; /* Nasconde il menu a tendina di default */
+    display: none;
     flex-direction: column;
-    background-color: #ffffff;
     position: absolute;
-    right: 20px;
-    top: 65px; /* Posiziona il menu leggermente sotto il burger menu */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    top: 65px; /* Posiziona il menu più in basso rispetto al burger menu */
+    right: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     overflow: hidden;
-    z-index: 1000; /* Assicura che il menu appaia sopra altri elementi */
+    z-index: 1000; /* Assicura che il menu sia sopra agli altri elementi */
 }
 
 /* Mostra il menu a tendina quando il burger menu è attivo */
@@ -122,7 +122,7 @@
 }
 
 .logo-image {
-    width: 100px; /* Dimensione del logo */
+    width: 120px; /* Dimensione del logo */
     margin-right: 15px; /* Spazio tra il logo e il titolo */
 }
 
@@ -147,19 +147,6 @@
     }
 }
 
-/* Stile del menù di navigazione */
-.nav-menu {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 65px; /* Posiziona il menu più in basso rispetto al burger menu */
-    right: 30px;
-    background-color: #ffffff;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    overflow: hidden;
-    z-index: 1000; /* Assicura che il menu sia sopra agli altri elementi */
-}
 
 .menu-toggle:checked + .burger-menu + .nav-menu {
     display: flex;
