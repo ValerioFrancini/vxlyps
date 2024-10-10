@@ -4,31 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Il Moro - Appartamento nel centro Storico di Tuscania</title>
-    <link rel="stylesheet" href="style.css"> <!-- Collegamento al CSS -->
+    <link rel="stylesheet" href="styles.css"> <!-- Collegamento al CSS -->
     <link rel="icon" href="img/favicon.png" type="image/png"> <!-- Favicon -->
 </head>
 <body>
 
     <!-- Inizio del Header -->
-    <div class="header" style="display: flex; align-items: center;">
-        <img src="img/logo_il_moro.png" alt="Logo Il Moro" class="logo-image" style="margin-right: 15px;">
-        <h1 style="margin: 0;">Il Moro - Appartamento nel centro Storico di Tuscania</h1>
-    </div>
+    <header class="header">
+        <div class="logo-title">
+            <img src="img/logo_il_moro.png" alt="Logo Il Moro" class="logo-image">
+            <h1>Il Moro - Appartamento nel centro Storico di Tuscania</h1>
+        </div>
+    </header>
     <!-- Fine del Header -->
 
     <!-- Inizio dello slider -->
     <div class="slider-container">
         <div class="slider" id="slider">
-            <img src="img/img_1.jpg" alt="Foto 1" class="slider-image">
+            <img src="img/img_1.jpg" alt="Foto 1" class="slider-image active">
             <img src="img/img_2.jpg" alt="Foto 2" class="slider-image">
             <img src="img/img_3.jpg" alt="Foto 3" class="slider-image">
             <img src="img/img_4.jpg" alt="Foto 4" class="slider-image">
-            <img src="img/img_5.jpg" alt="Foto 5" class="slider-image">
-            <img src="img/img_6.jpg" alt="Foto 6" class="slider-image">
-            <img src="img/img_7.jpg" alt="Foto 7" class="slider-image">
-            <img src="img/img_8.jpg" alt="Foto 8" class="slider-image">
-            <img src="img/img_9.jpg" alt="Foto 9" class="slider-image">
-            <img src="img/img_10.jpg" alt="Foto 10" class="slider-image">
         </div>
         <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
         <button class="next" onclick="moveSlide(1)">&#10095;</button>
@@ -37,13 +33,15 @@
 
     <a href="https://www.airbnb.it/rooms/971046443266957060" target="_blank" class="airbnb-button">Prenota su Airbnb</a>
 
+    <!-- Inizio descrizione -->
     <div class="description">
         <div class="card">
             <h2>INFORMAZIONI SULLA CASA</h2>
-            <p>La casa è immersa nel paesaggio suggestivo del grazioso borgo medievale. Perfetto per passare del tempo lontano dalle distrazioni della città e dedicarsi alle passeggiate nei vicoli del centro e assaporare le specialità del posto. Allontanandosi dal piccolo borgo sono facilmente raggiungibili boschi e luoghi naturalistici perfetti per piccole escursioni in famiglia.</p>
+            <p>La casa è immersa nel paesaggio suggestivo del grazioso borgo medievale, perfetto per passeggiate nei vicoli del centro e specialità locali.</p>
         </div>
     </div>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
             <div class="language-selector">
@@ -62,19 +60,6 @@
         </div>
     </footer>
 
-    <script>
-        let currentIndex = 0;
-        const slides = document.querySelectorAll('.slider-image');
-        const totalImages = slides.length;
-
-        function moveSlide(direction) {
-            slides[currentIndex].classList.remove('active'); // Nasconde l'immagine attuale
-            currentIndex = (currentIndex + direction + totalImages) % totalImages; // Calcola l'indice dell'immagine successiva
-            slides[currentIndex].classList.add('active'); // Mostra l'immagine successiva
-        }
-
-        // Inizializza il primo slide come attivo
-        slides[currentIndex].classList.add('active');
-    </script>
+    <script src="script.js"></script> <!-- Collegamento al JavaScript -->
 </body>
 </html>
