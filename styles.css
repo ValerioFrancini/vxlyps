@@ -42,7 +42,6 @@
     justify-content: center; /* Centra il contenuto all'interno del contenitore */
     z-index: 1000; /* Assicura che i pulsanti siano sopra gli altri elementi */
     width: 100%; /* Assicura che il contenitore riempia tutta la larghezza per un migliore posizionamento */
-    pointer-events: none; /* Evita che interferisca con altri elementi */
 }
 
 /* Regole specifiche per dispositivi mobili */
