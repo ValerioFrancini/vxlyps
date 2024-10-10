@@ -58,6 +58,22 @@ body {
     height: auto;
 }
 
+/* Stile per la header */
+.header {
+    background-color: #ffffff; /* Colore di sfondo della header */
+    padding: 20px; /* Padding intorno al contenuto */
+    text-align: center; /* Allinea il contenuto al centro */
+    margin-bottom: 20px; /* Margine inferiore per separare dalla sezione successiva */
+    border-radius: 10px; /* Bordo stondato per la header */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombra leggera per un effetto di profondità */
+}
+
+.header h1 {
+    font-size: 1.8em; /* Dimensione del titolo */
+    color: #2c3e50; /* Colore del titolo */
+    margin: 10px 0 0; /* Margine sopra per separare il titolo dall'immagine */
+}
+
 /* Stile per ogni singola "card" */
 .card {
     background-color: #ffffff; /* Colore di sfondo bianco per le card */
