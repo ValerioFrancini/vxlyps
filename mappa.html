@@ -4,30 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mappa - Il Moro</title>
-    <link rel="stylesheet" href="style.css"> <!-- Collegamento al CSS -->
+    <link rel="stylesheet" href="styles.css"> <!-- Collegamento al CSS -->
 </head>
 <body>
-    <div class="menu-icon" onclick="toggleMenu()">
-        &#9776; <!-- Icona del menu (tre linee) -->
-    </div>
-    <nav id="navbar" class="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="mappa.html">Mappa</a></li>
-            <li><a href="recensioni.html">Recensioni</a></li>
-            <li><a href="contatti.html">Contatti</a></li>
-        </ul>
-    </nav>
 
     <!-- Inizio del Header -->
-    <div class="header">
-        <img src="img/logo_il_moro.png" alt="Logo Il Moro" class="logo-image">
-        <h1>Il Moro - Appartamento nel centro Storico di Tuscania</h1>
-    </div>
+    <header class="header">
+        <div class="logo-title">
+            <img src="img/logo_il_moro.png" alt="Logo Il Moro" class="logo-image">
+            <h1 class="site-title">Il Moro - Appartamento nel centro Storico di Tuscania</h1>
+        </div>
+
+        <!-- Checkbox nascosto per controllare lo stato del menù burger -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        
+        <!-- Burger Menu -->
+        <label for="menu-toggle" class="burger-menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </label>
+
+        <!-- Menu a tendina per la navigazione -->
+        <nav id="nav-menu" class="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mappa.html">Mappa</a></li>
+                <li><a href="recensioni.html">Recensioni</a></li>
+                <li><a href="contatti.html">Contatti</a></li>
+            </ul>
+        </nav>
+    </header>
     <!-- Fine del Header -->
 
-    <h1>Mappa del Appartamento</h1>
-    <div class="map-container" style="text-align: center;"> <!-- Centra la mappa -->
+    <!-- Contenuto della pagina Mappa -->
+    <div class="map-container" style="text-align: center; margin-top: 30px;"> <!-- Centra la mappa -->
+        <h2>Mappa dell'Appartamento</h2>
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.967067852879!2d11.751212914743236!3d42.470783179187665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132fc001567d1b55%3A0x28cda79272438878!2sVia%20del%20Moro%2C%2071%2C%2010209%20Tuscania%20VT!5e0!3m2!1sit!2sit!4v1696847499621!5m2!1sit!2sit"
             width="600"
@@ -37,9 +49,10 @@
             loading="lazy"></iframe>
     </div>
 
+    <!-- Footer della pagina -->
     <footer class="footer">
         <div class="footer-content">
-            <div class="language-selector">
+            <div class="footer-language">
                 <label for="language">Lingua:</label>
                 <select id="language" onchange="changeLanguage(this.value)">
                     <option value="it">Italiano</option>
@@ -47,7 +60,9 @@
                 </select>
             </div>
             <div class="social-icons">
-                <img src="img/instagram-icon.png" alt="Instagram" class="social-icon">
+                <a href="https://instagram.com/appartamento_ilmoro" target="_blank" class="social-link">
+                    <img src="img/instagram-icon.png" alt="Instagram" class="instagram-icon">
+                </a>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2024 Il Moro Tuscania. All rights reserved.</p>
@@ -55,11 +70,21 @@
         </div>
     </footer>
 
+    <!-- Script JavaScript per le interazioni -->
     <script>
         function toggleMenu() {
             const navbar = document.getElementById("navbar");
             navbar.classList.toggle("active");
         }
+
+        function changeLanguage(language) {
+            if (language === 'it') {
+                window.location.href = 'mappa.html'; // Cambia alla versione italiana
+            } else if (language === 'en') {
+                window.location.href = 'mappa-en.html'; // Cambia alla versione inglese
+            }
+        }
     </script>
+
 </body>
 </html>
