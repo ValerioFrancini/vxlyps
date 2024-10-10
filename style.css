@@ -1,89 +1,67 @@
 body {
     font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.light-mode {
     background-color: #f5f5f5;
     color: #333;
-    text-align: center;
-    margin: 20px;
 }
 
-h1 {
-    color: #2c3e50;
-    font-size: 2.5em;
-    margin-top: 5px; /* Ridotto il margine superiore per avvicinare il titolo al logo */
-    margin-bottom: 20px;
-}
-
-p {
-    font-size: 1.2em;
-    margin-bottom: 15px;
-    text-align: justify; /* Testo giustificato */
-}
-
-/* Stile per il logo */
-.logo-container {
-    text-align: center;
-    margin: 5px 0; /* Ridotto ulteriormente il margine per ridurre lo spazio tra logo e titolo */
-}
-
-.logo-image {
-    max-width: 250px; /* Aumentata la larghezza del logo su desktop */
-    height: auto;
-}
-
-/* Stile per ogni singola "card" */
-.card {
-    background-color: #ffffff; /* Colore di sfondo bianco per le card */
-    padding: 15px;
-    margin: 20px auto;
-    max-width: 800px;
-    border-radius: 10px; /* Bordo stondato */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: left; /* Allineamento del testo a sinistra */
-}
-
-.card h2, .card h3 {
-    color: #2c3e50;
-    text-transform: uppercase; /* Sottotitoli in capslock */
-    text-align: center; /* Testo centrato per il titolo */
-}
-
-.card p {
-    line-height: 1.6;
-    margin-bottom: 10px;
-}
-
-/* Stile per il footer */
-.footer {
-    background-color: #1a1a1a; /* Colore di sfondo scuro simile all'esempio */
+body.dark-mode {
+    background-color: #1a1a1a;
     color: #fff;
-    padding: 20px 0;
-    text-align: center;
-    font-size: 0.9em;
 }
 
-.footer-content {
-    display: flex;
-    justify-content: space-between; /* Allinea il contenuto a sinistra e a destra */
-    align-items: center;
-    max-width: 800px;
-    margin: 0 auto;
+/* Switch modalità dark/light */
+.mode-switch-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
 }
 
-.language-selector select {
-    font-size: 1.2em; /* Aumenta la dimensione del selettore della lingua su mobile */
-    padding: 10px; /* Aumenta il padding per rendere il pulsante più grande e cliccabile */
+.switch input {
+    display: none;
 }
 
-.social-icon {
-    width: 24px; /* Ridotta dimensione dell'icona di Instagram */
-    height: 24px;
-    margin-left: 10px;
+.switch .slider-switch {
+    position: relative;
+    width: 50px;
+    height: 25px;
+    background-color: #ccc;
+    border-radius: 15px;
     cursor: pointer;
 }
 
-/* Media query per migliorare il layout sui dispositivi mobili */
-@media (max-width: 768px) {
-    .card {
-        max-width: 90%; /* Consente al testo di occupare più spazio sullo schermo */
-    }
+.switch .slider-switch:before {
+    content: '';
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    background-color: white;
+    border-radius: 50%;
+    top: 1px;
+    left: 1px;
+    transition: 0.3s;
+}
+
+input:checked + .slider-switch:before {
+    transform: translateX(25px);
+}
+
+/* Card styling, animazioni hover e miglioramenti pulsante */
+.card:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+.airbnb-button {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 5px #ff5a5f; }
+    50% { box-shadow: 0 0 20px #ff5a5f; }
+    100% { box-shadow: 0 0 5px #ff5a5f; }
 }
