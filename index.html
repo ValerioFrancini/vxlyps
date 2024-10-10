@@ -7,6 +7,19 @@
 </head>
 <body class="light-mode"> <!-- Aggiunta della classe light-mode per la modalità scura/chiara -->
 
+    <!-- Menu Hamburger -->
+    <div class="menu-icon" onclick="toggleMenu()">
+        &#9776; <!-- Icona del menu (tre linee) -->
+    </div>
+    <nav id="navbar" class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="mappa.html">Mappa</a></li>
+            <li><a href="recensioni.html">Recensioni</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
+        </ul>
+    </nav>
+
     <!-- Switch modalità dark/light -->
     <div class="mode-switch-container">
         <label class="switch">
@@ -45,16 +58,6 @@
             <h2>INFORMAZIONI SULLA CASA</h2>
             <p>La casa è immersa nel paesaggio suggestivo del grazioso borgo medievale...</p>
         </div>
-
-        <div class="card">
-            <h3>LO SPAZIO</h3>
-            <p>L’appartamento si trova all’interno delle mura di Tuscania...</p>
-        </div>
-
-        <div class="card">
-            <h3>ALTRE COSE DA TENERE A MENTE</h3>
-            <p>Al vostro arrivo troverete in camera da letto asciugamani e lenzuola fresche...</p>
-        </div>
     </div>
 
     <footer class="footer">
@@ -76,15 +79,9 @@
     </footer>
 
     <script>
-        let currentIndex = 0;
-        const slides = document.querySelector('.slider');
-        const totalImages = slides.children.length;
-
-        setInterval(() => moveSlide(1), 5000); // Transizione automatica ogni 5 secondi
-
-        function moveSlide(direction) {
-            currentIndex = (currentIndex + direction + totalImages) % totalImages;
-            slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+        function toggleMenu() {
+            const navbar = document.getElementById("navbar");
+            navbar.classList.toggle("active");
         }
 
         function toggleMode() {
