@@ -1,159 +1,233 @@
+/* styles.css */
+
 /* Rimuove lo stile standard del link per il logo e il titolo */
 .home-link {
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    align-items: center;
+    text-decoration: none; /* Rimuove la sottolineatura */
+    color: inherit; /* Mantiene il colore originale del testo */
+    display: flex; /* Mantiene il layout flex per il logo e il titolo */
+    align-items: center; /* Allinea il logo e il titolo verticalmente */
 }
 
 /* Stili per l'header */
 .header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* Distribuisce lo spazio tra il logo e il menù */
     background-color: #ffffff;
     padding: 15px 30px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    position: relative;
+    position: relative; /* Necessario per posizionare il logo correttamente */
 }
 
 .burger-menu {
     cursor: pointer;
-    display: flex;
+    display: flex; /* Imposta il display a flex per allineare correttamente le linee */
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 10px;
-    position: relative;
-    z-index: 1001;
-    margin-left: auto;
+    position: relative; /* Posizionamento assoluto per controllare la posizione */
+    right: 0px; /* Sposta il burger menu più a destra */
+    z-index: 1001; /* Assicura che sia sopra altri elementi */
+    margin-left: auto; /* Spinge il burger menu a destra completamente */
 }
 
 /* Posiziona il pulsante Airbnb centrato in basso nello slider */
 .booking-buttons-container {
     position: absolute;
-    bottom: 20px;
+    bottom: 20px; /* Posiziona il pulsante 20px sopra il bordo inferiore dello slider */
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); /* Centra orizzontalmente il pulsante */
     display: flex;
-    justify-content: center;
-    z-index: 1000;
-    width: 100%;
+    justify-content: center; /* Centra il contenuto all'interno del contenitore */
+    z-index: 1000; /* Assicura che i pulsanti siano sopra gli altri elementi */
+    width: 100%; /* Assicura che il contenitore riempia tutta la larghezza per un migliore posizionamento */
+}
+
+/* Regole specifiche per dispositivi mobili */
+@media (max-width: 768px) {
+    .booking-buttons-container {
+        position: static; /* Imposta il posizionamento statico su mobile per evitare problemi di overflow */
+        transform: none; /* Rimuove la trasformazione per il posizionamento */
+        bottom: 0; /* Resetta la posizione */
+        width: auto; /* Adatta la larghezza per mobile */
+        justify-content: center; /* Centra il pulsante anche su mobile */
+    }
+
+    .airbnb-button {
+        width: 90%; /* Ridimensiona il pulsante su mobile per adattarlo meglio allo schermo */
+        margin: 0 auto; /* Centra il pulsante */
+    }
 }
 
 /* Stili per il pulsante "Prenota su Airbnb" */
+.airbnb-button-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+/* Pulsante "Prenota su Airbnb" aggiornato per dispositivi mobili */
+@media (max-width: 768px) {
+    .airbnb-button {
+        font-size: 1rem; /* Riduci leggermente la dimensione del testo su mobile */
+        padding: 10px 20px; /* Riduci il padding per adattare meglio il testo */
+        min-width: 180px; /* Imposta una larghezza minima per evitare che il testo vada a capo */
+        text-align: center; /* Centra il testo all'interno del pulsante */
+        bottom: 10px; /* Riduci la distanza dal bordo inferiore per migliorare l'aspetto su mobile */
+    }
+}
+
+
 .airbnb-button {
-    background: linear-gradient(135deg, #FF5A5F, #FF7E82);
+    background: linear-gradient(135deg, #FF5A5F, #FF7E82); /* Gradiente con i colori di Airbnb */
     color: white;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
     padding: 15px 30px;
     border: none;
-    border-radius: 30px;
+    border-radius: 30px; /* Angoli arrotondati per un look moderno */
     box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Effetti al passaggio del mouse */
     cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .airbnb-button:hover {
-    background: linear-gradient(135deg, #FF7E82, #FF5A5F);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #FF7E82, #FF5A5F); /* Inverti il gradiente al passaggio del mouse */
+    transform: translateY(-3px); /* Solleva leggermente il pulsante */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Aumenta l'ombreggiatura */
 }
 
 .airbnb-button:active {
-    transform: translateY(1px);
-    background: #FF5A5F;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(1px); /* Effetto di clic quando si preme il pulsante */
+    background: #FF5A5F; /* Colore solido per un feedback immediato */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Riduce l'ombreggiatura quando il pulsante viene cliccato */
 }
 
-/* Slider styling */
+/* Stili aggiornati per lo slider */
 .slider-container {
     position: relative;
     max-width: 90%;
-    height: 50vh;
+    height: 50vh; /* Altezza ridotta per un aspetto più compatto */
     margin: auto;
     overflow: hidden;
     border-radius: 10px;
-    background-color: #f0f0f0;
+    background-color: #f0f0f0; /* Colore di sfondo per evitare spazi vuoti durante il caricamento */
 }
 
 .slider {
-    display: flex;
-    transition: transform 0.8s ease;
+    display: flex; /* Disposizione delle immagini in linea orizzontale */
+    transition: transform 0.8s ease; /* Aggiunge la transizione di scorrimento */
 }
 
 .slider-image {
-    min-width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+    min-width: 100%; /* Ogni immagine occupa l'intera larghezza del contenitore */
+    height: 100%; /* Adatta l'immagine all'altezza del contenitore */
+    object-fit: cover; /* Copre completamente l'area dello slider mantenendo le proporzioni */
+    display: block; /* Elimina eventuali margini o spazi vuoti */
 }
 
-/* Stili per slider su schermi grandi (desktop) */
-@media (min-width: 1024px) {
-    .slider-container {
-        max-width: 70%;
-        height: 60vh;
-        margin: auto;
-    }
+
+/* Posiziona il pulsante Airbnb centrato in basso nello slider */
+.slider-button-container {
+    position: absolute;
+    bottom: 20px; /* Posiziona il pulsante 20px sopra il bordo inferiore dello slider */
+    left: 50%;
+    transform: translateX(-50%); /* Centra orizzontalmente il pulsante */
+}
+
+.slider {
+    display: flex; /* Disposizione delle immagini in linea orizzontale */
+    transition: transform 0.8s ease; /* Aggiunge la transizione di scorrimento */
+}
+
+.slider-image {
+    min-width: 100%; /* Ogni immagine occupa l'intera larghezza del contenitore */
+    height: 100%; /* Adatta l'immagine all'altezza del contenitore */
+    object-fit: cover; /* Mantiene le proporzioni corrette, riempendo il contenitore senza distorcere l'immagine */
+    display: block; /* Evita spazi vuoti intorno all'immagine */
 }
 
 /* Regole specifiche per dispositivi mobili */
 @media (max-width: 768px) {
     .slider-container {
-        max-width: 95%;
-        height: 30vh;
-        margin: 10px auto;
+        max-width: 95%; /* Rendi il contenitore dello slider più stretto su mobile */
+        height: 30vh; /* Riduci l'altezza dello slider su mobile per una migliore proporzione */
+        margin: 10px auto; /* Aggiungi un piccolo margine per centrare meglio su mobile */
     }
 
-    .airbnb-button {
-        width: 90%;
-        margin: 0 auto;
+    .slider-image {
+        object-fit: cover; /* Mantiene le proporzioni corrette riempiendo lo spazio disponibile */
+        height: 100%; /* Adatta l'immagine all'altezza del contenitore */
+        width: 100%; /* Assicura che l'immagine riempia la larghezza dello schermo */
     }
 }
 
-/* Burger menu styling */
+/* Stili per slider su schermi grandi (desktop) */
+@media (min-width: 1024px) {
+    .slider-container {
+        max-width: 70%; /* Aumenta la larghezza dello slider su desktop */
+        height: 60vh; /* Aumenta l'altezza dello slider per occupare più spazio */
+        margin: auto;
+    }
+}
+
+
+/* Nascondi l'input checkbox del burger menu */
 .menu-toggle {
-    display: none;
+    display: none; /* Nasconde l'elemento checkbox per eliminare il pulsante tipo "to-do" */
+}
+
+/* Stili aggiornati per il menù burger migliorato */
+.burger-menu {
+    cursor: pointer;
+    display: flex; /* Imposta il display a flex per allineare correttamente le linee */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    position: relative; /* Assicura che il menu burger sia posizionato correttamente */
+    z-index: 1001; /* Mettilo sopra altri elementi */
 }
 
 .burger-menu .line {
-    width: 25px;
-    height: 5px;
-    background-color: #2c3e50;
+    width: 25px; /* Lunghezza delle linee del menu */
+    height: 5px; /* Spessore delle linee del menu */
+    background-color: #2c3e50; /* Colore delle linee */
     margin: 6px 0;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Animazioni per l'effetto di apertura */
 }
 
-/* Menu toggle effect */
+/* Effetto animazione quando il menù burger è attivo */
 .menu-toggle:checked + .burger-menu .line:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
 }
 
 .menu-toggle:checked + .burger-menu .line:nth-child(2) {
-    opacity: 0;
+    opacity: 0; /* Nasconde la linea centrale */
 }
 
 .menu-toggle:checked + .burger-menu .line:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
 }
 
+/* Stile del menu a tendina */
 .nav-menu {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 70px;
+    top: 70px; /* Posiziona il menu più in basso rispetto al burger menu */
     right: 20px;
     background-color: #ffffff;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     overflow: hidden;
-    z-index: 1000;
-    padding: 10px;
+    z-index: 1000; /* Assicura che il menu sia sopra agli altri elementi */
+    padding: 10px; /* Spazio interno per le voci del menu */
 }
 
+/* Migliora lo stile delle voci del menu */
 .nav-menu ul {
     list-style: none;
     padding: 0;
@@ -161,93 +235,139 @@
 }
 
 .nav-menu ul li {
-    margin: 10px 0;
+    margin: 10px 0; /* Spaziatura tra le voci del menu */
 }
 
 .nav-menu ul li a {
-    padding: 12px 20px;
+    padding: 12px 20px; /* Spazio interno per rendere le voci del menu più cliccabili */
     text-decoration: none;
-    font-size: 1.1rem;
-    color: #2c3e50;
-    background-color: #f0f0f0;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 1.1rem; /* Aumenta la dimensione del testo per migliorare la leggibilità */
+    color: #2c3e50; /* Colore elegante per il testo */
+    background-color: #f0f0f0; /* Colore di sfondo chiaro per le voci del menu */
+    border-radius: 5px; /* Bordi arrotondati per un look moderno */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transizioni al passaggio del mouse */
 }
 
+/* Effetto hover per le voci del menu */
 .nav-menu ul li a:hover {
-    background-color: #FF5A5F;
-    color: white;
+    background-color: #FF5A5F; /* Colore di sfondo al passaggio del mouse */
+    color: white; /* Colore del testo quando si passa sopra */
 }
+
+/* Mostra il menu a tendina quando il burger menu è attivo */
+.menu-toggle:checked + .burger-menu + .nav-menu {
+    display: flex; /* Mostra il menu a tendina */
+}
+
 
 /* Posiziona il logo a sinistra */
 .logo-title {
-    position: absolute;
-    left: 20px;
+    position: absolute; /* Posiziona il logo in modo assoluto a sinistra */
+    left: 20px; /* Riduce la distanza dal bordo sinistro */
     display: flex;
     align-items: center;
 }
 
 .logo-image {
-    width: 170px;
-    margin-right: 10px;
+    width: 170px; /* Dimensione del logo */
+    margin-right: 10px; /* Spazio tra il logo e il titolo */
 }
 
 .site-title {
     font-size: 2rem;
-    color: #2c3e50;
-    text-align: center;
+    color: #2c3e50; /* Colore del titolo */
+    text-align: center; /* Centra il testo */
 }
 
 /* Nascondi il titolo su dispositivi mobili */
 @media (max-width: 768px) {
     .site-title {
-        display: none;
+        display: none; /* Nasconde il titolo sui dispositivi mobili */
     }
 
-    .logo-title {
-        position: relative;
-        justify-content: center;
-        margin: 0 auto;
+   .logo-title {
+        position: relative; /* Cambia la posizione a relativa per centrare */
+        justify-content: center; /* Centra il logo quando il titolo è nascosto */
+        margin: 0 auto; /* Centra il contenitore del logo */
+    }
+
+    .logo-image {
+        width: 170px; /* Dimensione del logo su mobile */
+        margin-right: 0; /* Rimuove il margine per centrare meglio il logo */
     }
 }
 
-/* Footer styling */
-.footer {
-    background-color: #2c3e50;
-    color: #ffffff;
-    padding: 20px 0;
-    text-align: center;
+
+.menu-toggle:checked + .burger-menu + .nav-menu {
+    display: flex;
 }
 
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+/* Stile per le voci del menù */
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-/* Centra la card e imposta la foto come circolare */
-.contact-card, .email-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    margin: 20px auto;
-    max-width: 800px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+.nav-menu ul li a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #2c3e50;
+    transition: background-color 0.3s ease;
+}
+
+.nav-menu ul li a:hover {
+    background-color: #f0f0f5; /* Colore di sfondo chiaro quando si passa sopra */
+}
+
+/* Stili aggiornati per lo slider */
+.slider-container {
+    position: relative;
+    max-width: 100%;
+    height: 400px; /* Altezza fissa per mantenere la consistenza dello slider */
+    margin: auto;
+    overflow: hidden;
     border-radius: 10px;
-    text-align: center;
+    background-color: #f0f0f0; /* Colore di sfondo per evitare spazi vuoti durante il caricamento */
 }
 
-/* Assicurati che entrambe le card abbiano lo stesso comportamento su mobile */
-@media (max-width: 768px) {
-    .contact-card, .email-card {
-        width: 90%; /* Rendi la larghezza delle card coerente su dispositivi mobili */
-        margin: 0 auto; /* Centra le card all'interno del contenitore */
-    }
+.slider {
+    display: flex; /* Disposizione delle immagini in linea orizzontale */
+    transition: transform 0.8s ease; /* Aggiunge la transizione di scorrimento */
+}
+
+.slider-image {
+    min-width: 100%; /* Ogni immagine occupa l'intera larghezza del contenitore */
+    height: 100%; /* Adatta l'immagine all'altezza del contenitore */
+    object-fit: cover; /* Mantiene le proporzioni corrette */
+}
+
+/* Stili per i controlli dello slider */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 3px;
+    user-select: none;
+    transition: background-color 0.3s ease;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
 }
 
 /* Stili per le card */
@@ -285,17 +405,146 @@
     line-height: 1.5; /* Migliora la leggibilità del testo */
 }
 
+/* Stili per l'icona di Instagram */
+.instagram-icon {
+    width: 30px; /* Dimensione dell'icona */
+    height: 30px;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Transizione per l'effetto hover */
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #FF5A5F, #FF7E82); /* Gradiente di Airbnb */
+    border-radius: 50%; /* Rende lo sfondo circolare */
+    padding: 8px;
+    transition: background 0.3s ease, transform 0.3s ease; /* Effetti di transizione per l'hover */
+}
+
+.social-link:hover {
+    background: linear-gradient(135deg, #FF7E82, #FF5A5F); /* Inverte il gradiente al passaggio del mouse */
+    transform: scale(1.1); /* Ingrandisce leggermente l'icona al passaggio del mouse */
+}
+
+.instagram-icon:hover {
+    filter: brightness(1.2); /* Schiarisce l'icona al passaggio del mouse */
+}
+
+
+/* Stili per il footer */
+.footer {
+    background-color: #2c3e50; /* Colore di sfondo scuro */
+    color: #ffffff; /* Colore del testo chiaro */
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-icons {
+    margin-bottom: 10px;
+}
+
+.social-link {
+    color: #FF5A5F; /* Colore rosso di Airbnb per il link */
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.social-link:hover {
+    color: #FF7E82; /* Cambia colore al passaggio del mouse */
+}
+
+.footer-language {
+    margin: 10px 0;
+    color: #ffffff;
+}
+
+.footer-language select {
+    background-color: #ffffff;
+    color: #2c3e50;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.footer-bottom {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #d1d1d1; /* Colore grigio chiaro per il testo dei diritti riservati */
+}
+
+/* Centra la card e imposta la foto come circolare */
+.contact-card {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra la card */
+    gap: 20px; /* Spazio tra la foto e il testo */
+    margin: 20px auto; /* Margine automatico per centrare la card */
+    max-width: 800px; /* Limita la larghezza della card */
+    background-color: #ffffff; /* Colore di sfondo della card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombreggiatura leggera */
+    padding: 20px;
+    border-radius: 10px; /* Angoli arrotondati per un aspetto moderno */
+}
+
+.profile-pic {
+    width: 100px; /* Dimensione della foto */
+    height: 100px;
+    border-radius: 50%; /* Rende la foto circolare */
+    object-fit: cover; /* Mantiene le proporzioni della foto */
+    cursor: pointer; /* Mostra il cursore di puntatore per indicare che è cliccabile */
+}
+
+.contact-info {
+    flex: 1; /* Permette al testo di occupare il restante spazio */
+}
+
 /* Stili specifici per dispositivi mobili */
 @media (max-width: 768px) {
-    .card-container {
-        flex-direction: column; /* Disposizione verticale delle card su mobile */
-        align-items: center; /* Centra le card su mobile */
+    .contact-card, .email-card {
+        flex-direction: column; /* Disposizione verticale degli elementi nella card */
+        align-items: center; /* Centra tutti gli elementi */
+        text-align: center; /* Centra il testo */
     }
 
-    .card {
-        width: 90%; /* Larghezza della card più adatta su mobile */
-        max-width: 100%; /* Rimuove il limite di larghezza su dispositivi mobili */
-        margin: 10px auto; /* Margine automatico per centrare */
+    .profile-pic {
+        margin-bottom: 15px; /* Spazio tra la foto e il testo */
+        width: 120px; /* Dimensione della foto su mobile */
+        height: 120px;
+        border-radius: 50%; /* Rende la foto circolare */
+        object-fit: cover; /* Mantiene le proporzioni corrette della foto */
+    }
+
+    .description {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centra le card all'interno del contenitore */
+        gap: 20px; /* Spaziatura tra le card */
+        padding: 20px;
     }
 }
 
+/* Stili per centrare entrambe le card nella pagina Contatti */
+.contact-card, .email-card {
+    display: flex;
+    flex-direction: column; /* Disposizione verticale degli elementi nella card */
+    align-items: center; /* Centra tutti gli elementi */
+    justify-content: center; /* Centra il contenuto */
+    gap: 15px; /* Spazio tra gli elementi */
+    margin: 20px auto; /* Centra la card nella pagina */
+    max-width: 800px; /* Limita la larghezza della card */
+    background-color: #ffffff; /* Colore di sfondo della card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombreggiatura leggera */
+    padding: 20px;
+    border-radius: 10px; /* Angoli arrotondati */
+    text-align: center; /* Centra il testo all'interno della card */
+}
