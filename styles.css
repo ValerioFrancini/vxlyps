@@ -48,6 +48,7 @@
         padding: 10px 20px; /* Riduci il padding per adattare meglio il testo */
         min-width: 180px; /* Imposta una larghezza minima per evitare che il testo vada a capo */
         text-align: center; /* Centra il testo all'interno del pulsante */
+        bottom: 10px; /* Riduci la distanza dal bordo inferiore per migliorare l'aspetto su mobile */
     }
 }
 
