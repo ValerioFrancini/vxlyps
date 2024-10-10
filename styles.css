@@ -18,7 +18,7 @@ h1, h2, h3 {
 .header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center; /* Centro logo e titolo */
     background-color: #fff;
     padding: 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -34,9 +34,29 @@ h1, h2, h3 {
     margin-right: 15px;
 }
 
-/* Menù burger */
+.site-title {
+    font-size: 1.8em;
+}
+
+@media (max-width: 768px) {
+    .site-title {
+        font-size: 1.5em;
+    }
+
+    .header .site-title {
+        font-size: 1.5em;
+        margin-left: 10px;
+    }
+}
+
+/* Animazione Menù Burger */
 .burger-menu {
     cursor: pointer;
+    transition: transform 0.3s ease; /* Transizione */
+}
+
+.burger-menu.open {
+    transform: rotate(90deg); /* Ruota il menù burger quando aperto */
 }
 
 .burger-menu .line {
@@ -46,93 +66,10 @@ h1, h2, h3 {
     margin: 4px 0;
 }
 
-.nav-menu {
-    display: none;
-    flex-direction: column;
-    background-color: #fff;
-    position: absolute;
-    right: 20px;
-    top: 60px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+/* Responsive */
+@media (max-width: 768px) {
+    .site-title {
+        font-size: 1.8em;
+    }
 }
 
-.nav-menu.open {
-    display: flex;
-}
-
-.nav-menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.nav-menu ul li a {
-    text-decoration: none;
-    color: #333;
-    padding: 10px;
-    display: block;
-}
-
-/* Card */
-.card {
-    background-color: white;
-    border-radius: 15px; /* Bordo stondato per le card */
-    padding: 20px;
-    margin: 20px auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    max-width: 800px;
-    text-align: left;
-}
-
-/* Pulsante Airbnb */
-.airbnb-button {
-    background-color: #FF5A5F;
-    color: white;
-    padding: 12px 24px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    margin-top: 15px;
-    display: inline-block;
-    text-decoration: none;
-}
-
-.airbnb-button:hover {
-    background-color: #E2474B;
-    transform: scale(1.05);
-}
-
-/* Pulsante Instagram */
-.social-icon {
-    color: white;
-    background-color: #ff5a5f;
-    padding: 10px;
-    border-radius: 5px;
-    text-decoration: none;
-}
-
-.social-icon:hover {
-    background-color: #e2474b;
-}
-
-/* Footer */
-.footer {
-    background-color: #333;
-    color: white;
-    padding: 15px 20px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.footer-bottom {
-    margin-top: 10px;
-}
