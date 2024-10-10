@@ -453,5 +453,26 @@
     flex: 1; /* Permette al testo di occupare il restante spazio */
 }
 
+/* Stili specifici per dispositivi mobili */
+@media (max-width: 768px) {
+    .contact-card, .email-card {
+        flex-direction: column; /* Imposta la direzione della card in verticale */
+        align-items: center; /* Centra gli elementi all'interno della card */
+        text-align: center; /* Centra il testo all'interno della card */
+    }
+
+    .profile-pic {
+        margin-bottom: 15px; /* Aggiunge spazio tra la foto e il testo */
+    }
+
+    .description {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centra tutte le card */
+        gap: 20px; /* Spaziatura tra le card */
+        padding: 20px;
+    }
+}
+
 
 
