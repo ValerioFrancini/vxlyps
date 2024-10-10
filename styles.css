@@ -97,6 +97,18 @@
     background-color: #f0f0f5; /* Colore di sfondo chiaro quando si passa sopra */
 }
 
+/* Animazione di ingresso per il titolo */
+.site-title {
+    opacity: 0; /* Inizia nascosto */
+    transform: translateY(-20px); /* Posizione iniziale più alta */
+    transition: opacity 0.8s ease, transform 0.8s ease; /* Transizione fluida */
+}
+
+/* Attiva l'animazione quando la pagina viene caricata */
+.site-title.loaded {
+    opacity: 1; /* Mostra il titolo */
+    transform: translateY(0); /* Riporta il titolo alla posizione originale */
+}
 
 /* Animazione del logo durante il caricamento della pagina */
 .logo-image {
