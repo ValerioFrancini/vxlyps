@@ -30,7 +30,7 @@ function preloadImages() {
 .slider-container {
     position: relative;
     max-width: 100%;
-    height: 250px; /* Altezza ridotta per un aspetto più allungato */
+    height: 300px; /* Altezza ridotta per un aspetto più allungato */
     margin: auto;
     overflow: hidden;
     border-radius: 10px;
