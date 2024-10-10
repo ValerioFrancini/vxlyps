@@ -1,6 +1,11 @@
 /* styles.css */
 
-/* Stili per il menù burger migliorato */
+/* Nascondi l'input checkbox del burger menu */
+.menu-toggle {
+    display: none; /* Nasconde l'elemento checkbox per eliminare il pulsante tipo "to-do" */
+}
+
+/* Stili aggiornati per il menù burger migliorato */
 .header {
     display: flex;
     align-items: center;
@@ -13,7 +18,7 @@
 .burger-menu {
     cursor: pointer;
     display: inline-block;
-    position: relative; /* Permette di gestire la posizione assoluta degli elementi interni */
+    position: relative;
     padding: 10px;
     transition: transform 0.3s ease; /* Aggiunge un'animazione al clic */
 }
@@ -50,6 +55,24 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     overflow: hidden;
+}
+
+.menu-toggle:checked + .burger-menu + .nav-menu {
+    display: flex;
+}
+
+/* Migliora la posizione del menù a tendina */
+.nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 65px; /* Posiziona il menu più in basso rispetto al burger menu */
+    right: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 1000; /* Assicura che il menu sia sopra agli altri elementi */
 }
 
 .menu-toggle:checked + .burger-menu + .nav-menu {
