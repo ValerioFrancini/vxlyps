@@ -165,8 +165,8 @@ p {
 }
 
 .social-icon {
-    width: 24px; /* Dimensione dell'icona di Instagram */
-    height: 24px;
+    width: 18px; /* Ridotta dimensione dell'icona di Instagram */
+    height: 18px;
     margin-left: 10px;
     cursor: pointer;
 }
