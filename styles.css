@@ -456,19 +456,23 @@
 /* Stili specifici per dispositivi mobili */
 @media (max-width: 768px) {
     .contact-card, .email-card {
-        flex-direction: column; /* Imposta la direzione della card in verticale */
-        align-items: center; /* Centra gli elementi all'interno della card */
-        text-align: center; /* Centra il testo all'interno della card */
+        flex-direction: column; /* Disposizione verticale degli elementi nella card */
+        align-items: center; /* Centra tutti gli elementi */
+        text-align: center; /* Centra il testo */
     }
 
     .profile-pic {
-        margin-bottom: 15px; /* Aggiunge spazio tra la foto e il testo */
+        margin-bottom: 15px; /* Spazio tra la foto e il testo */
+        width: 120px; /* Dimensione della foto su mobile */
+        height: 120px;
+        border-radius: 50%; /* Rende la foto circolare */
+        object-fit: cover; /* Mantiene le proporzioni corrette della foto */
     }
 
     .description {
         display: flex;
         flex-direction: column;
-        align-items: center; /* Centra tutte le card */
+        align-items: center; /* Centra le card all'interno del contenitore */
         gap: 20px; /* Spaziatura tra le card */
         padding: 20px;
     }
