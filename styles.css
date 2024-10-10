@@ -523,5 +523,22 @@
     }
 }
 
+/* Stili per centrare entrambe le card nella pagina Contatti */
+.contact-card, .email-card {
+    display: flex;
+    flex-direction: column; /* Disposizione verticale degli elementi nella card */
+    align-items: center; /* Centra tutti gli elementi */
+    justify-content: center; /* Centra il contenuto */
+    gap: 15px; /* Spazio tra gli elementi */
+    margin: 20px auto; /* Centra la card nella pagina */
+    max-width: 800px; /* Limita la larghezza della card */
+    background-color: #ffffff; /* Colore di sfondo della card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombreggiatura leggera */
+    padding: 20px;
+    border-radius: 10px; /* Angoli arrotondati */
+    text-align: center; /* Centra il testo all'interno della card */
+}
+
+
 
 
