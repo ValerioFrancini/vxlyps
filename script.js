@@ -26,6 +26,30 @@ function preloadImages() {
     });
 }
 
+/* Stili aggiornati per lo slider con altezza fissa */
+.slider-container {
+    position: relative;
+    max-width: 100%;
+    height: 400px; /* Imposta un'altezza fissa per mantenere la stabilità del layout */
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #f0f0f0; /* Colore di sfondo per evitare spazi vuoti durante il caricamento */
+}
+
+.slider {
+    display: flex; /* Disposizione delle immagini in linea orizzontale */
+    transition: transform 0.8s ease; /* Aggiunge la transizione di scorrimento */
+}
+
+.slider-image {
+    min-width: 100%; /* Ogni immagine occupa l'intera larghezza del contenitore */
+    height: 100%; /* Adatta l'immagine all'altezza fissa del contenitore */
+    object-fit: cover; /* Mantiene le proporzioni corrette e riempie il contenitore */
+    position: relative;
+}
+
+
 // Codice per lo slider con transizione di scorrimento
 let currentIndex = 0;
 const slides = document.querySelectorAll('.slider-image');
