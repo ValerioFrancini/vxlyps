@@ -86,17 +86,25 @@
 </div>
 
 
-    <!-- Footer -->
+   <!-- Footer -->
 <footer class="footer">
     <div class="footer-content">
         <div class="social-icons">
-            <a href="https://instagram.com/appartamento_ilmoro" target="_blank">Instagram</a>
+            <a href="https://instagram.com/appartamento_ilmoro" target="_blank" class="social-link">Instagram</a>
+        </div>
+        <div class="footer-language">
+            <label for="language-select">Lingua:</label>
+            <select id="language-select" onchange="changeLanguage(this.value)">
+                <option value="it">Italiano</option>
+                <option value="en">English</option>
+            </select>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2024 Il Moro Tuscania. All rights reserved.</p>
         </div>
     </div>
 </footer>
+
 
     <!-- Script JavaScript -->
 <script src="script.js"></script>
