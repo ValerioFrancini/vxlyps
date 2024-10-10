@@ -23,6 +23,17 @@
     z-index: 1001; /* Assicura che sia sopra altri elementi */
 }
 
+/* Stili per il burger menu a destra su desktop */
+@media (min-width: 769px) {
+    .burger-menu {
+        position: absolute; /* Forza il posizionamento assoluto */
+        right: 20px; /* Ancoraggio a destra */
+        top: 50%; /* Centra verticalmente il burger menu all'interno dell'header */
+        transform: translateY(-50%); /* Corregge l'allineamento verticale */
+        z-index: 1001; /* Assicura che il menu sia sopra gli altri elementi */
+    }
+}
+
 
 /* Stili per il pulsante "Prenota su Airbnb" */
 .airbnb-button-container {
