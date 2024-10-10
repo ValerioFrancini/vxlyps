@@ -200,13 +200,15 @@
         display: none; /* Nasconde il titolo sui dispositivi mobili */
     }
 
-    .logo-image {
-        width: 110px; /* Riduce leggermente il logo su mobile per migliorare l'aspetto */
-        margin-right: 0; /* Rimuove il margine per centrare meglio il logo */
+   .logo-title {
+        position: relative; /* Cambia la posizione a relativa per centrare */
+        justify-content: center; /* Centra il logo quando il titolo è nascosto */
+        margin: 0 auto; /* Centra il contenitore del logo */
     }
 
-    .logo-title {
-        justify-content: center; /* Centra il logo quando il titolo è nascosto */
+    .logo-image {
+        width: 110px; /* Dimensione del logo su mobile */
+        margin-right: 0; /* Rimuove il margine per centrare meglio il logo */
     }
 }
 
