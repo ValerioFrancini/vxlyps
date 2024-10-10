@@ -4,30 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recensioni - Il Moro</title>
-    <link rel="stylesheet" href="style.css"> <!-- Collegamento al CSS -->
+    <link rel="stylesheet" href="styles.css"> <!-- Collegamento al CSS -->
 </head>
 <body>
-    <div class="menu-icon" onclick="toggleMenu()">
-        &#9776; <!-- Icona del menu (tre linee) -->
-    </div>
-    <nav id="navbar" class="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="mappa.html">Mappa</a></li>
-            <li><a href="recensioni.html">Recensioni</a></li>
-            <li><a href="contatti.html">Contatti</a></li>
-        </ul>
-    </nav>
 
     <!-- Inizio del Header -->
-    <div class="header">
-        <img src="img/logo_il_moro.png" alt="Logo Il Moro" class="logo-image">
-        <h1>Il Moro - Appartamento nel centro Storico di Tuscania</h1>
-    </div>
+    <header class="header">
+        <div class="logo-title">
+            <a href="index.html" class="home-link"> <!-- Link che avvolge sia il logo che il titolo -->
+                <img src="img/logo_il_moro.png" alt="Logo Il Moro" class="logo-image">
+                <h1 class="site-title">Il Moro - Appartamento nel centro Storico di Tuscania</h1>
+            </a>
+        </div>
+
+        <!-- Checkbox nascosto per controllare lo stato del menù burger -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        
+        <!-- Burger Menu -->
+        <label for="menu-toggle" class="burger-menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </label>
+
+        <!-- Menu a tendina per la navigazione -->
+        <nav id="nav-menu" class="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mappa.html">Mappa</a></li>
+                <li><a href="recensioni.html">Recensioni</a></li>
+                <li><a href="contatti.html">Contatti</a></li>
+            </ul>
+        </nav>
+    </header>
     <!-- Fine del Header -->
 
-    <h1>Recensioni dei nostri Ospiti</h1>
+    <!-- Contenuto della pagina Recensioni -->
     <div class="description">
+        <h2>Recensioni dei nostri Ospiti</h2>
         <div class="card">
             <h2>Ospite 1</h2>
             <p>“Un soggiorno indimenticabile! L'appartamento è perfetto e molto accogliente.”</p>
@@ -39,9 +53,10 @@
         <!-- Aggiungi altre recensioni qui -->
     </div>
 
+    <!-- Footer della pagina -->
     <footer class="footer">
         <div class="footer-content">
-            <div class="language-selector">
+            <div class="footer-language">
                 <label for="language">Lingua:</label>
                 <select id="language" onchange="changeLanguage(this.value)">
                     <option value="it">Italiano</option>
@@ -49,7 +64,9 @@
                 </select>
             </div>
             <div class="social-icons">
-                <img src="img/instagram-icon.png" alt="Instagram" class="social-icon">
+                <a href="https://instagram.com/appartamento_ilmoro" target="_blank" class="social-link">
+                    <img src="img/instagram-icon.png" alt="Instagram" class="instagram-icon">
+                </a>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2024 Il Moro Tuscania. All rights reserved.</p>
@@ -57,11 +74,21 @@
         </div>
     </footer>
 
+    <!-- Script JavaScript per le interazioni -->
     <script>
         function toggleMenu() {
             const navbar = document.getElementById("navbar");
             navbar.classList.toggle("active");
         }
+
+        function changeLanguage(language) {
+            if (language === 'it') {
+                window.location.href = 'recensioni.html'; // Cambia alla versione italiana
+            } else if (language === 'en') {
+                window.location.href = 'recensioni-en.html'; // Cambia alla versione inglese
+            }
+        }
     </script>
+
 </body>
 </html>
