@@ -29,3 +29,4 @@ setInterval(autoSlide, 5000);
 
 // Inizializza il primo slide come attivo
 sliderContainer.style.transform = `translateX(0)`;
+
