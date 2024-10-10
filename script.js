@@ -39,10 +39,12 @@ const sliderContainer = document.querySelector('.slider');
 
 // Funzione per muovere lo slider manualmente con le frecce
 function moveSlide(direction) {
-    slides[currentIndex].classList.remove('active'); // Nasconde l'immagine attuale
-    currentIndex = (currentIndex + direction + slides.length) % slides.length; // Calcola l'indice della prossima immagine
-    slides[currentIndex].classList.add('active'); // Mostra la nuova immagine con effetto dissolvenza
-    sliderContainer.style.transform = `translateX(-${currentIndex * 100}%)`; // Sposta lo slider alla nuova immagine
+    if (slides.length > 0) { // Verifica che ci siano immagini nello slider
+        slides[currentIndex].classList.remove('active'); // Nasconde l'immagine attuale
+        currentIndex = (currentIndex + direction + slides.length) % slides.length; // Calcola l'indice della prossima immagine
+        slides[currentIndex].classList.add('active'); // Mostra la nuova immagine con effetto dissolvenza
+        sliderContainer.style.transform = `translateX(-${currentIndex * 100}%)`; // Sposta lo slider alla nuova immagine
+    }
 }
 
 // Funzione per far avanzare automaticamente lo slider
@@ -53,9 +55,10 @@ function autoSlide() {
 // Inizializza l'effetto di transizione automatica ogni 4 secondi
 setInterval(autoSlide, 4000);
 
-// Inizializza il primo slide come attivo
-slides[currentIndex].classList.add('active');
-
+// Inizializza il primo slide come attivo, solo se ci sono immagini nello slider
+if (slides.length > 0) {
+    slides[currentIndex].classList.add('active');
+}
 
 // Funzione per cambiare la lingua del sito
 function changeLanguage(language) {
@@ -65,4 +68,3 @@ function changeLanguage(language) {
         window.location.href = 'index-en.html'; // Cambia alla versione inglese del sito
     }
 }
-
