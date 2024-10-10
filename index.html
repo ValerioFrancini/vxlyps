@@ -1,110 +1,62 @@
-/* styles.css */
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Il Moro - Appartamento nel centro Storico di Tuscania</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-title">
+            <img src="img/logo.png" alt="Logo Il Moro" class="logo">
+            <h1>Il Moro - Appartamento nel centro Storico di Tuscania</h1>
+        </div>
+        <div class="burger-menu" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav id="nav-menu" class="nav-menu">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#info">Informazioni</a></li>
+                <li><a href="#contact">Contatti</a></li>
+            </ul>
+        </nav>
+    </header>
 
-/* Generali */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
-    margin: 0;
-    padding: 0;
-}
+    <section id="home" class="slider-section">
+        <div class="slider">
+            <img src="img/img_1.jpg" class="slider-image" alt="Immagine 1">
+            <img src="img/img_2.jpg" class="slider-image" alt="Immagine 2">
+            <img src="img/img_3.jpg" class="slider-image" alt="Immagine 3">
+        </div>
+        <button class="book-button">Prenota su Airbnb</button>
+    </section>
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #fff;
-    border-bottom: 1px solid #ccc;
-}
+    <section id="info" class="info-section">
+        <div class="card">
+            <h2>INFORMAZIONI SULLA CASA</h2>
+            <p>La casa è immersa nel paesaggio suggestivo del grazioso borgo medievale...</p>
+        </div>
+        <div class="card">
+            <h2>SERVIZI INCLUSI</h2>
+            <p>WiFi gratuito, parcheggio riservato, cucina attrezzata, aria condizionata...</p>
+        </div>
+        <div class="card">
+            <h2>ATTRAZIONI VICINE</h2>
+            <p>Centro storico di Tuscania, parco naturale, sentieri per escursioni...</p>
+        </div>
+    </section>
 
-.logo-title {
-    display: flex;
-    align-items: center;
-}
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Il Moro Tuscania. All rights reserved.</p>
+        </div>
+    </footer>
 
-.logo {
-    width: 50px;
-    height: auto;
-    margin-right: 10px;
-}
+    <script src="script.js"></script>
+</body>
+</html>
 
-.burger-menu {
-    cursor: pointer;
-}
-
-.burger-menu .line {
-    width: 25px;
-    height: 3px;
-    background-color: #333;
-    margin: 4px 0;
-    transition: 0.4s;
-}
-
-/* Animazione menù burger */
-.nav-menu {
-    display: none;
-    flex-direction: column;
-    background-color: #fff;
-    position: absolute;
-    right: 20px;
-    top: 60px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.nav-menu.open {
-    display: flex;
-}
-
-.slider-section {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.slider {
-    display: flex;
-    overflow: hidden;
-    width: 90%;
-    max-width: 1200px;
-}
-
-.slider-image {
-    width: 100%;
-    object-fit: cover;
-}
-
-.book-button {
-    margin-top: 20px;
-    padding: 12px 24px;
-    background-color: #ff5a5f;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.book-button:hover {
-    background-color: #e74c3c;
-    transform: scale(1.05);
-}
-
-/* Stile delle card */
-.card {
-    background-color: white;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 15px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    max-width: 800px;
-    text-align: center;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-}
