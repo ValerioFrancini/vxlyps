@@ -60,11 +60,19 @@
 .slider-container {
     position: relative;
     max-width: 100%;
-    height: 400px; /* Altezza ridotta per un aspetto più allungato */
+    height: 600px; /* Altezza ridotta per un aspetto più allungato */
     margin: auto;
     overflow: hidden;
     border-radius: 10px;
     background-color: #f0f0f0; /* Colore di sfondo per evitare spazi vuoti durante il caricamento */
+}
+
+/* Posiziona il pulsante Airbnb centrato in basso nello slider */
+.slider-button-container {
+    position: absolute;
+    bottom: 20px; /* Posiziona il pulsante 20px sopra il bordo inferiore dello slider */
+    left: 50%;
+    transform: translateX(-50%); /* Centra orizzontalmente il pulsante */
 }
 
 .slider {
