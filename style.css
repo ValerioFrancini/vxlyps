@@ -75,6 +75,15 @@ body {
     transition: all 0.3s ease;
 }
 
+/* Stile per l'immagine del profilo */
+.profile-pic {
+    width: 100px; /* Larghezza dell'immagine */
+    height: 100px; /* Altezza dell'immagine */
+    border-radius: 50%; /* Rende l'immagine circolare */
+    object-fit: cover; /* Mantiene il rapporto di aspetto */
+    margin-bottom: 15px; /* Spazio sotto l'immagine */
+}
+
 /* Stile per il pulsante di Airbnb */
 .airbnb-button {
     animation: pulse 2s infinite; /* Animazione di pulsazione */
