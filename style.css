@@ -122,3 +122,20 @@ p {
     line-height: 1.6;
     margin-bottom: 10px;
 }
+
+/* Media query per migliorare il layout sui dispositivi mobili */
+@media (max-width: 768px) {
+    body {
+        margin: 10px; /* Riduce i margini per schermi più piccoli */
+    }
+
+    .logo-image {
+        max-width: 150px; /* Ingrandisce il logo per schermi mobili */
+    }
+
+    .description {
+        max-width: 100%; /* Consente al testo di occupare più spazio sullo schermo */
+        margin: 10px; /* Riduce i margini laterali per migliorare la leggibilità */
+        padding: 15px; /* Riduce leggermente il padding interno */
+    }
+}
