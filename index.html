@@ -1,71 +1,69 @@
 <!DOCTYPE html>
-<html lang="it">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Il Moro - Appartamento nel centro Storico di Tuscania</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Il Moro - Benvenuti</title>
+    <link rel="stylesheet" href="style.css"> <!-- Collegamento al CSS -->
+    <link rel="icon" href="img/favicon.png" type="image/png"> <!-- Favicon -->
 </head>
 <body>
-    <header>
-        <div class="logo-title">
-            <img src="img/logo_il_moro.png" alt="Logo Il Moro" class="logo">
-            <h1>Il Moro - Appartamento nel centro Storico di Tuscania</h1>
-        </div>
-        <div class="burger-menu" onclick="toggleMenu()">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
-        <nav id="nav-menu" class="nav-menu">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#info">Informazioni</a></li>
-                <li><a href="#reviews">Recensioni</a></li>
-                <li><a href="#contact">Contatti</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="home" class="slider-section">
-        <div class="slider">
-            <img src="img/img_1.jpg" class="slider-image" alt="Immagine 1">
-            <img src="img/img_2.jpg" class="slider-image" alt="Immagine 2">
-            <img src="img/img_3.jpg" class="slider-image" alt="Immagine 3">
-        </div>
-        <button class="book-button">Prenota su Airbnb</button>
-    </section>
+    <!-- Inizio del logo -->
+    <div class="logo-container">
+        <img src="img/logo_il_moro.png" alt="Logo Il Moro" class="logo-image">
+    </div>
+    <!-- Fine del logo -->
 
-    <section id="info" class="info-section">
+    <h1>Il Moro - Appartamento nel centro Storico di Tuscania</h1>
+
+    <!-- Inizio dello slider -->
+    <div class="slider-container">
+        <div class="slider" id="slider">
+            <img src="img/img_1.jpg" alt="Foto 1">
+            <img src="img/img_2.jpg" alt="Foto 2">
+            <img src="img/img_3.jpg" alt="Foto 3">
+            <img src="img/img_4.jpg" alt="Foto 4">
+            <img src="img/img_5.jpg" alt="Foto 5">
+            <img src="img/img_6.jpg" alt="Foto 6">
+            <img src="img/img_7.jpg" alt="Foto 7">
+            <img src="img/img_8.jpg" alt="Foto 8">
+            <img src="img/img_9.jpg" alt="Foto 9">
+            <img src="img/img_10.jpg" alt="Foto 10">
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+    <!-- Fine dello slider -->
+
+    <a href="https://www.airbnb.it/rooms/971046443266957060" target="_blank" class="airbnb-button">Prenota su Airbnb</a>
+
+    <!-- Inizio descrizione spazi -->
+    <div class="description">
         <div class="card">
             <h2>INFORMAZIONI SULLA CASA</h2>
-            <p>La casa è immersa nel paesaggio suggestivo del grazioso borgo medievale...</p>
+            <p>La casa è immersa nel paesaggio suggestivo del grazioso borgo medievale. Perfetto per passare del tempo lontano dalle distrazioni della città e dedicarsi alle passeggiate nei vicoli del centro e assaporare le specialità del posto. Allontanandosi dal piccolo borgo sono facilmente raggiungibili boschi e luoghi naturalistici perfetti per piccole escursioni in famiglia.</p>
         </div>
-    </section>
 
-    <section id="reviews" class="reviews-section">
         <div class="card">
-            <h2>RECENSIONI</h2>
-            <p>Le recensioni degli ospiti appaiono qui...</p>
+            <h3>LO SPAZIO</h3>
+            <p>L’appartamento si trova all’interno delle mura di Tuscania, nel cuore del centro storico, punto di partenza ideale per esplorare la città. L’appartamento è composto da una cucina dotata di tutto l’essenziale per rendere la vostra esperienza qui come se foste a casa vostra: troverete pentole e padelle per preparare pietanze deliziose, piatti e posate per gustarle, calici di vino per accompagnare i vostri piatti e, immancabile, una moka per prepararvi un ottimo caffè.</p>
         </div>
-    </section>
 
-    <section id="contact" class="contact-section">
-        <div class="contact-card">
-            <h2>Contatti</h2>
-            <p>Email: <a href="mailto:valerio.hostairbnb@gmail.com">valerio.hostairbnb@gmail.com</a></p>
-            <div class="map">
-                <iframe src="URL_MAPPAGoogle" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
+        <div class="card">
+            <h3>ALTRE COSE DA TENERE A MENTE</h3>
+            <p>Al vostro arrivo troverete in camera da letto asciugamani (corpo, viso e bidet) e lenzuola fresche; in bagno avrete a disposizione un asciugacapelli, la lavatrice con del detersivo monodose e uno stendino per il bucato; avrete un badge da mettere in macchina per il parcheggio gratuito.</p>
         </div>
-    </section>
+    </div>
+    <!-- Fine descrizione spazi -->
 
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 Il Moro Tuscania. All rights reserved.</p>
-        </div>
-    </footer>
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelector('.slider');
+        const totalImages = slides.children.length;
 
-    <script src="script.js"></script>
+        function moveSlide(direction) {
+            currentIndex = (currentIndex + direction + totalImages) % totalImages;
+            slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+    </script>
 </body>
 </html>
