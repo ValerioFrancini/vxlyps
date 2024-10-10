@@ -53,4 +53,73 @@ h1, h2, h3 {
     .site-title {
         display: none; /* Nasconde il titolo su dispositivi mobili */
     }
+    /* styles.css */
+
+/* Animazione del menù burger */
+.burger-menu {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px;
+    transition: transform 0.3s ease; /* Effetto di animazione quando si clicca */
+}
+
+.burger-menu .line {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Cambia l'icona del menù burger quando è attivo */
+.menu-toggle:checked + .burger-menu .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle:checked + .burger-menu .line:nth-child(2) {
+    opacity: 0; /* Nascondi la linea centrale */
+}
+
+.menu-toggle:checked + .burger-menu .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mostra il menù quando il checkbox è selezionato */
+.menu-toggle:checked + .burger-menu + .nav-menu {
+    display: flex;
+}
+
+/* Stile del menù burger */
+.nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    right: 20px;
+    top: 60px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Stile delle voci del menù */
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    display: block;
+    transition: transform 0.3s ease, color 0.3s ease, border-bottom 0.3s ease;
+}
+
+/* Effetto hover per le voci del menù */
+.nav-menu ul li a:hover {
+    transform: scale(1.1); /* Ingrandisce leggermente il testo */
+    border-bottom: 2px solid #FF5A5F; /* Sottolinea con un colore rosso */
+    color: #FF5A5F; /* Cambia il colore del testo al passaggio */
+}
+
 }
