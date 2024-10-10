@@ -95,5 +95,26 @@
         </div>
     </footer>
 
+    <script>
+    // codice JavaScript per lo slider
+        /* script.js */
+
+// Funzione per controllare lo slider
+let currentIndex = 0;
+const slides = document.querySelectorAll('.slider-image');
+const totalImages = slides.length;
+
+function moveSlide(direction) {
+    slides[currentIndex].classList.remove('active'); // Nasconde l'immagine attuale
+    currentIndex = (currentIndex + direction + totalImages) % totalImages; // Calcola l'indice della prossima immagine
+    slides[currentIndex].classList.add('active'); // Mostra l'immagine successiva
+}
+
+// Inizializza il primo slide come attivo
+slides[currentIndex].classList.add('active');
+
+</script>
+
+
 </body>
 </html>
