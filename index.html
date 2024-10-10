@@ -5,7 +5,16 @@
     <link rel="stylesheet" href="style.css"> <!-- Collegamento al CSS -->
     <link rel="icon" href="img/favicon.png" type="image/png"> <!-- Favicon -->
 </head>
-<body>
+<body class="light-mode"> <!-- Aggiunta della classe light-mode per la modalità scura/chiara -->
+
+    <!-- Switch modalità dark/light -->
+    <div class="mode-switch-container">
+        <label class="switch">
+            <input type="checkbox" id="mode-switch" onclick="toggleMode()">
+            <span class="slider-switch"></span>
+        </label>
+        <span id="mode-label">🌞</span>
+    </div>
 
     <!-- Inizio del logo -->
     <div class="logo-container">
@@ -23,46 +32,66 @@
             <img src="img/img_3.jpg" alt="Foto 3">
             <img src="img/img_4.jpg" alt="Foto 4">
             <img src="img/img_5.jpg" alt="Foto 5">
-            <img src="img/img_6.jpg" alt="Foto 6">
-            <img src="img/img_7.jpg" alt="Foto 7">
-            <img src="img/img_8.jpg" alt="Foto 8">
-            <img src="img/img_9.jpg" alt="Foto 9">
-            <img src="img/img_10.jpg" alt="Foto 10">
         </div>
         <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
         <button class="next" onclick="moveSlide(1)">&#10095;</button>
     </div>
-    <!-- Fine dello slider -->
 
     <a href="https://www.airbnb.it/rooms/971046443266957060" target="_blank" class="airbnb-button">Prenota su Airbnb</a>
 
-    <!-- Inizio descrizione spazi -->
+    <!-- Inizio descrizione spazi con le card -->
     <div class="description">
         <div class="card">
             <h2>INFORMAZIONI SULLA CASA</h2>
-            <p>La casa è immersa nel paesaggio suggestivo del grazioso borgo medievale. Perfetto per passare del tempo lontano dalle distrazioni della città e dedicarsi alle passeggiate nei vicoli del centro e assaporare le specialità del posto. Allontanandosi dal piccolo borgo sono facilmente raggiungibili boschi e luoghi naturalistici perfetti per piccole escursioni in famiglia.</p>
+            <p>La casa è immersa nel paesaggio suggestivo del grazioso borgo medievale...</p>
         </div>
 
         <div class="card">
             <h3>LO SPAZIO</h3>
-            <p>L’appartamento si trova all’interno delle mura di Tuscania, nel cuore del centro storico, punto di partenza ideale per esplorare la città. L’appartamento è composto da una cucina dotata di tutto l’essenziale per rendere la vostra esperienza qui come se foste a casa vostra: troverete pentole e padelle per preparare pietanze deliziose, piatti e posate per gustarle, calici di vino per accompagnare i vostri piatti e, immancabile, una moka per prepararvi un ottimo caffè.</p>
+            <p>L’appartamento si trova all’interno delle mura di Tuscania...</p>
         </div>
 
         <div class="card">
             <h3>ALTRE COSE DA TENERE A MENTE</h3>
-            <p>Al vostro arrivo troverete in camera da letto asciugamani (corpo, viso e bidet) e lenzuola fresche; in bagno avrete a disposizione un asciugacapelli, la lavatrice con del detersivo monodose e uno stendino per il bucato; avrete un badge da mettere in macchina per il parcheggio gratuito.</p>
+            <p>Al vostro arrivo troverete in camera da letto asciugamani e lenzuola fresche...</p>
         </div>
     </div>
-    <!-- Fine descrizione spazi -->
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="language-selector">
+                <label for="language">Lingua:</label>
+                <select id="language" onchange="changeLanguage(this.value)">
+                    <option value="it">Italiano</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+            <div class="social-icons">
+                <img src="img/instagram-icon.png" alt="Instagram" class="social-icon">
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Il Moro Tuscania. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
     <script>
         let currentIndex = 0;
         const slides = document.querySelector('.slider');
         const totalImages = slides.children.length;
 
+        setInterval(() => moveSlide(1), 5000); // Transizione automatica ogni 5 secondi
+
         function moveSlide(direction) {
             currentIndex = (currentIndex + direction + totalImages) % totalImages;
             slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        function toggleMode() {
+            document.body.classList.toggle("dark-mode");
+            document.body.classList.toggle("light-mode");
+            const modeLabel = document.getElementById("mode-label");
+            modeLabel.textContent = document.body.classList.contains("dark-mode") ? "🌜" : "🌞";
         }
     </script>
 </body>
