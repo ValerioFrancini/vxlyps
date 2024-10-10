@@ -64,14 +64,57 @@
 }
 
 /* Stili aggiornati per il menù burger migliorato */
-.header {
-    display: flex;
+.burger-menu {
+    cursor: pointer;
+    display: flex; /* Imposta il display a flex per allineare correttamente le linee */
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between; /* Distribuisce lo spazio tra il logo e il menù */
-    background-color: #ffffff;
-    padding: 15px 30px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    position: relative; /* Assicura che il menu burger sia posizionato correttamente */
+    z-index: 1001; /* Mettilo sopra altri elementi */
 }
+
+.burger-menu .line {
+    width: 25px; /* Lunghezza delle linee del menu */
+    height: 3px; /* Spessore delle linee del menu */
+    background-color: #2c3e50; /* Colore delle linee */
+    margin: 4px 0;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Animazioni per l'effetto di apertura */
+}
+
+/* Effetto animazione quando il menù burger è attivo */
+.menu-toggle:checked + .burger-menu .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle:checked + .burger-menu .line:nth-child(2) {
+    opacity: 0; /* Nasconde la linea centrale */
+}
+
+.menu-toggle:checked + .burger-menu .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Stile del menu a tendina */
+.nav-menu {
+    display: none; /* Nasconde il menu a tendina di default */
+    flex-direction: column;
+    background-color: #ffffff;
+    position: absolute;
+    right: 20px;
+    top: 65px; /* Posiziona il menu leggermente sotto il burger menu */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 1000; /* Assicura che il menu appaia sopra altri elementi */
+}
+
+/* Mostra il menu a tendina quando il burger menu è attivo */
+.menu-toggle:checked + .burger-menu + .nav-menu {
+    display: flex; /* Mostra il menu a tendina */
+}
+
 
 .logo-title {
     display: flex;
@@ -95,7 +138,7 @@
     }
 
     .logo-image {
-        width: 90px; /* Riduce leggermente il logo su mobile per migliorare l'aspetto */
+        width: 110px; /* Riduce leggermente il logo su mobile per migliorare l'aspetto */
         margin-right: 0; /* Rimuove il margine per centrare meglio il logo */
     }
 
