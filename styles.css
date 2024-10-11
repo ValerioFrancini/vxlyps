@@ -11,7 +11,7 @@ body {
 .header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center; /* Centra il contenuto orizzontalmente */
     background-color: #ffffff;
     padding: 5px 0px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -39,6 +39,7 @@ body {
     font-size: 1.8rem; /* Regola la dimensione del titolo per renderlo ben visibile */
     color: #2c3e50;
     margin: 0;
+   text-align: center; /* Allinea il testo del titolo al centro */
 }
 
 .home-link {
