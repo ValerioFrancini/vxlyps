@@ -1,4 +1,11 @@
 /* =========================
+      BODY
+   ========================= */
+body {
+    margin-top: 60px; /* Modifica questo valore in base all'altezza effettiva del tuo header */
+}
+
+/* =========================
    HEADER & LOGO STYLES
    ========================= */
 .header {
