@@ -293,8 +293,8 @@
 }
 
 .instagram-icon {
-    width: 24px; /* Dimensione ridotta dell'icona */
-    height: 24px; /* Altezza ridotta dell'icona */
+    width: 34px; /* Dimensione ridotta dell'icona */
+    height: 34px; /* Altezza ridotta dell'icona */
     transition: transform 0.3s ease, filter 0.3s ease; /* Transizione per l'effetto hover */
 }
 
