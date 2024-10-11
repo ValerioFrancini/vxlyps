@@ -207,11 +207,12 @@
 /* Stili per i puntini di navigazione dello slider */
 .dots-container {
     position: absolute; /* Posiziona i puntini all'interno dello slider */
-    bottom: 10px; /* Posiziona i puntini 10px sopra la parte inferiore dell'immagine */
+    bottom: 15px; /* Posiziona i puntini 10px sopra la parte inferiore dell'immagine */
     left: 50%; /* Centra i puntini orizzontalmente */
     transform: translateX(-50%); /* Centra effettivamente i puntini */
     margin: 0; /* Rimuove il margine extra */
     text-align: center; /* Allinea i puntini al centro */
+    z-index: 2; /* Assicura che i puntini siano sopra l'immagine */
 }
 
 .dot {
@@ -272,12 +273,13 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive Airbnb button adjustments */
+/* Pulsante Airbnb per dispositivi mobili */
 @media (max-width: 768px) {
     .airbnb-button {
-        width: 90%;
-        font-size: 1rem;
-        padding: 12px 20px;
+        width: 80%; /* Riduci la larghezza del pulsante su mobile */
+        font-size: 0.9rem; /* Riduci leggermente la dimensione del testo */
+        padding: 10px 15px; /* Riduci il padding per un aspetto più compatto */
+        margin: 10px auto; /* Spazio minore attorno al pulsante su mobile */
     }
 }
 
