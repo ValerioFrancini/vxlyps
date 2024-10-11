@@ -227,9 +227,9 @@ body {
 
 .dot {
     display: inline-block;
-    width: 8px; /* Dimensione ridotta del puntino */
-    height: 8px; /* Dimensione ridotta del puntino */
-    margin: 0 4px; /* Spazio tra i puntini */
+    width: 5px; /* Dimensione ridotta del puntino */
+    height: 5px; /* Dimensione ridotta del puntino */
+    margin: 0 3px; /* Spazio tra i puntini */
     background-color: #bbb;
     border-radius: 50%; /* Rende i puntini rotondi */
     cursor: pointer;
@@ -284,25 +284,26 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Pulsante Airbnb per dispositivi mobili e posizionamento del contenitore */
+/* Stili per il pulsante Airbnb su dispositivi mobili */
 @media (max-width: 768px) {
+    .booking-buttons-container {
+        position: relative; /* Cambia da statico a relative per controllare meglio il posizionamento */
+        transform: none; /* Rimuove eventuali trasformazioni */
+        margin-top: 15px; /* Aggiunge uno spazio sopra il pulsante per separarlo dallo slider */
+        width: 100%; /* Imposta la larghezza al 100% */
+        display: flex;
+        justify-content: center; /* Centra il pulsante */
+        z-index: 1; /* Assicura che il pulsante non sia coperto da altri elementi */
+    }
+
     .airbnb-button {
         width: 80%; /* Riduci la larghezza del pulsante su mobile */
         font-size: 0.9rem; /* Riduci leggermente la dimensione del testo */
         padding: 10px 15px; /* Riduci il padding per un aspetto più compatto */
         margin: 10px auto; /* Spazio minore attorno al pulsante su mobile */
     }
-
-    /* Posiziona il contenitore del pulsante Airbnb sotto lo slider su dispositivi mobili */
-    .booking-buttons-container {
-        position: static; /* Cambia la posizione da assoluta a statica per mobile */
-        transform: none; /* Rimuove eventuali trasformazioni */
-        margin-top: 15px; /* Aggiunge uno spazio sopra il pulsante per separarlo dallo slider */
-        width: 100%; /* Imposta la larghezza al 100% */
-        display: flex;
-        justify-content: center; /* Centra il pulsante */
-    }
 }
+
 
 
 /* =========================
