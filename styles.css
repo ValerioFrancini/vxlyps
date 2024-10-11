@@ -101,10 +101,10 @@
     position: absolute;
     top: 70px;
     right: 20px;
-    background-color: #ffffff;
+    background-color: #fafafa;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
-    padding: 10px;
+    padding: 17px;
     z-index: 1000;
 }
 
@@ -115,19 +115,24 @@
 }
 
 .nav-menu ul li {
-    margin: 10px 0;
+    margin: 19px 0;
 }
 
 .nav-menu ul li a {
-    padding: 12px 20px;
+    padding: 7px 23px;
     text-decoration: none;
     font-size: 1.1rem;
     color: #2c3e50;
     background-color: #f0f0f0;
-    border-radius: 5px;
+    border-radius: 11px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Hover effect for menu items */
+.nav-menu ul li a:hover {
+    background-color: #FF5A5F;
+    color: white;
+}
 /* Hover effect for menu items */
 .nav-menu ul li a:hover {
     background-color: #FF5A5F;
