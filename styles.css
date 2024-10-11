@@ -99,40 +99,40 @@
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 70px;
-    right: 20px;
+    top: 90px;
+    right: 12px;
     background-color: #fafafa;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    padding: 17px;
+    border-radius: 7px;
+    padding: 15px;
     z-index: 1000;
+    width: 130px; /* Imposta una larghezza fissa per il menu */
 }
 
 .nav-menu ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    width: 65%; /* Assicura che la lista ul occupi tutta la larghezza del menu */
 }
 
 .nav-menu ul li {
-    margin: 19px 0;
+    margin: 11px 0;
+    width: 100%; /* Assicura che ogni elemento li occupi tutta la larghezza del menu */
 }
 
 .nav-menu ul li a {
+    display: block; /* Trasforma l'elemento <a> in un blocco per occupare tutta la larghezza */
+    width: 100%; /* Assicura che lo sfondo si estenda su tutta la larghezza del contenitore */
     padding: 7px 23px;
     text-decoration: none;
     font-size: 1.1rem;
     color: #2c3e50;
     background-color: #f0f0f0;
-    border-radius: 11px;
+    border-radius: 12px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Hover effect for menu items */
-.nav-menu ul li a:hover {
-    background-color: #FF5A5F;
-    color: white;
-}
 /* Hover effect for menu items */
 .nav-menu ul li a:hover {
     background-color: #FF5A5F;
