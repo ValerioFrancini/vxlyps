@@ -67,16 +67,16 @@
 }
 
 .burger-menu .line {
-    width: 25px;
+    width: 37px;
     height: 2px;
     background-color: #2c3e50;
-    margin: 6px 0;
+    margin: 3px 0;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 /* Apri e chiudi BURGERMENU */
 .menu-toggle:checked + .burger-menu .line:nth-child(1) {
-    transform: rotate(45deg) translate(7px, 11.4px);
+    transform: rotate(45deg) translate(7px, 6px);
 }
 
 .menu-toggle:checked + .burger-menu .line:nth-child(2) {
@@ -84,7 +84,7 @@
 }
 
 .menu-toggle:checked + .burger-menu .line:nth-child(3) {
-    transform: rotate(-45deg) translate(8px, -12px);
+    transform: rotate(-45deg) translate(4px, -5px);
 }
 
 /* Hide menu checkbox */
