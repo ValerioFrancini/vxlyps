@@ -204,6 +204,28 @@
     }
 }
 
+/* Stili per i puntini di navigazione dello slider */
+.dots-container {
+    text-align: center;
+    margin-top: 15px; /* Spazio tra lo slider e i puntini */
+}
+
+.dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%; /* Rende i puntini rotondi */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #FF5A5F; /* Colore attivo del puntino quando la foto è selezionata */
+}
+
+
 /* =========================
    AIRBNB BUTTON STYLES
    ========================= */
