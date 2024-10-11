@@ -32,19 +32,37 @@ function preloadImages() {
     });
 }
 
-// Codice per lo slider con transizione di scorrimento
+// Codice per lo slider con transizione di scorrimento e puntini di navigazione
 let currentIndex = 0;
 const slides = document.querySelectorAll('.slider-image');
+const dots = document.querySelectorAll('.dot');
 const sliderContainer = document.querySelector('.slider');
+
+// Funzione per aggiornare lo stato attivo dei puntini
+function updateDots() {
+    dots.forEach((dot, index) => {
+        if (index === currentIndex) {
+            dot.classList.add('active');
+        } else {
+            dot.classList.remove('active');
+        }
+    });
+}
 
 // Funzione per muovere lo slider manualmente con le frecce
 function moveSlide(direction) {
     if (slides.length > 0) { // Verifica che ci siano immagini nello slider
-        slides[currentIndex].classList.remove('active'); // Nasconde l'immagine attuale
         currentIndex = (currentIndex + direction + slides.length) % slides.length; // Calcola l'indice della prossima immagine
-        slides[currentIndex].classList.add('active'); // Mostra la nuova immagine con effetto dissolvenza
         sliderContainer.style.transform = `translateX(-${currentIndex * 100}%)`; // Sposta lo slider alla nuova immagine
+        updateDots(); // Aggiorna lo stato dei puntini
     }
+}
+
+// Funzione per passare a uno specifico slide cliccando sul puntino
+function currentSlide(index) {
+    currentIndex = index;
+    sliderContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+    updateDots(); // Aggiorna lo stato dei puntini
 }
 
 // Funzione per far avanzare automaticamente lo slider
@@ -55,9 +73,9 @@ function autoSlide() {
 // Inizializza l'effetto di transizione automatica ogni 4 secondi
 setInterval(autoSlide, 4000);
 
-// Inizializza il primo slide come attivo, solo se ci sono immagini nello slider
+// Inizializza il primo slide come attivo e imposta lo stato iniziale dei puntini
 if (slides.length > 0) {
-    slides[currentIndex].classList.add('active');
+    updateDots();
 }
 
 // Funzione per cambiare la lingua del sito
@@ -69,11 +87,10 @@ function changeLanguage(language) {
     }
 }
 
-// JavaScript per il menu burger NUOVA DA ELIMINARE SE CI SONO PROBLEMI
+// JavaScript per il menu burger
 const burgerMenu = document.querySelector('.burger-menu');
 const navMenu = document.querySelector('.nav-menu');
 burgerMenu.addEventListener('click', () => {
     burgerMenu.classList.toggle('open'); // Anima il menu burger
     navMenu.classList.toggle('visible'); // Mostra/nasconde il menu
 });
-
