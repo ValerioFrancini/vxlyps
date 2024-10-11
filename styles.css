@@ -53,11 +53,20 @@ body {
     .site-title {
         display: none; /* Nasconde il titolo sui dispositivi mobili per salvare spazio */
     }
+    
+    .header {
+        display: flex;
+        justify-content: center; /* Centra tutto il contenuto all'interno dell'header */
+    }
+
     .logo-title {
+        display: flex;
         justify-content: center; /* Centra il logo su mobile */
-        padding: 0; /* Rimuove padding aggiuntivo su mobile */
+        flex: initial; /* Rimuove il comportamento flex precedente */
+        margin: 0 auto; /* Assicura che il logo si posizioni al centro */
     }
 }
+
 
 /* =========================
    BURGER MENU STYLES
