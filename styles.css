@@ -178,25 +178,40 @@ body {
     display: block;
 }
 
-/* Slider navigation controls */
+/* Stili migliorati per i controlli dello slider */
 .prev, .next {
     cursor: pointer;
     position: absolute;
     top: 50%;
-    padding: 16px;
+    padding: 12px;
     color: white;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6); /* Colore di sfondo più scuro */
     border: none;
-    border-radius: 3px;
-    transition: background-color 0.3s ease;
+    border-radius: 50%; /* Rende le frecce circolari */
+    user-select: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombreggiatura per un effetto di profondità */
 }
 
 .prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.8); /* Colore di sfondo più scuro al passaggio del mouse */
+    transform: scale(1.1); /* Leggero ingrandimento al passaggio del mouse */
 }
 
-.prev { left: 10px; }
-.next { right: 10px; }
+.prev {
+    left: 10px; /* Posiziona la freccia sinistra */
+}
+
+.next {
+    right: 10px; /* Posiziona la freccia destra */
+}
+
+/* Nascondi le freccette su dispositivi mobili */
+@media (max-width: 768px) {
+    .prev, .next {
+        display: none;
+    }
+}
 
 /* Responsive slider adjustments */
 @media (max-width: 768px) {
