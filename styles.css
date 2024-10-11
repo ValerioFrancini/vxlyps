@@ -272,7 +272,7 @@ body {
 }
 
 .airbnb-button {
-    background: linear-gradient(135deg, #FF5A5F, #FF7E82);
+    background: linear-gradient(135deg, #FF4E50, #FF6B6B); /* Gradiente rosso più acceso */
     color: white;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
@@ -288,15 +288,15 @@ body {
 }
 
 .airbnb-button:hover {
-    background: linear-gradient(135deg, #FF7E82, #FF5A5F);
+    background: linear-gradient(135deg, #FF6B6B, #FF4E50); /* Colore del gradiente invertito per l'effetto hover */
     transform: translateY(-4px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 12px 24px rgba(255, 110, 110, 0.5); /* Leggero effetto glow al passaggio del mouse */
 }
 
 .airbnb-button:active {
     transform: translateY(2px);
-    background: #FF5A5F;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: #FF4E50;
+    box-shadow: 0 4px 8px rgba(255, 110, 110, 0.7); /* Effetto glow più intenso durante il clic */
 }
 
 /* Stili per il pulsante Airbnb su dispositivi mobili */
