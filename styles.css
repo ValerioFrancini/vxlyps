@@ -9,7 +9,7 @@
     padding: 45px 30px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     position: relative;
-    width: 100%; /* Assicura che l'header occupi tutta la larghezza */
+    width: 95.5%; /* Assicura che l'header occupi tutta la larghezza */
 }
 
 .logo-title {
@@ -61,8 +61,8 @@
     align-items: center;
     padding: 10px;
     position: absolute; /* Imposta la posizione del burger menu */
-    right: 20px; /* Posiziona il menu a 20px dal bordo destro */
-    top: 15px; /* Posiziona il menu a 15px dall'alto */
+    right: 50px; /* Posiziona il menu a 20px dal bordo destro */
+    top: 30px; /* Posiziona il menu a 15px dall'alto */
     z-index: 1001;
 }
 
