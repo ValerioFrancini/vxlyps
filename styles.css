@@ -292,6 +292,12 @@
     gap: 10px;
 }
 
+.instagram-icon {
+    width: 24px; /* Dimensione ridotta dell'icona */
+    height: 24px; /* Altezza ridotta dell'icona */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Transizione per l'effetto hover */
+}
+
 .footer-language select {
     background-color: #ffffff;
     color: #2c3e50;
