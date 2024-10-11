@@ -242,9 +242,9 @@ body {
 
 .dot {
     display: inline-block;
-    width: 5px; /* Dimensione ridotta del puntino */
-    height: 5px; /* Dimensione ridotta del puntino */
-    margin: 0 3px; /* Spazio tra i puntini */
+    width: 6px; /* Dimensione ridotta del puntino */
+    height: 6px; /* Dimensione ridotta del puntino */
+    margin: 0 3.5px; /* Spazio tra i puntini */
     background-color: #bbb;
     border-radius: 50%; /* Rende i puntini rotondi */
     cursor: pointer;
