@@ -58,6 +58,9 @@
     justify-content: center;
     align-items: center;
     padding: 10px;
+    position: absolute; /* Imposta la posizione del burger menu */
+    right: 20px; /* Posiziona il menu a 20px dal bordo destro */
+    top: 15px; /* Posiziona il menu a 15px dall'alto */
     z-index: 1001;
 }
 
@@ -86,6 +89,7 @@
 .menu-toggle {
     display: none;
 }
+
 
 /* =========================
    NAV MENU STYLES
