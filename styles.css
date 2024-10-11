@@ -206,14 +206,18 @@
 
 /* Stili per i puntini di navigazione dello slider */
 .dots-container {
-    text-align: center;
-    margin-top: 15px; /* Spazio tra lo slider e i puntini */
+    position: absolute; /* Posiziona i puntini all'interno dello slider */
+    bottom: 10px; /* Posiziona i puntini 10px sopra la parte inferiore dell'immagine */
+    left: 50%; /* Centra i puntini orizzontalmente */
+    transform: translateX(-50%); /* Centra effettivamente i puntini */
+    margin: 0; /* Rimuove il margine extra */
+    text-align: center; /* Allinea i puntini al centro */
 }
 
 .dot {
     display: inline-block;
-    width: 7px;
-    height: 7px;
+    width: 6px;
+    height: 6px;
     margin: 0 4px;
     background-color: #bbb;
     border-radius: 50%; /* Rende i puntini rotondi */
