@@ -17,13 +17,13 @@
     align-items: center;
     flex: 1; /* Permette al logo e al titolo di espandersi e occupare più spazio */
     justify-content: flex-start; /* Allinea il contenuto a sinistra */
-    padding-right: 20px; /* Spazio tra il logo/titolo e il menu burger */
+    padding-right: 10px; /* Spazio tra il logo/titolo e il menu burger */
 }
 
 .logo-image {
-    max-width: 210px; /* Dimensione massima del logo */
+    max-width: 190px; /* Dimensione massima del logo */
     height: auto;
-    margin-right: 15px; /* Spazio tra il logo e il titolo */
+    margin-right: 35px; /* Spazio tra il logo e il titolo */
 }
 
 .site-title {
