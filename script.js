@@ -94,3 +94,27 @@ burgerMenu.addEventListener('click', () => {
     burgerMenu.classList.toggle('open'); // Anima il menu burger
     navMenu.classList.toggle('visible'); // Mostra/nasconde il menu
 });
+
+// Variabili per gestire il touch sullo slider immagini da mobile
+let startX = 0;
+let endX = 0;
+
+// Aggiungi eventi di tocco per supportare lo scorrimento su dispositivi mobili
+const sliderContainer = document.querySelector('.slider-container');
+
+sliderContainer.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX; // Registra la posizione iniziale del tocco
+});
+
+sliderContainer.addEventListener('touchmove', (e) => {
+    endX = e.touches[0].clientX; // Aggiorna la posizione finale del tocco durante lo spostamento
+});
+
+sliderContainer.addEventListener('touchend', () => {
+    if (startX > endX + 50) {
+        moveSlide(1); // Scorri verso destra se il tocco è stato uno swipe verso sinistra
+    } else if (startX < endX - 50) {
+        moveSlide(-1); // Scorri verso sinistra se il tocco è stato uno swipe verso destra
+    }
+});
+
