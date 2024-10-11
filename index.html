@@ -43,7 +43,6 @@
 <!-- Fine del Header -->
 
 
-    
 <!-- Inizio dello slider di foto -->
 <div class="slider-card">
     <div class="slider-container">
@@ -58,10 +57,27 @@
             <img src="img/img_8.JPG" alt="Foto 8" class="slider-image" loading="lazy">
             <img src="img/img_9.JPG" alt="Foto 9" class="slider-image" loading="lazy">
         </div>
-       <!-- Contenitore per i pulsanti di prenotazione -->
-<div class="booking-buttons-container">
-    <a href="https://www.airbnb.it/rooms/tuo_link_airbnb" target="_blank" class="airbnb-button">Prenota su Airbnb</a>
+
+        <!-- Puntini di navigazione per lo slider -->
+        <div class="dots-container" id="dotsContainer">
+            <span class="dot" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+        </div>
+
+        <!-- Contenitore per i pulsanti di prenotazione -->
+        <div class="booking-buttons-container">
+            <a href="https://www.airbnb.it/rooms/tuo_link_airbnb" target="_blank" class="airbnb-button">Prenota su Airbnb</a>
+        </div>
+    </div>
 </div>
+
 
         <!-- Controlli per lo slider -->
         <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
