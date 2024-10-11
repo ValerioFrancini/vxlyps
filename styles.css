@@ -284,7 +284,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Pulsante Airbnb per dispositivi mobili */
+/* Pulsante Airbnb per dispositivi mobili e posizionamento del contenitore */
 @media (max-width: 768px) {
     .airbnb-button {
         width: 80%; /* Riduci la larghezza del pulsante su mobile */
@@ -293,8 +293,7 @@ body {
         margin: 10px auto; /* Spazio minore attorno al pulsante su mobile */
     }
 
-/* Posiziona il contenitore del pulsante Airbnb sotto lo slider su dispositivi mobili */
-@media (max-width: 768px) {
+    /* Posiziona il contenitore del pulsante Airbnb sotto lo slider su dispositivi mobili */
     .booking-buttons-container {
         position: static; /* Cambia la posizione da assoluta a statica per mobile */
         transform: none; /* Rimuove eventuali trasformazioni */
@@ -305,7 +304,6 @@ body {
     }
 }
 
-}
 
 /* =========================
    CARD STYLES
