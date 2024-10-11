@@ -281,6 +281,46 @@
 }
 
 /* =========================
+   CONTACT CARD STYLES
+   ========================= */
+.contact-card {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Allinea il contenuto a sinistra */
+    gap: 20px; /* Spazio tra l'immagine e il testo */
+    margin: 20px auto; /* Centra la card nella pagina */
+    max-width: 800px; /* Limita la larghezza della card */
+    background-color: #ffffff; /* Colore di sfondo della card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombreggiatura leggera */
+    padding: 20px;
+    border-radius: 10px; /* Angoli arrotondati */
+    text-align: left; /* Allinea il testo a sinistra */
+}
+
+/* Stile dell'immagine del profilo */
+.profile-pic {
+    width: 120px; /* Dimensione della foto */
+    height: 120px; /* Mantiene la stessa altezza della larghezza per rendere la foto circolare */
+    border-radius: 50%; /* Rende l'immagine circolare */
+    object-fit: cover; /* Mantiene le proporzioni della foto */
+    cursor: pointer; /* Mostra il cursore di puntatore per indicare che è cliccabile */
+}
+
+/* Stile specifico per dispositivi mobili */
+@media (max-width: 768px) {
+    .contact-card {
+        flex-direction: column; /* Disposizione verticale degli elementi nella card su mobile */
+        align-items: center; /* Centra tutti gli elementi */
+        text-align: center; /* Centra il testo */
+    }
+
+    .profile-pic {
+        margin-bottom: 15px; /* Spazio tra la foto e il testo su mobile */
+    }
+}
+
+
+/* =========================
    FOOTER STYLES
    ========================= */
 .footer {
