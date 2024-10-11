@@ -74,9 +74,9 @@
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Burger menu open state */
+/* Apri e chiudi BURGERMENU */
 .menu-toggle:checked + .burger-menu .line:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
+    transform: rotate(45deg) translate(7px, 11.4px);
 }
 
 .menu-toggle:checked + .burger-menu .line:nth-child(2) {
@@ -84,14 +84,13 @@
 }
 
 .menu-toggle:checked + .burger-menu .line:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
+    transform: rotate(-45deg) translate(8px, -12px);
 }
 
 /* Hide menu checkbox */
 .menu-toggle {
     display: none;
 }
-
 
 /* =========================
    NAV MENU STYLES
