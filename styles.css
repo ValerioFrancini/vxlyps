@@ -11,35 +11,34 @@ body {
 .header {
     display: flex;
     align-items: center;
-    justify-content: center; /* Centra il contenuto orizzontalmente */
+    justify-content: space-between; /* Distribuisce il logo e il titolo correttamente */
     background-color: #ffffff;
     padding: 5px 0px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     position: fixed;
-  top: 0;/* Posiziona l'header in cima alla pagina */
+    top: 0; /* Posiziona l'header in cima alla pagina */
     width: 100%; /* Assicura che l'header occupi tutta la larghezza */
-   z-index: 1000; /* Assicura che l'header sia sempre sopra gli altri elementi della pagina */
+    z-index: 1000; /* Assicura che l'header sia sempre sopra gli altri elementi della pagina */
 }
 
 .logo-title {
     display: flex;
     align-items: center;
-    flex: 1; /* Permette al logo e al titolo di espandersi e occupare più spazio */
-    justify-content: flex-start; /* Allinea il contenuto a sinistra */
-    padding-right: 10px; /* Spazio tra il logo/titolo e il menu burger */
+    justify-content: flex-start; /* Mantiene il logo a sinistra */
 }
 
 .logo-image {
     max-width: 170px; /* Dimensione massima del logo */
     height: auto;
-    margin-right: 35px; /* Spazio tra il logo e il titolo */
+    margin-right: 15px; /* Spazio tra il logo e il titolo */
 }
 
 .site-title {
     font-size: 1.8rem; /* Regola la dimensione del titolo per renderlo ben visibile */
     color: #2c3e50;
-    margin: 0;
-   text-align: center; /* Allinea il testo del titolo al centro */
+    margin: 0 auto; /* Utilizza margini automatici per centrare il titolo */
+    text-align: center; /* Allinea il testo del titolo al centro */
+    flex: 1; /* Fa sì che il titolo occupi lo spazio disponibile per centrarlo */
 }
 
 .home-link {
