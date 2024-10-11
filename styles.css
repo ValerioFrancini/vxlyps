@@ -292,6 +292,19 @@ body {
         padding: 10px 15px; /* Riduci il padding per un aspetto più compatto */
         margin: 10px auto; /* Spazio minore attorno al pulsante su mobile */
     }
+
+/* Posiziona il contenitore del pulsante Airbnb sotto lo slider su dispositivi mobili */
+@media (max-width: 768px) {
+    .booking-buttons-container {
+        position: static; /* Cambia la posizione da assoluta a statica per mobile */
+        transform: none; /* Rimuove eventuali trasformazioni */
+        margin-top: 15px; /* Aggiunge uno spazio sopra il pulsante per separarlo dallo slider */
+        width: 100%; /* Imposta la larghezza al 100% */
+        display: flex;
+        justify-content: center; /* Centra il pulsante */
+    }
+}
+
 }
 
 /* =========================
