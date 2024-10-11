@@ -13,21 +13,23 @@
 }
 
 .logo-title {
-    position: absolute;
-    left: 20px;
     display: flex;
     align-items: center;
+    flex: 1; /* Permette al logo e al titolo di espandersi e occupare più spazio */
+    justify-content: flex-start; /* Allinea il contenuto a sinistra */
+    padding-right: 20px; /* Spazio tra il logo/titolo e il menu burger */
 }
 
 .logo-image {
-    width: 170px;
-    margin-right: 10px;
+    max-width: 170px; /* Dimensione massima del logo */
+    height: auto;
+    margin-right: 15px; /* Spazio tra il logo e il titolo */
 }
 
 .site-title {
-    font-size: 2rem;
+    font-size: 1.8rem; /* Regola la dimensione del titolo per renderlo ben visibile */
     color: #2c3e50;
-    text-align: center;
+    margin: 0;
 }
 
 .home-link {
@@ -40,12 +42,11 @@
 /* Responsive adjustments for mobile */
 @media (max-width: 768px) {
     .site-title {
-        display: none;
+        display: none; /* Nasconde il titolo sui dispositivi mobili per salvare spazio */
     }
     .logo-title {
-        position: relative;
-        justify-content: center;
-        margin: 0 auto;
+        justify-content: center; /* Centra il logo su mobile */
+        padding: 0; /* Rimuove padding aggiuntivo su mobile */
     }
 }
 
