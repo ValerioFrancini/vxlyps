@@ -1,5 +1,3 @@
-// script.js
-
 // Codice per l'animazione del logo durante il caricamento della pagina
 window.addEventListener('load', () => {
     const logo = document.querySelector('.logo-image');
@@ -36,7 +34,7 @@ function preloadImages() {
 let currentIndex = 0;
 const slides = document.querySelectorAll('.slider-image');
 const dots = document.querySelectorAll('.dot');
-const sliderContainer = document.querySelector('.slider');
+const sliderElement = document.querySelector('.slider'); // Usato per la transizione dello slider
 
 // Funzione per aggiornare lo stato attivo dei puntini
 function updateDots() {
@@ -53,7 +51,7 @@ function updateDots() {
 function moveSlide(direction) {
     if (slides.length > 0) { // Verifica che ci siano immagini nello slider
         currentIndex = (currentIndex + direction + slides.length) % slides.length; // Calcola l'indice della prossima immagine
-        sliderContainer.style.transform = `translateX(-${currentIndex * 100}%)`; // Sposta lo slider alla nuova immagine
+        sliderElement.style.transform = `translateX(-${currentIndex * 100}%)`; // Sposta lo slider alla nuova immagine
         updateDots(); // Aggiorna lo stato dei puntini
     }
 }
@@ -61,7 +59,7 @@ function moveSlide(direction) {
 // Funzione per passare a uno specifico slide cliccando sul puntino
 function currentSlide(index) {
     currentIndex = index;
-    sliderContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+    sliderElement.style.transform = `translateX(-${currentIndex * 100}%)`;
     updateDots(); // Aggiorna lo stato dei puntini
 }
 
@@ -117,4 +115,3 @@ sliderContainer.addEventListener('touchend', () => {
         moveSlide(-1); // Scorri verso sinistra se il tocco è stato uno swipe verso destra
     }
 });
-
