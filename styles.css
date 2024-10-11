@@ -287,9 +287,19 @@
 
 .footer-content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row; /* Cambia la disposizione degli elementi in una fila */
+    justify-content: space-between; /* Distribuisce lo spazio tra gli elementi */
     align-items: center;
-    gap: 10px;
+    width: 90%; /* Assicura che gli elementi riempiano la larghezza del footer */
+    padding: 0 10px; /* Aggiunge un po' di spazio sui lati */
+}
+
+.footer-language {
+    order: 2; /* Posiziona il selettore della lingua a dx */
+}
+
+.social-icons {
+    order: 1; /* Posiziona l'icona di Instagram a sx */
 }
 
 .instagram-icon {
