@@ -216,7 +216,7 @@ body {
 /* Stili per i puntini di navigazione dello slider */
 .dots-container {
     position: absolute; /* Posiziona i puntini all'interno dello slider */
-    bottom: 10px; /* Sposta i puntini molto vicini alla parte inferiore dell'immagine */
+    bottom: 5px; /* Sposta i puntini molto vicini alla parte inferiore dell'immagine */
     left: 50%; /* Centra i puntini orizzontalmente */
     transform: translateX(-50%); /* Centra i puntini rispetto alla loro posizione */
     margin: 0; /* Rimuove qualsiasi margine extra */
