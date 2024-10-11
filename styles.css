@@ -78,31 +78,33 @@
     }
 }
 
-
 .airbnb-button {
-    background: linear-gradient(135deg, #FF5A5F, #FF7E82); /* Gradiente con i colori di Airbnb */
+    background: linear-gradient(135deg, #FF5A5F, #FF7E82); /* Gradiente con i colori distintivi di Airbnb */
     color: white;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    padding: 15px 30px;
+    font-size: 1.2rem; /* Leggermente più grande per migliorare la leggibilità */
+    padding: 15px 40px; /* Aumenta il padding per un aspetto più sostanzioso */
     border: none;
-    border-radius: 30px; /* Angoli arrotondati per un look moderno */
-    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2);
-    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Effetti al passaggio del mouse */
+    border-radius: 50px; /* Angoli più arrotondati per un look moderno */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Aumenta l'ombreggiatura per un effetto di profondità */
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Effetti di transizione più evidenti */
     cursor: pointer;
+    margin: 20px auto; /* Centro del pulsante all'interno del contenitore */
+    display: block; /* Per centrare il pulsante in orizzontale */
 }
 
+/* Effetto hover per il pulsante Airbnb */
 .airbnb-button:hover {
-    background: linear-gradient(135deg, #FF7E82, #FF5A5F); /* Inverti il gradiente al passaggio del mouse */
-    transform: translateY(-3px); /* Solleva leggermente il pulsante */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Aumenta l'ombreggiatura */
+    background: linear-gradient(135deg, #FF7E82, #FF5A5F); /* Inverte il gradiente al passaggio del mouse */
+    transform: translateY(-4px); /* Solleva leggermente il pulsante per un effetto più dinamico */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Ombreggiatura più forte al passaggio del mouse */
 }
 
 .airbnb-button:active {
-    transform: translateY(1px); /* Effetto di clic quando si preme il pulsante */
-    background: #FF5A5F; /* Colore solido per un feedback immediato */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Riduce l'ombreggiatura quando il pulsante viene cliccato */
+    transform: translateY(2px); /* Effetto di clic per dare un feedback visivo immediato */
+    background: #FF5A5F; /* Colore solido per un effetto di feedback */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Riduzione dell'ombreggiatura quando il pulsante viene cliccato */
 }
 
 /* Stili aggiornati per lo slider */
