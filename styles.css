@@ -8,8 +8,10 @@
     background-color: #ffffff;
     padding: 5px 0px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    position: relative;
+    position: fixed;
+  top: 0;/* Posiziona l'header in cima alla pagina */
     width: 100%; /* Assicura che l'header occupi tutta la larghezza */
+   z-index: 1000; /* Assicura che l'header sia sempre sopra gli altri elementi della pagina */
 }
 
 .logo-title {
