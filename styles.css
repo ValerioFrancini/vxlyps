@@ -309,6 +309,7 @@ body {
         display: flex;
         justify-content: center; /* Centra il pulsante */
         z-index: 1; /* Assicura che il pulsante non sia coperto da altri elementi */
+        visibility: visible; /* Assicura che il pulsante sia visibile */
     }
 
     .airbnb-button {
@@ -316,8 +317,10 @@ body {
         font-size: 0.9rem; /* Riduci leggermente la dimensione del testo */
         padding: 10px 15px; /* Riduci il padding per un aspetto più compatto */
         margin: 10px auto; /* Spazio minore attorno al pulsante su mobile */
+        display: block; /* Assicura che il pulsante sia visualizzato come un blocco */
     }
 }
+
 
 
 
