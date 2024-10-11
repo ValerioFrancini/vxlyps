@@ -68,3 +68,12 @@ function changeLanguage(language) {
         window.location.href = 'index-en.html'; // Cambia alla versione inglese del sito
     }
 }
+
+// JavaScript per il menu burger NUOVA DA ELIMINARE SE CI SONO PROBLEMI
+const burgerMenu = document.querySelector('.burger-menu');
+const navMenu = document.querySelector('.nav-menu');
+burgerMenu.addEventListener('click', () => {
+    burgerMenu.classList.toggle('open'); // Anima il menu burger
+    navMenu.classList.toggle('visible'); // Mostra/nasconde il menu
+});
+
