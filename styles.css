@@ -82,33 +82,41 @@ body {
     right: 50px; /* Posiziona il menu a 20px dal bordo destro */
     top: 30px; /* Posiziona il menu a 15px dall'alto */
     z-index: 1001;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transizioni per l'hover e il clic */
 }
 
 .burger-menu .line {
     width: 37px;
     height: 2px;
-    background-color: #2c3e50;
+    background-color: #2c3e50; /* Colore di default per le linee del burger menu */
     margin: 3px 0;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Apri e chiudi BURGERMENU */
-.menu-toggle:checked + .burger-menu .line:nth-child(1) {
+/* Effetti hover e clic per il burger menu */
+.burger-menu:hover .line {
+    background-color: #B9A890; /* Taupe tenue per l'hover */
+}
+
+.burger-menu.open .line:nth-child(1) {
     transform: rotate(45deg) translate(7px, 6px);
+    background-color: #EFE2CC; /* Beige chiaro quando il menu è aperto */
 }
 
-.menu-toggle:checked + .burger-menu .line:nth-child(2) {
-    opacity: 0;
+.burger-menu.open .line:nth-child(2) {
+    opacity: 0; /* Nasconde la seconda linea durante l'animazione del menu */
 }
 
-.menu-toggle:checked + .burger-menu .line:nth-child(3) {
+.burger-menu.open .line:nth-child(3) {
     transform: rotate(-45deg) translate(4px, -5px);
+    background-color: #EFE2CC; /* Beige chiaro quando il menu è aperto */
 }
 
 /* Hide menu checkbox */
 .menu-toggle {
     display: none;
 }
+
 
 /* =========================
    NAV MENU STYLES
