@@ -319,27 +319,26 @@ body {
     box-shadow: 0 4px 8px rgba(255, 110, 110, 0.7); /* Effetto glow più intenso durante il clic */
 }
 
-/* Stili per il pulsante Airbnb su dispositivi mobili */
+/* Correzione per mobile */
 @media (max-width: 768px) {
     .booking-buttons-container {
         position: relative; /* Cambia da statico a relative per controllare meglio il posizionamento */
-        transform: none; /* Rimuove eventuali trasformazioni */
-        margin-top: 15px; /* Aggiunge uno spazio sopra il pulsante per separarlo dallo slider */
-        width: 100%; /* Imposta la larghezza al 100% */
+        bottom: auto; /* Rimuove qualsiasi impostazione fissa in basso */
+        top: auto; /* Rimuove qualsiasi impostazione fissa in alto */
+        margin-top: 20px; /* Aggiunge spazio sopra il pulsante */
+        width: 100%; /* Assicura che il pulsante occupi tutta la larghezza */
         display: flex;
-        justify-content: center; /* Centra il pulsante */
-        z-index: 1; /* Assicura che il pulsante non sia coperto da altri elementi */
-        visibility: visible; /* Assicura che il pulsante sia visibile */
+        justify-content: center;
+        z-index: 1; /* Assicura che il pulsante sia visibile */
     }
-
+    
     .airbnb-button {
-        width: 80%; /* Riduci la larghezza del pulsante su mobile */
-        font-size: 0.9rem; /* Riduci leggermente la dimensione del testo */
-        padding: 10px 15px; /* Riduci il padding per un aspetto più compatto */
-        margin: 10px auto; /* Spazio minore attorno al pulsante su mobile */
-        display: block; /* Assicura che il pulsante sia visualizzato come un blocco */
+        width: 90%; /* Imposta una larghezza comoda su mobile */
+        font-size: 1rem; /* Leggermente più piccola la dimensione del testo */
+        padding: 12px 20px; /* Riduce il padding per adattarsi allo schermo più piccolo */
     }
 }
+
 
 
 
