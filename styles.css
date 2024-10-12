@@ -133,7 +133,7 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
-    width: 100%; /* Assicura che la lista ul occupi tutta la larghezza del menu */
+    width: 80%; /* Assicura che la lista ul occupi tutta la larghezza del menu */
 }
 
 .nav-menu ul li {
