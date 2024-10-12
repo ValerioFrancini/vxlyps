@@ -3,7 +3,7 @@
    ========================= */
 body {
     margin-top: 80px; /* Modifica questo valore in base all'altezza effettiva del tuo header */
-    font-family: 'Nunito', sans-serif; /* Apply Nunito font */
+      font-family: 'Nunito', sans-serif; /* Apply Nunito font */
 }
 
 /* =========================
@@ -20,7 +20,6 @@ body {
     top: 0; /* Posiziona l'header in cima alla pagina */
     width: 100%; /* Assicura che l'header occupi tutta la larghezza */
     z-index: 1000; /* Assicura che l'header sia sempre sopra gli altri elementi della pagina */
-      position: relative;
 }
 
 .logo-title {
@@ -41,7 +40,7 @@ body {
     margin: 0 auto; /* Utilizza margini automatici per centrare il titolo */
     text-align: center; /* Allinea il testo del titolo al centro */
     flex: 1; /* Fa sì che il titolo occupi lo spazio disponibile per centrarlo */
-    font-family: 'Nunito', sans-serif; /* Ensure the title uses Nunito */
+      font-family: 'Nunito', sans-serif; /* Ensure the title uses Nunito */
 }
 
 .home-link {
@@ -56,7 +55,7 @@ body {
     .site-title {
         display: none; /* Nasconde il titolo sui dispositivi mobili per salvare spazio */
     }
-
+    
     .header {
         display: flex;
         justify-content: center; /* Centra tutto il contenuto all'interno dell'header */
@@ -70,6 +69,7 @@ body {
     }
 }
 
+
 /* =========================
    BURGER MENU STYLES
    ========================= */
@@ -81,8 +81,8 @@ body {
     align-items: center;
     padding: 10px;
     position: absolute; /* Imposta la posizione del burger menu */
-    right: 50px; /* Posiziona il menu a 50px dal bordo destro */
-    top: 50px; /* Posiziona il menu a 50px dall'alto */
+    right: 50px; /* Posiziona il menu a 20px dal bordo destro */
+    top: 50px; /* Posiziona il menu a 15px dall'alto */
     z-index: 1001;
 }
 
@@ -92,6 +92,7 @@ body {
         right: 20px; /* Adjusts the horizontal position of the burger menu */
     }
 }
+
 
 .burger-menu .line {
     width: 37px;
@@ -118,6 +119,8 @@ body {
 .menu-toggle {
     display: none;
 }
+
+
 
 /* =========================
    NAV MENU STYLES
@@ -149,7 +152,7 @@ body {
 }
 
 .nav-menu ul li a {
-    font-family: 'Nunito', sans-serif; /* Menu items */
+      font-family: 'Nunito', sans-serif; /* Menu items */
     display: block; /* Trasforma l'elemento <a> in un blocco per occupare tutta la larghezza */
     width: 100%; /* Assicura che lo sfondo si estenda su tutta la larghezza del contenitore */
     padding: 10px 15px;
@@ -176,4 +179,297 @@ body {
 /* Show menu when burger menu is active */
 .menu-toggle:checked + .burger-menu + .nav-menu {
     display: flex;
+}
+
+
+
+/* =========================
+   SLIDER STYLES
+   ========================= */
+.slider-container {
+    position: relative;
+    max-width: 90%;
+    height: 50vh;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.8s ease;
+}
+
+.slider-image {
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Stili migliorati per i controlli dello slider */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 12px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6); /* Colore di sfondo più scuro */
+    border: none;
+    border-radius: 50%; /* Rende le frecce circolari */
+    user-select: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombreggiatura per un effetto di profondità */
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Colore di sfondo più scuro al passaggio del mouse */
+    transform: scale(1.1); /* Leggero ingrandimento al passaggio del mouse */
+}
+
+.prev {
+    left: 10px; /* Posiziona la freccia sinistra */
+}
+
+.next {
+    right: 10px; /* Posiziona la freccia destra */
+}
+
+/* Nascondi le freccette su dispositivi mobili */
+@media (max-width: 768px) {
+    .prev, .next {
+        display: none;
+    }
+}
+
+/* Responsive slider adjustments */
+@media (max-width: 768px) {
+    .slider-container {
+        max-width: 95%;
+        height: 30vh;
+    }
+}
+
+@media (min-width: 1024px) {
+    .slider-container {
+        max-width: 70%;
+        height: 60vh;
+    }
+}
+
+/* Stili per i puntini di navigazione dello slider */
+.dots-container {
+    position: absolute; /* Posiziona i puntini all'interno dello slider */
+    bottom: 5px; /* Sposta i puntini molto vicini alla parte inferiore dell'immagine */
+    left: 50%; /* Centra i puntini orizzontalmente */
+    transform: translateX(-50%); /* Centra i puntini rispetto alla loro posizione */
+    margin: 0; /* Rimuove qualsiasi margine extra */
+    text-align: center; /* Allinea i puntini al centro */
+    z-index: 2; /* Assicura che i puntini siano sopra l'immagine */
+    pointer-events: none; /* Assicura che i puntini non interferiscano con altri elementi cliccabili */
+}
+
+.dot {
+    display: inline-block;
+    width: 6px; /* Dimensione del puntino */
+    height: 6px; /* Altezza del puntino */
+    margin: 0 3.5px; /* Spazio tra i puntini */
+    background-color: #EFE2CC; /* Beige chiaro per i puntini inattivi */
+    border-radius: 50%; /* Rende i puntini rotondi */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    pointer-events: all; /* Permette di cliccare sui puntini */
+}
+
+.dot.active {
+    background-color: #B9A890; /* Taupe tenue per i puntini attivi */
+}
+
+
+
+/* =========================
+   AIRBNB BUTTON STYLES
+   ========================= */
+.booking-buttons-container {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    z-index: 1000;
+}
+
+.airbnb-button {
+    background: linear-gradient(135deg, #FF4E50, #FF6B6B); /* Gradiente rosso più acceso */
+    color: white;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+}
+
+.airbnb-button:hover {
+    background: linear-gradient(135deg, #FF6B6B, #FF4E50); /* Colore del gradiente invertito per l'effetto hover */
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(255, 110, 110, 0.5); /* Leggero effetto glow al passaggio del mouse */
+}
+
+.airbnb-button:active {
+    transform: translateY(2px);
+    background: #FF4E50;
+    box-shadow: 0 4px 8px rgba(255, 110, 110, 0.7); /* Effetto glow più intenso durante il clic */
+}
+
+@media (max-width: 768px) {
+    /* Posiziona il pulsante airbnb sotto lo slider */
+    .booking-buttons-container {
+        position: relative; /* Cambia da absolute a relative per dispositivi mobili */
+        top: auto; /* Rimuove qualsiasi impostazione fissa */
+        bottom: auto; /* Annulla le impostazioni precedenti */
+        margin-top: 20px; /* Aggiungi spazio tra lo slider e il pulsante */
+        display: flex;
+        justify-content: center;
+        z-index: 1; /* Assicura che il pulsante sia visibile */
+        width: 100%; /* Imposta la larghezza per essere responsiva */
+    }
+    
+    .airbnb-button {
+        width: 90%; /* Imposta una larghezza comoda per il pulsante su mobile */
+        font-size: 1rem; /* Riduce la dimensione del testo per adattarsi a schermi più piccoli */
+        padding: 12px 20px; /* Riduce il padding per renderlo compatibile con schermi mobili */
+    }
+}
+
+
+
+
+/* =========================
+   CARD STYLES
+   ========================= */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+.card {
+    background-color: #ffffff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================
+   CONTACT CARD STYLES
+   ========================= */
+.contact-card {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Allinea il contenuto a sinistra */
+    gap: 20px; /* Spazio tra l'immagine e il testo */
+    margin: 20px auto; /* Centra la card nella pagina */
+    max-width: 800px; /* Limita la larghezza della card */
+    background-color: #ffffff; /* Colore di sfondo della card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombreggiatura leggera */
+    padding: 20px;
+    border-radius: 10px; /* Angoli arrotondati */
+    text-align: left; /* Allinea il testo a sinistra */
+}
+
+/* Stile dell'immagine del profilo */
+.profile-pic {
+    width: 120px; /* Dimensione della foto */
+    height: 120px; /* Mantiene la stessa altezza della larghezza per rendere la foto circolare */
+    border-radius: 50%; /* Rende l'immagine circolare */
+    object-fit: cover; /* Mantiene le proporzioni della foto */
+    cursor: pointer; /* Mostra il cursore di puntatore per indicare che è cliccabile */
+}
+
+/* Stili per la card contatti su dispositivi mobili */
+@media (max-width: 768px) {
+    .contact-card {
+        display: flex;
+        flex-direction: column; /* Disposizione verticale degli elementi nella card su mobile */
+        align-items: center; /* Centra tutti gli elementi */
+        text-align: center; /* Centra il testo */
+    }
+
+    .profile-pic {
+        order: 2; /* Sposta l'immagine sotto il testo */
+        margin-top: 15px; /* Aggiungi uno spazio tra il testo e la foto */
+        margin-bottom: 15px; /* Spazio sotto la foto */
+    }
+
+    .contact-info {
+        order: 1; /* Assicura che il testo venga visualizzato sopra l'immagine */
+    }
+}
+
+
+
+/* =========================
+   FOOTER STYLES
+   ========================= */
+.footer {
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row; /* Cambia la disposizione degli elementi in una fila */
+    justify-content: space-between; /* Distribuisce lo spazio tra gli elementi */
+    align-items: center;
+    width: 90%; /* Assicura che gli elementi riempiano la larghezza del footer */
+    padding: 0 10px; /* Aggiunge un po' di spazio sui lati */
+}
+
+.footer-language {
+    order: 2; /* Posiziona il selettore della lingua a dx */
+}
+
+.social-icons {
+    order: 1; /* Posiziona l'icona di Instagram a sx */
+}
+
+.instagram-icon {
+    width: 34px; /* Dimensione ridotta dell'icona */
+    height: 34px; /* Altezza ridotta dell'icona */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Transizione per l'effetto hover */
+}
+
+.footer-language select {
+    background-color: #ffffff;
+    color: #2c3e50;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.footer-bottom {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #d1d1d1;
 }
