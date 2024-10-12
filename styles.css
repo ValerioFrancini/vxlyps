@@ -394,18 +394,26 @@ body {
     cursor: pointer; /* Mostra il cursore di puntatore per indicare che è cliccabile */
 }
 
-/* Stile specifico per dispositivi mobili */
+/* Stili per la card contatti su dispositivi mobili */
 @media (max-width: 768px) {
     .contact-card {
+        display: flex;
         flex-direction: column; /* Disposizione verticale degli elementi nella card su mobile */
         align-items: center; /* Centra tutti gli elementi */
         text-align: center; /* Centra il testo */
     }
 
     .profile-pic {
-        margin-bottom: 15px; /* Spazio tra la foto e il testo su mobile */
+        order: 2; /* Sposta l'immagine sotto il testo */
+        margin-top: 15px; /* Aggiungi uno spazio tra il testo e la foto */
+        margin-bottom: 15px; /* Spazio sotto la foto */
+    }
+
+    .contact-info {
+        order: 1; /* Assicura che il testo venga visualizzato sopra l'immagine */
     }
 }
+
 
 
 /* =========================
