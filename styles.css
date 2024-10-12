@@ -127,7 +127,7 @@ body {
     position: absolute;
     top: 90px;
     right: 12px;
-    background-color: #fafafa;
+    background-color: #fafafa; /* Sfondo del menu */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     border-radius: 7px;
     padding: 15px;
@@ -139,7 +139,7 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
-    width: 65%; /* Assicura che la lista ul occupi tutta la larghezza del menu */
+    width: 100%; /* Assicura che la lista ul occupi tutta la larghezza del menu */
 }
 
 .nav-menu ul li {
@@ -150,25 +150,32 @@ body {
 .nav-menu ul li a {
     display: block; /* Trasforma l'elemento <a> in un blocco per occupare tutta la larghezza */
     width: 100%; /* Assicura che lo sfondo si estenda su tutta la larghezza del contenitore */
-    padding: 7px 23px;
+    padding: 10px 15px;
     text-decoration: none;
     font-size: 1.1rem;
-    color: #2c3e50;
-    background-color: #f0f0f0;
+    color: #B9A890; /* Colore del testo in Taupe tenue */
+    background-color: transparent; /* Sfondo trasparente di default */
     border-radius: 12px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Hover effect for menu items */
 .nav-menu ul li a:hover {
-    background-color: #FF5A5F;
-    color: white;
+    background-color: #EFE2CC; /* Beige chiaro per l'hover */
+    color: #5F6A74; /* Grigio-blu scuro per il testo al passaggio del mouse */
+}
+
+/* Active state for clicked menu items */
+.nav-menu ul li a:active {
+    background-color: #B9A890; /* Taupe tenue per lo stato attivo */
+    color: white; /* Testo bianco per maggiore contrasto nello stato attivo */
 }
 
 /* Show menu when burger menu is active */
 .menu-toggle:checked + .burger-menu + .nav-menu {
     display: flex;
 }
+
 
 /* =========================
    SLIDER STYLES
