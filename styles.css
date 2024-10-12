@@ -246,16 +246,18 @@ body {
     margin: 0; /* Rimuove qualsiasi margine extra */
     text-align: center; /* Allinea i puntini al centro */
     z-index: 2; /* Assicura che i puntini siano sopra l'immagine */
+    pointer-events: none; /* Assicura che i puntini non interferiscano con altri elementi cliccabili */
 }
 
 .dot {
     display: inline-block;
-    width: 6px; /* Dimensione ridotta del puntino */
-    height: 6px; /* Dimensione ridotta del puntino */
+    width: 6px; /* Dimensione del puntino */
+    height: 6px; /* Altezza del puntino */
     margin: 0 3.5px; /* Spazio tra i puntini */
     background-color: #EFE2CC; /* Beige chiaro per i puntini inattivi */
     border-radius: 50%; /* Rende i puntini rotondi */
     cursor: pointer;
+    transition: background-color 0.3s ease;
     pointer-events: all; /* Permette di cliccare sui puntini */
 }
 
