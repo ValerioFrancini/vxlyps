@@ -254,7 +254,7 @@ body {
     width: 6px; /* Dimensione ridotta del puntino */
     height: 6px; /* Dimensione ridotta del puntino */
     margin: 0 3.5px; /* Spazio tra i puntini */
-    background-color: #bbb;
+    background-color: #EFE2CC; /* Beige chiaro per i puntini inattivi */
     border-radius: 50%; /* Rende i puntini rotondi */
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -262,8 +262,9 @@ body {
 }
 
 .dot.active {
-    background-color: #FF5A5F; /* Colore attivo del puntino quando la foto è selezionata */
+    background-color: #B9A890; /* Taupe tenue per i puntini attivi */
 }
+
 
 
 /* =========================
