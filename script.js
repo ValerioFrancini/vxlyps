@@ -38,20 +38,18 @@ const sliderElement = document.querySelector('.slider'); // Usato per la transiz
 
 // Funzione per aggiornare lo stato attivo dei puntini
 function updateDots() {
-    dots.forEach((dot, index) => {
-        if (index === currentIndex) {
-            dot.classList.add('active');
-        } else {
-            dot.classList.remove('active');
-        }
-    });
+    if (dots.length > 0) {
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+        });
+    }
 }
 
 // Funzione per muovere lo slider manualmente con le frecce
 function moveSlide(direction) {
-    if (slides.length > 0) { // Verifica che ci siano immagini nello slider
+    if (slides.length > 0) {
         currentIndex = (currentIndex + direction + slides.length) % slides.length; // Calcola l'indice della prossima immagine
-        sliderElement.style.transform = `translateX(-${currentIndex * 100}%)`; // Sposta lo slider alla nuova immagine
+        sliderElement.style.transform = `translateX(-${currentIndex * 100}%)`;
         updateDots(); // Aggiorna lo stato dei puntini
     }
 }
@@ -69,11 +67,9 @@ function autoSlide() {
 }
 
 // Inizializza l'effetto di transizione automatica ogni 4 secondi
-setInterval(autoSlide, 4000);
-
-// Inizializza il primo slide come attivo e imposta lo stato iniziale dei puntini
 if (slides.length > 0) {
-    updateDots();
+    setInterval(autoSlide, 4000);
+    updateDots(); // Inizializza il primo slide come attivo
 }
 
 // Funzione per cambiare la lingua del sito
@@ -109,9 +105,10 @@ sliderContainer.addEventListener('touchmove', (e) => {
 });
 
 sliderContainer.addEventListener('touchend', () => {
-    if (startX > endX + 50) {
+    const threshold = 50; // Aggiungi una soglia per evitare cambiamenti accidentali
+    if (startX > endX + threshold) {
         moveSlide(1); // Scorri verso destra se il tocco è stato uno swipe verso sinistra
-    } else if (startX < endX - 50) {
+    } else if (startX < endX - threshold) {
         moveSlide(-1); // Scorri verso sinistra se il tocco è stato uno swipe verso destra
     }
 });
