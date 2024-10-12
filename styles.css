@@ -1,8 +1,10 @@
 /* =========================
-      BODY
+      BODY STYLES
    ========================= */
 body {
     margin-top: 130px; /* Modifica questo valore in base all'altezza effettiva del tuo header */
+      font-family: 'Nunito', sans-serif; /* Apply Nunito font */
+}
 }
 
 /* =========================
@@ -39,6 +41,7 @@ body {
     margin: 0 auto; /* Utilizza margini automatici per centrare il titolo */
     text-align: center; /* Allinea il testo del titolo al centro */
     flex: 1; /* Fa sì che il titolo occupi lo spazio disponibile per centrarlo */
+      font-family: 'Nunito', sans-serif; /* Ensure the title uses Nunito */
 }
 
 .home-link {
@@ -142,6 +145,7 @@ body {
 }
 
 .nav-menu ul li a {
+      font-family: 'Nunito', sans-serif; /* Menu items */
     display: block; /* Trasforma l'elemento <a> in un blocco per occupare tutta la larghezza */
     width: 100%; /* Assicura che lo sfondo si estenda su tutta la larghezza del contenitore */
     padding: 10px 15px;
