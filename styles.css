@@ -165,28 +165,32 @@ body {
 
 /* Stili per i puntini di navigazione dello slider */
 .dots-container {
-    position: absolute;
-    bottom: 5px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    z-index: 2;
+    position: absolute; /* Posiziona i puntini all'interno dello slider */
+    bottom: 5px; /* Sposta i puntini molto vicini alla parte inferiore dell'immagine */
+    left: 50%; /* Centra i puntini orizzontalmente */
+    transform: translateX(-50%); /* Centra i puntini rispetto alla loro posizione */
+    margin: 0; /* Rimuove qualsiasi margine extra */
+    text-align: center; /* Allinea i puntini al centro */
+    z-index: 2; /* Assicura che i puntini siano sopra l'immagine */
+    pointer-events: none; /* Assicura che i puntini non interferiscano con altri elementi cliccabili */
 }
 
 .dot {
     display: inline-block;
-    width: 6px;
-    height: 6px;
-    margin: 0 3.5px;
-    background-color: #EFE2CC; /* Beige chiaro per lo stato inattivo dei puntini */
-    border-radius: 50%;
+    width: 6px; /* Dimensione ridotta del puntino */
+    height: 6px; /* Dimensione ridotta del puntino */
+    margin: 0 3.5px; /* Spazio tra i puntini */
+    background-color: #EFE2CC; /* Beige chiaro per i puntini inattivi */
+    border-radius: 50%; /* Rende i puntini rotondi */
     cursor: pointer;
     transition: background-color 0.3s ease;
+    pointer-events: all; /* Permette di cliccare sui puntini */
 }
 
 .dot.active {
-    background-color: #B9A890; /* Taupe tenue per il puntino attivo */
+    background-color: #B9A890; /* Taupe tenue per i puntini attivi */
 }
+
 
 /* =========================
    AIRBNB BUTTON STYLES
