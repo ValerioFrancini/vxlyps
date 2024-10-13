@@ -508,13 +508,13 @@ body {
 
     .card p {
         font-family: 'Poppins', sans-serif;
-        font-weight: 100; /* Assicura che il testo delle card usi Poppins Thin 100 su mobile */
+        font-weight: 200; /* Cambia a Poppins ExtraLight 200 per migliorare la leggibilità */
         font-size: 0.9rem; /* Riduce leggermente la dimensione del testo su mobile */
     }
 
     .nav-menu ul li a {
         font-family: 'Poppins', sans-serif;
-        font-weight: 100; /* Assicura che il testo del menu burger usi Poppins Thin 100 su mobile */
+        font-weight: 200; /* Cambia a Poppins ExtraLight 200 per migliorare la leggibilità del menu */
         font-size: 1rem; /* Imposta una dimensione comoda per il menu su mobile */
     }
 }
