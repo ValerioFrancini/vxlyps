@@ -84,7 +84,7 @@ body {
     padding: 10px;
     position: absolute; /* Imposta la posizione del burger menu */
     right: 50px; /* Posiziona il menu a 20px dal bordo destro */
-    top: 50px; /* Posiziona il menu a 15px dall'alto */
+    top: 40px; /* Posiziona il menu a 40px dall'alto */
     z-index: 1001;
 }
 
