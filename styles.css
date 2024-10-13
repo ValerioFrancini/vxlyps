@@ -491,3 +491,30 @@ body {
     font-size: 0.9rem;
     color: #d1d1d1;
 }
+
+/* Aggiungi le media queries per mobile */
+@media (max-width: 768px) {
+    .site-title {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400; /* Assicura che il titolo abbia Poppins Regular 400 su mobile */
+        font-size: 1.5rem; /* Regola la dimensione del font per adattarsi a schermi più piccoli */
+    }
+
+    .card h2 {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 300; /* Assicura che il titolo delle card usi Poppins Light 300 su mobile */
+        font-size: 1.3rem; /* Riduce leggermente la dimensione per il titolo delle card su mobile */
+    }
+
+    .card p {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 100; /* Assicura che il testo delle card usi Poppins Thin 100 su mobile */
+        font-size: 0.9rem; /* Riduce leggermente la dimensione del testo su mobile */
+    }
+
+    .nav-menu ul li a {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 100; /* Assicura che il testo del menu burger usi Poppins Thin 100 su mobile */
+        font-size: 1rem; /* Imposta una dimensione comoda per il menu su mobile */
+    }
+}
