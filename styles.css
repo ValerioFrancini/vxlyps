@@ -319,6 +319,7 @@ body {
     cursor: pointer;
     display: block;
     margin: 20px auto;
+    z-index: 1000; /* Assegna un valore di z-index elevato */
 }
 
 .airbnb-button:hover {
@@ -338,11 +339,14 @@ body {
         display: flex;
         justify-content: center;
         margin-top: 20px; /* Spazio extra sopra il pulsante */
+          z-index: 1; /* Assicura che il contenitore del pulsante sia visibile */
     }
 
     .airbnb-button {
         width: 90%; /* Larghezza per adattarsi ai dispositivi mobili */
-        background-color: red; /* Colore temporaneo per visibilità */
+        font-size: 1rem; /* Leggermente più piccola la dimensione del testo */
+        padding: 12px 20px; /* Riduce il padding per adattarsi agli schermi mobili */
+        background: linear-gradient(135deg, #FF4E50, #FF6B6B); /* Mantieni il gradiente del pulsante */
     }
 }
 
