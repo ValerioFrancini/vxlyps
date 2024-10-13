@@ -3,7 +3,8 @@
    ========================= */
 body {
     margin-top: 133.5px; /* Modifica questo valore in base all'altezza effettiva del tuo header */
-      font-family: 'Nunito', sans-serif; /* Apply Nunito font */
+      font-family: 'Poppins', sans-serif; /* Cambia font in Poppins */
+    font-weight: 100; /* Imposta il peso Thin 100 per i testi e il burger menu */
 }
 
 /* =========================
@@ -40,7 +41,8 @@ body {
     margin: 0 auto; /* Utilizza margini automatici per centrare il titolo */
     text-align: center; /* Allinea il testo del titolo al centro */
     flex: 1; /* Fa sì che il titolo occupi lo spazio disponibile per centrarlo */
-      font-family: 'Nunito', sans-serif; /* Ensure the title uses Nunito */
+      font-family: 'Poppins', sans-serif; /* Cambia font in Poppins */
+    font-weight: 400; /* Imposta il peso Regular 400 per il titolo */
 }
 
 .home-link {
@@ -152,7 +154,8 @@ body {
 }
 
 .nav-menu ul li a {
-      font-family: 'Nunito', sans-serif; /* Menu items */
+      font-family: 'Poppins', sans-serif; /* Cambia font in Poppins */
+    font-weight: 100; /* Imposta il peso Thin 100 per il menu burger */
     display: block; /* Trasforma l'elemento <a> in un blocco per occupare tutta la larghezza */
     width: 100%; /* Assicura che lo sfondo si estenda su tutta la larghezza del contenitore */
     padding: 10px 15px;
@@ -355,7 +358,7 @@ body {
 
 /* =========================
    CARD STYLES
-   ========================= */
+========================= */
 .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -373,10 +376,25 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.card h2 {
+    font-family: 'Poppins', sans-serif;  /* Applica il font Poppins */
+    font-weight: 300; /* Usa Poppins Light 300 per i titoli delle card */
+    font-size: 1.5rem; /* Dimensione del font per i titoli delle card */
+    color: #2c3e50; /* Colore del titolo */
+}
+
+.card p {
+    font-family: 'Poppins', sans-serif;  /* Applica il font Poppins */
+    font-weight: 100; /* Usa Poppins Thin 100 per il testo delle card */
+    font-size: 1rem; /* Dimensione del font per i paragrafi delle card */
+    color: #5F6A74; /* Colore del testo delle card */
+}
+
 .card:hover {
     transform: translateY(-8px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
+
 
 /* =========================
    CONTACT CARD STYLES
