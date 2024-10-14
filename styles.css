@@ -232,13 +232,11 @@ body {
 /* Freccia sinistra (prev) */
 .prev {
     left: 20px; /* Posiziona leggermente a sinistra del contenitore slider */
-    background-image: url('img/freccia-sinistra.png'); /* Immagine per la freccia sinistra */
 }
 
 /* Freccia destra (next) */
 .next {
     right: 20px; /* Posiziona leggermente a destra del contenitore slider */
-    background-image: url('img/freccia-destra.png'); /* Immagine per la freccia destra */
 }
 
 /* Hover effect per le frecce */
