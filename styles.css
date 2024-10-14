@@ -212,30 +212,33 @@ body {
 }
 
 
-/* Stili per le frecce dello slider */
+/* Stili per le frecce dello slider con immagine PNG */
 .prev, .next {
     cursor: pointer;
     position: absolute;
-    top: 50%; /* Posiziona al centro verticale del contenitore slider */
-    transform: translateY(-50%); /* Centra le frecce verticalmente */
-    width: 40px; /* Larghezza della linea */
-    height: 3px; /* Spessore della linea */
-    background-color: #000; /* Colore della freccia */
-    border: none; /* Rimuove eventuali bordi */
-    margin: 0; /* Rimuove margini */
-    padding: 0; /* Rimuove padding */
+    top: 50%; /* Posiziona le frecce al centro verticale del contenitore slider */
+    transform: translateY(-50%); /* Centra verticalmente */
+    width: 40px; /* Larghezza dell'immagine */
+    height: 40px; /* Altezza dell'immagine */
+    background-size: contain; /* Adatta l'immagine alla dimensione */
+    background-repeat: no-repeat; /* Non ripete l'immagine */
+    background-position: center; /* Centra l'immagine */
     z-index: 20; /* Posiziona le frecce sopra lo slider */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Effetto di transizione */
+    border: none; /* Rimuovi eventuali bordi */
+    background-color: transparent; /* Sfondo trasparente */
 }
 
-/* Freccia sinistra */
+/* Freccia sinistra (prev) */
 .prev {
-    left: 20px; /* Posiziona leggermente a sinistra del contenitore dello slider */
+    left: 20px; /* Posiziona leggermente a sinistra del contenitore slider */
+    background-image: url('img/freccia-sinistra.png'); /* Immagine per la freccia sinistra */
 }
 
-/* Freccia destra */
+/* Freccia destra (next) */
 .next {
-    right: 20px; /* Posiziona leggermente a destra del contenitore dello slider */
+    right: 20px; /* Posiziona leggermente a destra del contenitore slider */
+    background-image: url('img/freccia-destra.png'); /* Immagine per la freccia destra */
 }
 
 /* Hover effect per le frecce */
@@ -243,12 +246,6 @@ body {
     transform: scale(1.1); /* Leggero effetto di ingrandimento */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Effetto glow leggero */
 }
-
-/* Rimuovi la linea strana sopra le frecce */
-.prev::before, .next::before {
-    content: none; /* Rimuovi eventuali contenuti indesiderati sopra le frecce */
-}
-
 
 /* Nascondi le freccette su dispositivi mobili */
 @media (max-width: 768px) {
