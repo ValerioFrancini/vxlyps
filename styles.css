@@ -90,7 +90,7 @@ body {
 
 @media (max-width: 768px) {
     .burger-menu {
-        top: 20px; /* Adjusts the vertical position of the burger menu */
+        top: 34px; /* Adjusts the vertical position of the burger menu */
         right: 20px; /* Adjusts the horizontal position of the burger menu */
     }
 }
