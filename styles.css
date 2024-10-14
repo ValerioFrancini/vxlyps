@@ -301,10 +301,10 @@ body {
     top: 20px; /* Posiziona il pulsante sopra lo slider */
     left: 50%;
     transform: translateX(-50%);
+    z-index: 10; /* Assicura che il pulsante sia visibile sopra lo slider */
     display: flex;
     justify-content: center;
     width: 100%;
-    z-index: 1;
 }
 
 .airbnb-button {
@@ -336,7 +336,6 @@ body {
     .booking-buttons-container {
         position: relative; /* Cambia da absolute a relative */
         top: auto; /* Annulla la posizione top */
-        bottom: auto; /* Annulla la posizione bottom */
         margin-top: 20px; /* Aggiungi un margine sopra il pulsante */
         margin-bottom: 20px; /* Aggiungi un margine sotto il pulsante */
         display: flex;
