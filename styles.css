@@ -246,18 +246,19 @@ body {
     }
 }
 
-/* Responsive slider adjustments */
+/* Dimensioni Slider Mobile */
 @media (max-width: 768px) {
     .slider-container {
         max-width: 95%;
-        height: 30vh;
+        height: 37vh;
     }
 }
 
+/* Dimensioni Slider Desktop */
 @media (min-width: 1024px) {
     .slider-container {
-        max-width: 70%;
-        height: 60vh;
+        max-width: 80%;
+        height: 70vh;
     }
 }
 
