@@ -308,14 +308,14 @@ body {
    ========================= */
 /* Stile base: pulsante sopra lo slider (desktop) */
 .booking-buttons-container {
-    position: relative;  /* Cambia da absolute a relative */
-    top: 20px;           /* Aggiusta la distanza dall'alto */
-    margin-top: 20px;    /* Aggiungi uno spazio sopra il pulsante */
-    margin-bottom: 20px; /* Aggiungi uno spazio sotto il pulsante */
+    position: absolute; /* Posiziona il pulsante in modo assoluto sopra lo slider */
+    top: 20px;          /* Posiziona il pulsante 20px sopra lo slider */
+    left: 50%;          /* Centra orizzontalmente il pulsante */
+    transform: translateX(-50%); /* Assicura che il pulsante sia perfettamente centrato */
+    z-index: 10;        /* Assicurati che il pulsante sia sopra lo slider */
     display: flex;
     justify-content: center;
-    width: 100%;         /* Occupa tutta la larghezza del contenitore */
-    z-index: 1;          /* Assicurati che sia visibile */
+    width: 100%;        /* Occupa tutta la larghezza */
 }
 
 .airbnb-button {
