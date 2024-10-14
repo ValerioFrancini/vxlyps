@@ -217,32 +217,30 @@ body {
     cursor: pointer;
     position: absolute;
     top: 50%; /* Posiziona verticalmente al centro */
-    transform: translateY(-50%); /* Centra la freccia verticalmente */
+    transform: translateY(-50%); /* Mantiene centrata la freccia verticalmente */
     width: 40px; /* Larghezza della linea */
     height: 3px; /* Spessore della linea */
-    background-color: #000; /* Colore della linea, puoi cambiarlo a seconda del design */
+    background-color: #000; /* Colore della linea */
     border: none;
     border-radius: 1px; /* Arrotonda leggermente i bordi */
-    z-index: 10; /* Assicurati che siano visibili sopra lo slider */
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 10; /* Assicura che siano visibili sopra lo slider */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Effetti di transizione su hover */
 }
 
 /* Freccia sinistra */
 .prev {
     left: 10px; /* Posiziona a sinistra dello slider */
-    transform: rotate(-90deg) translateY(-50%);
 }
 
 /* Freccia destra */
 .next {
     right: 10px; /* Posiziona a destra dello slider */
-    transform: rotate(90deg) translateY(-50%);
 }
 
-/* Hover effect per le frecce */
+/* Hover effect per le frecce: leggera crescita e glow */
 .prev:hover, .next:hover {
-    background-color: #666; /* Cambia colore quando l'utente passa sopra */
-    transform: scale(1.2); /* Leggero ingrandimento quando l'utente passa sopra */
+    transform: scale(1.1); /* Effetto zoom leggero */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Effetto glow leggero attorno alla freccia */
 }
 
 
