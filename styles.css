@@ -469,6 +469,22 @@ body {
     color: white; /* Cambia il colore del testo per maggiore contrasto */
 }
 
+/* Rendi il cursore un puntatore quando si passa sopra una card */
+.card-link {
+    text-decoration: none; /* Rimuovi la sottolineatura del link */
+}
+
+.card-link .card {
+    cursor: pointer; /* Cursore puntatore per indicare che la card è cliccabile */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-link .card:hover {
+    transform: translateY(-8px); /* Leggero spostamento verso l'alto al passaggio del mouse */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Effetto ombra al passaggio del mouse */
+}
+
+
 
 /* =========================
    CONTACT CARD STYLES
