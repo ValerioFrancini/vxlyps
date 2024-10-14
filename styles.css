@@ -241,8 +241,8 @@ body {
 
 /* Hover effect per le frecce */
 .prev:hover, .next:hover {
-    transform: scale(1.1); /* Leggero effetto di ingrandimento */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Effetto glow leggero */
+    /* transform: scale(1.1); RIMOSSO l'ingrandimento */
 }
 
 /* Nascondi le freccette su dispositivi mobili */
