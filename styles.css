@@ -237,12 +237,12 @@ body {
 
 /* Freccia sinistra (prev) */
 .prev {
-    left: 165px; /* Posiziona leggermente a sinistra del contenitore slider */
+    left: 115px; /* Posiziona leggermente a sinistra del contenitore slider */
 }
 
 /* Freccia destra (next) */
 .next {
-    right: 165px; /* Posiziona leggermente a destra del contenitore slider */
+    right: 115px; /* Posiziona leggermente a destra del contenitore slider */
 }
 
 /* Hover effect per le frecce */
@@ -261,8 +261,8 @@ body {
 /* Dimensioni Slider Mobile */
 @media (max-width: 768px) {
     .slider-container {
-        max-width: 95%;
-        height: 34vh;
+        max-width: 92%;
+        height: 28vh;
     }
 }
 
@@ -439,6 +439,7 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
     text-align: center; /* Centra il testo all'interno del pulsante */
 }
+
 
 /* Centra il pulsante in fondo alla card */
 .card {
