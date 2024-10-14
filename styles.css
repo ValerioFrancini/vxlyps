@@ -307,20 +307,20 @@ body {
 /* =========================
    AIRBNB BUTTON STYLES
    ========================= */
-/* Stile base: pulsante sopra lo slider (desktop) */
-booking-buttons-container {
+/* Posizionamento del pulsante sopra lo slider */
+.booking-buttons-container {
     position: absolute;
-    top: 10px; /* Posiziona il pulsante 10px sotto la parte superiore dello slider */
+    top: 85%; /* Posiziona il pulsante sopra i puntini */
     left: 50%;
     transform: translateX(-50%);
-    z-index: 1000; /* Z-index alto per essere sopra slider e puntini */
+    z-index: 1000; /* Assicurati che il pulsante sia sopra lo slider */
     display: flex;
     justify-content: center;
-    width: auto;
     pointer-events: all;
+    width: auto;
 }
 
-/* Aggiunta del fade-in al caricamento */
+/* Stile del pulsante Airbnb */
 .airbnb-button {
     background: linear-gradient(135deg, #FF4E50, #FF6B6B); /* Mantieni il gradiente */
     color: white;
@@ -331,26 +331,40 @@ booking-buttons-container {
     border: none;
     border-radius: 50px; /* Mantieni la stondatura del pulsante */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
-    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease, opacity 0.5s ease; /* Aggiunta della transizione per opacity */
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease, opacity 0.5s ease;
     cursor: pointer;
     display: block;
     margin: 0 auto;
-    opacity: 0; /* Inizia nascosto */
-    transform: translateY(20px); /* Partenza leggermente spostata verso il basso */
+    opacity: 0; /* Inizia nascosto per il fade-in */
+    transform: translateY(20px); /* Piccolo spostamento iniziale per il fade-in */
 }
 
-/* Effetto hover */
+/* Hover effect */
 .airbnb-button:hover {
     background: linear-gradient(135deg, #FF6B6B, #FF4E50);
     transform: translateY(-4px);
     box-shadow: 0 12px 24px rgba(255, 110, 110, 0.5);
 }
 
-/* Classe per attivare il fade-in al caricamento */
+/* Classe per attivare il fade-in */
 .airbnb-button.loaded {
-    opacity: 1; /* Rende il pulsante visibile */
-    transform: translateY(0); /* Riporta il pulsante alla sua posizione originale */
+    opacity: 1;
+    transform: translateY(0); /* Torna alla posizione originale */
 }
+
+/* Adattamento per dispositivi mobili */
+@media (max-width: 768px) {
+    .booking-buttons-container {
+        top: 80%; /* Posiziona il pulsante più in alto per adattarsi meglio su mobile */
+    }
+
+    .airbnb-button {
+        width: 80%; /* Riduce la larghezza del pulsante su dispositivi mobili */
+        font-size: 1rem; /* Riduce leggermente la dimensione del testo */
+        padding: 12px 24px; /* Adatta il padding per schermi piccoli */
+    }
+}
+
 
 
 /* Stile per mobile: pulsante sotto lo slider */
