@@ -312,10 +312,11 @@ body {
     top: 20px;          /* Posiziona il pulsante 20px sopra lo slider */
     left: 50%;          /* Centra orizzontalmente il pulsante */
     transform: translateX(-50%); /* Assicura che il pulsante sia perfettamente centrato */
-    z-index: 10;        /* Assicurati che il pulsante sia sopra lo slider */
+    z-index: 50;        /* Aumenta il valore di z-index per assicurarti che sia visibile */
     display: flex;
     justify-content: center;
-    width: 100%;        /* Occupa tutta la larghezza */
+    width: auto;        /* Imposta la larghezza su 'auto' */
+    pointer-events: all; /* Assicurati che il pulsante sia cliccabile */
 }
 
 .airbnb-button {
@@ -351,7 +352,7 @@ body {
         display: flex;
         justify-content: center;
         width: 100%; /* Occupa tutta la larghezza su mobile */
-          text-align: center;
+        text-align: center;
     }
 
     .airbnb-button {
