@@ -487,6 +487,57 @@ body {
     text-align: left; /* Allinea il testo a sinistra */
 }
 
+/* Stile per il pulsante email */
+.email-card .email-button {
+    background-color: #fafafa; /* Colore di sfondo simile al menu */
+    color: #5F6A74; /* Colore del testo come il menu */
+    border: 1px solid #5F6A74; /* Bordo simile al menu */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 12px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* Stile per rendere la card della mail della stessa dimensione di quella di Valerio su desktop */
+.email-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px; /* Dimensione massima della card */
+    height: auto; /* Adatta l'altezza alla dimensione del contenuto */
+}
+
+/* Media query per adattare la dimensione su desktop */
+@media (min-width: 1024px) {
+    .email-card {
+        height: 380px; /* Stessa altezza della card di Valerio */
+    }
+}
+
+/* Effetto hover per il pulsante email */
+.email-card .email-button:hover {
+    background-color: #EFE2CC; /* Colore chiaro al passaggio del mouse */
+    color: #5F6A74;
+    border-color: #EFE2CC;
+}
+
+/* Effetto active (quando cliccato) */
+.email-card .email-button:active {
+    background-color: #B9A890; /* Colore più scuro quando viene cliccato */
+    color: white; /* Colore del testo bianco per contrasto */
+    border-color: #B9A890;
+}
+
 /* Stile dell'immagine del profilo */
 .profile-pic {
     width: 120px; /* Dimensione della foto */
