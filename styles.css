@@ -310,7 +310,7 @@ body {
 /* Posizionamento del pulsante sopra lo slider */
 .booking-buttons-container {
     position: absolute;
-    top: 85%; /* Posiziona il pulsante sopra i puntini */
+    top: 79%; /* Posiziona il pulsante sopra i puntini */
     left: 50%;
     transform: translateX(-50%);
     z-index: 1000; /* Assicurati che il pulsante sia sopra lo slider */
@@ -326,10 +326,10 @@ body {
     color: white;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     padding: 15px 40px;
     border: none;
-    border-radius: 50px; /* Mantieni la stondatura del pulsante */
+    border-radius: 17px; /* Mantieni la stondatura del pulsante */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
     transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease, opacity 0.5s ease;
     cursor: pointer;
