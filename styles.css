@@ -229,6 +229,10 @@ body {
     background-color: transparent; /* Sfondo trasparente */
       border-radius: 50%; /* Arrotonda i bordi delle frecce */
 }
+/* Correggi la posizione con un aggiustamento */
+.prev, .next {
+    top: calc(50% + 10px); /* Aggiustamento per centrare meglio */
+}
 
 /* Freccia sinistra (prev) */
 .prev {
