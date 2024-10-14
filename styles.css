@@ -227,6 +227,7 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Effetto di transizione */
     border: none; /* Rimuovi eventuali bordi */
     background-color: transparent; /* Sfondo trasparente */
+      border-radius: 50%; /* Arrotonda i bordi delle frecce */
 }
 
 /* Freccia sinistra (prev) */
