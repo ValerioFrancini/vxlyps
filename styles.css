@@ -294,16 +294,20 @@ body {
 /* =========================
    AIRBNB BUTTON STYLES
    ========================= */
+/* Stile base: pulsante sopra lo slider (desktop) */
 .booking-buttons-container {
-    margin-top: 20px; /* Spazio tra lo slider e il pulsante */
-    margin-bottom: 20px; /* Spazio tra il pulsante e le card */
+    position: absolute;
+    top: 20px; /* Posiziona il pulsante sopra lo slider */
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     justify-content: center;
-    width: 100%; /* Assicura che il pulsante sia centrato */
+    width: 100%;
+    z-index: 1000;
 }
 
 .airbnb-button {
-    background: linear-gradient(135deg, #FF4E50, #FF6B6B); /* Gradiente rosso più acceso */
+    background: linear-gradient(135deg, #FF4E50, #FF6B6B);
     color: white;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
@@ -315,35 +319,34 @@ body {
     transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
     cursor: pointer;
     display: block;
-    margin: 0 auto; /* Centra il pulsante */
-    z-index: 1000; /* Assicura che il pulsante sia visibile */
+    margin: 0 auto;
+    z-index: 1000; /* Assicura che il pulsante sia visibile sopra gli altri elementi */
 }
 
+/* Hover effect */
 .airbnb-button:hover {
-    background: linear-gradient(135deg, #FF6B6B, #FF4E50); /* Colore del gradiente invertito per l'effetto hover */
+    background: linear-gradient(135deg, #FF6B6B, #FF4E50);
     transform: translateY(-4px);
-    box-shadow: 0 12px 24px rgba(255, 110, 110, 0.5); /* Leggero effetto glow al passaggio del mouse */
+    box-shadow: 0 12px 24px rgba(255, 110, 110, 0.5);
 }
 
-.airbnb-button:active {
-    transform: translateY(2px);
-    background: #FF4E50;
-    box-shadow: 0 4px 8px rgba(255, 110, 110, 0.7); /* Effetto glow più intenso durante il clic */
-}
-
+/* Stile per mobile: pulsante sotto lo slider */
 @media (max-width: 768px) {
     .booking-buttons-container {
+        position: relative; /* Cambia da absolute a relative */
+        top: auto; /* Annulla la posizione top */
+        bottom: auto; /* Annulla la posizione bottom */
+        margin-top: 20px; /* Aggiungi un margine sopra il pulsante */
+        margin-bottom: 20px; /* Aggiungi un margine sotto il pulsante */
         display: flex;
         justify-content: center;
-        margin-top: 20px; /* Spazio extra sopra il pulsante */
-          z-index: 1; /* Assicura che il contenitore del pulsante sia visibile */
+        width: 100%; /* Occupa tutta la larghezza su mobile */
     }
 
     .airbnb-button {
-        width: 90%; /* Larghezza per adattarsi ai dispositivi mobili */
-        font-size: 1rem; /* Leggermente più piccola la dimensione del testo */
-        padding: 12px 20px; /* Riduce il padding per adattarsi agli schermi mobili */
-        background: linear-gradient(135deg, #FF4E50, #FF6B6B); /* Mantieni il gradiente del pulsante */
+        width: 90%; /* Riduce la larghezza del pulsante su mobile */
+        font-size: 1rem; /* Riduce leggermente la dimensione del font su mobile */
+        padding: 12px 20px; /* Adatta il padding per mobile */
     }
 }
 
