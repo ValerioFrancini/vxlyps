@@ -112,3 +112,10 @@ sliderContainer.addEventListener('touchend', () => {
         moveSlide(-1); // Scorri verso sinistra se il tocco è stato uno swipe verso destra
     }
 });
+
+window.addEventListener('load', () => {
+    const airbnbButton = document.querySelector('.airbnb-button');
+    if (airbnbButton) {
+        airbnbButton.classList.add('loaded'); // Aggiunge la classe 'loaded' per attivare il fade-in
+    }
+});
