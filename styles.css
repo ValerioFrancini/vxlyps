@@ -313,7 +313,7 @@ body {
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 999; /* Aumentato il valore di z-index */
+    z-index: 500; /* Riduci il valore di z-index per essere sotto l'header */
     display: flex;
     justify-content: center;
     width: auto;
