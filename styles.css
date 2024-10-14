@@ -205,11 +205,12 @@ body {
 }
 
 .slider-image {
-    min-width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+    width: 100%; /* Assicura che l'immagine riempia lo spazio orizzontale */
+    height: 100%; /* Assicura che l'immagine riempia lo spazio verticale */
+    object-fit: cover; /* Mantiene le proporzioni e riempie lo slider, tagliando le parti in eccesso */
+    object-position: 50% 50%; /* Il primo valore controlla l'asse orizzontale, il secondo quello verticale (50% è centrato) */
 }
+
 
 /* Stili migliorati per i controlli dello slider */
 .prev, .next {
