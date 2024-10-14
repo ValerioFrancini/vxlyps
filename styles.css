@@ -320,6 +320,7 @@ booking-buttons-container {
     pointer-events: all;
 }
 
+/* Aggiunta del fade-in al caricamento */
 .airbnb-button {
     background: linear-gradient(135deg, #FF4E50, #FF6B6B); /* Mantieni il gradiente */
     color: white;
@@ -330,18 +331,27 @@ booking-buttons-container {
     border: none;
     border-radius: 50px; /* Mantieni la stondatura del pulsante */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
-    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease, opacity 0.5s ease; /* Aggiunta della transizione per opacity */
     cursor: pointer;
     display: block;
     margin: 0 auto;
+    opacity: 0; /* Inizia nascosto */
+    transform: translateY(20px); /* Partenza leggermente spostata verso il basso */
 }
 
-/* Hover effect */
+/* Effetto hover */
 .airbnb-button:hover {
     background: linear-gradient(135deg, #FF6B6B, #FF4E50);
     transform: translateY(-4px);
     box-shadow: 0 12px 24px rgba(255, 110, 110, 0.5);
 }
+
+/* Classe per attivare il fade-in al caricamento */
+.airbnb-button.loaded {
+    opacity: 1; /* Rende il pulsante visibile */
+    transform: translateY(0); /* Riporta il pulsante alla sua posizione originale */
+}
+
 
 /* Stile per mobile: pulsante sotto lo slider */
 @media (max-width: 768px) {
