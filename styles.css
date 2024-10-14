@@ -231,12 +231,12 @@ body {
 
 /* Freccia sinistra (prev) */
 .prev {
-    left: 20px; /* Posiziona leggermente a sinistra del contenitore slider */
+    left: 165px; /* Posiziona leggermente a sinistra del contenitore slider */
 }
 
 /* Freccia destra (next) */
 .next {
-    right: 20px; /* Posiziona leggermente a destra del contenitore slider */
+    right: 165px; /* Posiziona leggermente a destra del contenitore slider */
 }
 
 /* Hover effect per le frecce */
