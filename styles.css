@@ -502,9 +502,10 @@ body {
     text-decoration: none;
 }
 
-/* Stile per rendere la card della mail della stessa dimensione di quella di Valerio su desktop */
+/* Stile per rendere la card della mail della stessa larghezza di quella di Valerio, con altezza adattabile al contenuto */
 .email-card {
     display: flex;
+    flex-direction: column; /* Disposizione verticale del contenuto */
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -513,16 +514,20 @@ body {
     border-radius: 15px;
     padding: 20px;
     margin: 20px auto;
-    max-width: 800px; /* Dimensione massima della card */
-    height: auto; /* Adatta l'altezza alla dimensione del contenuto */
+    max-width: 800px; /* Imposta la stessa larghezza della card di Valerio */
+    width: 100%; /* Assicura che la card sia responsiva */
+    height: auto; /* L'altezza si adatta al contenuto */
 }
 
-/* Media query per adattare la dimensione su desktop */
+/* Media query per schermi più grandi (desktop) */
 @media (min-width: 1024px) {
     .email-card {
-        height: 380px; /* Stessa altezza della card di Valerio */
+        max-width: 800px; /* La larghezza rimane uguale alla card di Valerio */
+        width: 100%; /* Mantiene la larghezza adattabile */
+        height: auto; /* L'altezza si adatta al contenuto */
     }
 }
+
 
 /* Effetto hover per il pulsante email */
 .email-card .email-button:hover {
