@@ -399,6 +399,51 @@ body {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
+/* Stili per i pulsanti "Info" nelle card */
+.card-info-button {
+    font-family: 'Poppins', sans-serif; /* Stesso font del burger menu */
+    font-weight: 100; /* Peso leggero per lo stile sobrio */
+    display: inline-block; /* Per gestire padding e margini correttamente */
+    text-decoration: none; /* Rimuove la sottolineatura del link */
+    color: #5F6A74; /* Colore simile al testo del burger menu */
+    background-color: transparent; /* Sfondo trasparente di default */
+    border: 1px solid #5F6A74; /* Aggiunge un bordo sottile */
+    border-radius: 8px; /* Arrotonda leggermente i bordi per un look sobrio */
+    padding: 8px 15px; /* Padding per rendere il pulsante comodo da cliccare */
+    margin-top: 20px; /* Aggiunge spazio tra il pulsante e il testo */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    text-align: center; /* Centra il testo all'interno del pulsante */
+}
+
+/* Centra il pulsante in fondo alla card */
+.card {
+    display: flex;
+    flex-direction: column; /* Organizza gli elementi della card verticalmente */
+    justify-content: space-between; /* Distribuisce gli elementi */
+    align-items: center; /* Centra gli elementi */
+}
+
+/* Giustifica il testo all'interno delle card */
+.card p {
+    text-align: justify; /* Giustifica il testo delle card */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100; /* Usa lo stesso peso leggero per mantenere coerenza con il design */
+    color: #5F6A74; /* Colore del testo */
+}
+
+/* Effetto hover per i pulsanti delle card */
+.card-info-button:hover {
+    background-color: #EFE2CC; /* Cambia colore dello sfondo al passaggio del mouse */
+    color: #5F6A74; /* Mantieni il colore del testo */
+    border-color: #EFE2CC; /* Cambia il colore del bordo durante l'hover */
+}
+
+/* Effetto active (quando il pulsante è cliccato) */
+.card-info-button:active {
+    background-color: #B9A890; /* Cambia il colore di sfondo quando cliccato */
+    color: white; /* Cambia il colore del testo per maggiore contrasto */
+}
+
 
 /* =========================
    CONTACT CARD STYLES
