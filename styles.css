@@ -20,7 +20,7 @@ body {
     position: fixed;
     top: 0; /* Posiziona l'header in cima alla pagina */
     width: 100%; /* Assicura che l'header occupi tutta la larghezza */
-    z-index: 1000; /* Assicura che l'header sia sempre sopra gli altri elementi della pagina */
+    z-index: 999; /* Assicura che l'header sia sempre sopra gli altri elementi della pagina */
 }
 
 .logo-title {
