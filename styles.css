@@ -310,7 +310,7 @@ body {
 /* Stile base: pulsante sopra lo slider (desktop) */
 .booking-buttons-container {
     position: absolute;
-    top: 20px;
+    top: 270px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 500; /* Riduci il valore di z-index per essere sotto l'header */
