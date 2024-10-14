@@ -352,7 +352,7 @@ body {
     }
 
     .airbnb-button {
-        width: 60%; /* Riduce la larghezza del pulsante su mobile */
+        width: 40%; /* Riduce la larghezza del pulsante su mobile */
         font-size: 1rem; /* Riduce leggermente la dimensione del font su mobile */
         padding: 12px 20px; /* Adatta il padding per mobile */
     }
