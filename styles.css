@@ -208,7 +208,7 @@ body {
     width: 100%; /* Assicura che l'immagine riempia lo spazio orizzontale */
     height: 100%; /* Assicura che l'immagine riempia lo spazio verticale */
     object-fit: cover; /* Mantiene le proporzioni e riempie lo slider, tagliando le parti in eccesso */
-    object-position: 50% 50%; /* Il primo valore controlla l'asse orizzontale, il secondo quello verticale (50% è centrato) */
+    object-position: 50% 40%; /* Il primo valore controlla l'asse orizzontale, il secondo quello verticale (50% è centrato) */
 }
 
 
@@ -258,8 +258,8 @@ body {
 /* Dimensioni Slider Desktop */
 @media (min-width: 1024px) {
     .slider-container {
-        max-width: 80%;
-        height: 70vh;
+        max-width: 70%;
+        height: 80vh;
     }
 }
 
