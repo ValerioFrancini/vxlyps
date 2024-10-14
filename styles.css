@@ -308,12 +308,12 @@ body {
    AIRBNB BUTTON STYLES
    ========================= */
 /* Stile base: pulsante sopra lo slider (desktop) */
-.booking-buttons-container {
+booking-buttons-container {
     position: absolute;
-    bottom: 20px; /* Cambiato da top a bottom */
+    top: 10px; /* Posiziona il pulsante 10px sotto la parte superiore dello slider */
     left: 50%;
     transform: translateX(-50%);
-    z-index: 500;
+    z-index: 1000; /* Z-index alto per essere sopra slider e puntini */
     display: flex;
     justify-content: center;
     width: auto;
@@ -346,23 +346,18 @@ body {
 /* Stile per mobile: pulsante sotto lo slider */
 @media (max-width: 768px) {
     .booking-buttons-container {
-        position: relative; /* Cambia da absolute a relative */
-        top: auto; /* Annulla la posizione top */
-        margin-top: 20px; /* Aggiungi un margine sopra il pulsante */
-        margin-bottom: 20px; /* Aggiungi un margine sotto il pulsante */
-        display: flex;
-        justify-content: center;
-        width: 100%; /* Occupa tutta la larghezza su mobile */
-        text-align: center;
+        top: 5px; /* Posizione più vicina alla parte superiore per mobile */
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1000; /* Mantiene il pulsante sopra gli altri elementi */
     }
 
     .airbnb-button {
-        width: 40%; /* Riduce la larghezza del pulsante su mobile */
-        font-size: 1rem; /* Riduce leggermente la dimensione del font su mobile */
-        padding: 12px 12px; /* Adatta il padding per mobile */
+        width: 70%; /* Allarga il pulsante per dispositivi mobili */
+        font-size: 1rem; /* Riduce leggermente la dimensione del testo */
+        padding: 10px 12px; /* Padding adattato per mobile */
     }
 }
-
 
 
 
