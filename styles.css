@@ -216,31 +216,33 @@ body {
 .prev, .next {
     cursor: pointer;
     position: absolute;
-    top: 50%; /* Posiziona verticalmente al centro */
-    transform: translateY(-50%); /* Mantiene centrata la freccia verticalmente */
+    top: 50%; /* Posiziona al centro verticale del contenitore slider */
+    transform: translate(-50%, -50%); /* Centra sia orizzontalmente che verticalmente */
     width: 40px; /* Larghezza della linea */
     height: 3px; /* Spessore della linea */
-    background-color: #000; /* Colore della linea */
-    border: none;
+    background-color: #000; /* Colore della freccia */
+    border: none; /* Rimuovi eventuali bordi */
+    margin: 0; /* Rimuovi margini */
+    padding: 0; /* Rimuovi padding */
     border-radius: 1px; /* Arrotonda leggermente i bordi */
-    z-index: 10; /* Assicura che siano visibili sopra lo slider */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Effetti di transizione su hover */
+    z-index: 20; /* Posiziona le frecce sopra lo slider */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Effetto di transizione */
 }
 
 /* Freccia sinistra */
 .prev {
-    left: 10px; /* Posiziona a sinistra dello slider */
+    left: 20px; /* Posiziona leggermente a sinistra del contenitore dello slider */
 }
 
 /* Freccia destra */
 .next {
-    right: 10px; /* Posiziona a destra dello slider */
+    right: 20px; /* Posiziona leggermente a destra del contenitore dello slider */
 }
 
-/* Hover effect per le frecce: leggera crescita e glow */
+/* Hover effect per le frecce */
 .prev:hover, .next:hover {
-    transform: scale(1.1); /* Effetto zoom leggero */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Effetto glow leggero attorno alla freccia */
+    transform: scale(1.1); /* Leggero effetto di ingrandimento */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Effetto glow leggero */
 }
 
 
