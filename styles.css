@@ -295,14 +295,11 @@ body {
    AIRBNB BUTTON STYLES
    ========================= */
 .booking-buttons-container {
-    position: relative;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+    margin-top: 20px; /* Spazio tra lo slider e il pulsante */
+    margin-bottom: 20px; /* Spazio tra il pulsante e le card */
     display: flex;
     justify-content: center;
-    width: 100%;
-    z-index: 1000;
+    width: 100%; /* Assicura che il pulsante sia centrato */
 }
 
 .airbnb-button {
@@ -318,8 +315,8 @@ body {
     transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
     cursor: pointer;
     display: block;
-    margin: 20px auto;
-    z-index: 1000; /* Assegna un valore di z-index elevato */
+    margin: 0 auto; /* Centra il pulsante */
+    z-index: 1000; /* Assicura che il pulsante sia visibile */
 }
 
 .airbnb-button:hover {
