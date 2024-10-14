@@ -262,8 +262,8 @@ body {
 /* Dimensioni Slider Desktop */
 @media (min-width: 1024px) {
     .slider-container {
-        max-width: 70%;
-        height: 80vh;
+        max-width: 75%;
+        height: 75vh;
     }
 }
 
