@@ -646,7 +646,11 @@ body {
 .instagram-icon {
     width: 34px; /* Dimensione ridotta dell'icona */
     height: 34px; /* Altezza ridotta dell'icona */
+    filter: invert(1); /* Inverte i colori per rendere l'icona bianca */
     transition: transform 0.3s ease, filter 0.3s ease; /* Transizione per l'effetto hover */
+}
+.instagram-icon:hover {
+    filter: invert(1) brightness(0.8); /* Leggero oscuramento dell'icona al passaggio del mouse */
 }
 
 .footer-language select {
@@ -663,6 +667,9 @@ body {
     font-size: 0.9rem;
     color: #d1d1d1;
 }
+/* Fine del footer */
+
+
 
 /* Aggiungi le media queries per mobile */
 @media (max-width: 768px) {
