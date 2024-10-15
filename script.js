@@ -119,3 +119,13 @@ window.addEventListener('load', () => {
         airbnbButton.classList.add('loaded'); // Aggiunge la classe 'loaded' per attivare il fade-in
     }
 });
+
+window.addEventListener('scroll', function() {
+    if (localStorage.getItem('promoClosed')) {
+        return;
+    }
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+        promoCard.style.display = 'block'; // Mostra la card
+    }
+});
+
