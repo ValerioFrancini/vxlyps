@@ -20,7 +20,7 @@ body {
     position: fixed;
     top: 0; /* Posiziona l'header in cima alla pagina */
     width: 99%; /* Assicura che l'header occupi tutta la larghezza */
-    z-index: 999; /* Assicura che l'header sia sempre sopra gli altri elementi della pagina */
+    z-index: 1500; /* Assicura che l'header sia sempre sopra gli altri elementi della pagina */
 }
 
 
