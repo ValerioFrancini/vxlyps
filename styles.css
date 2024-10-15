@@ -311,7 +311,7 @@ body {
 /* Pulsante Airbnb nel slider visibile su desktop */
 .booking-buttons-container {
     position: absolute;
-    top: 80%; /* Modifica l'altezza per un migliore posizionamento su desktop */
+    top: 78%; /* Modifica l'altezza per un migliore posizionamento su desktop */
     left: 50%;
     transform: translateX(-50%);
     z-index: 1000; /* Assicurati che il pulsante sia sopra lo slider */
@@ -325,23 +325,22 @@ body {
 /* Stile del pulsante Airbnb */
 .airbnb-button {
     background: linear-gradient(135deg, #FF4E50, #FF6B6B); /* Mantieni il gradiente */
-    color: white;
-    font-size: 1.2rem; /* Riduci leggermente la dimensione su desktop */
-    padding: 10px 30px; /* Riduci padding su desktop per adattarlo meglio */
-    border: none;
-    border-radius: 17px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-    display: block;
-    margin: 0 auto;
+    color: white; /* Testo bianco per contrasto */
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    padding: 12px 30px; /* Aggiusta il padding per un look più pulito */
+    border: none; /* Rimuovi il bordo */
+    border-radius: 10px; /* Mantieni la stondatura del pulsante */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombra leggera per profondità */
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
 /* Hover effect per desktop */
 .airbnb-button:hover {
     background: linear-gradient(135deg, #FF6B6B, #FF4E50);
-    transform: translateY(-4px);
-    box-shadow: 0 12px 24px rgba(255, 110, 110, 0.5);
+    transform: translateY(-3px); /* Leggero sollevamento al passaggio del mouse */
+    box-shadow: 0 8px 20px rgba(255, 110, 110, 0.3);
 }
 
 /* Nascondi il pulsante nel slider su mobile */
@@ -400,10 +399,13 @@ body {
 }
 
 .card p {
-    font-family: 'Poppins', sans-serif;  /* Applica il font Poppins */
-    font-weight: 100; /* Usa Poppins Thin 100 per il testo delle card */
-    font-size: 1rem; /* Dimensione del font per i paragrafi delle card */
-    color: #5F6A74; /* Colore del testo delle card */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    font-size: 1rem;
+    color: #5F6A74;
+    text-align: justify; /* Giustifica il testo per una migliore leggibilità */
+    word-wrap: break-word; /* Impedisce che il testo esca dalla card */
+    height: auto; /* Lascia che l'altezza della card si adatti al contenuto */
 }
 
 .card:hover {
@@ -670,7 +672,7 @@ body {
         text-decoration: none;
         border-radius: 10px;
         margin-top: 20px;
-        border: 2px solid rgb(8, 0, 255); /* ELIMINA Questo ti aiuterà a identificare dove appare il pulsante in modo errato */
+
     }
 }
 
