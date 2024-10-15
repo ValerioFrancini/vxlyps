@@ -718,4 +718,51 @@ body {
 
     }
 
-    
+    /* Card promozionale */
+.promo-card {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 350px;
+    padding: 20px;
+    background-color: #f5f5dc; /* Beige chiaro per la card */
+    color: #333;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    display: none;
+    z-index: 1000;
+}
+
+/* Pulsante e input */
+.promo-card input, .promo-card button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+}
+
+.promo-card input {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.promo-card button {
+    background-color: #d2b48c; /* Beige scuro per il pulsante */
+    color: white;
+    cursor: pointer;
+}
+
+.promo-card .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+}
+
+
