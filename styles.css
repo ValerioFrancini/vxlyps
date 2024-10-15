@@ -379,42 +379,72 @@ body {
 ========================= */
 .card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+    grid-template-columns: 1fr; /* Impila le card verticalmente su mobile */
+    gap: 20px; /* Distanza tra le card */
     padding: 20px;
-    justify-items: center;
+    max-width: 97%; /* Imposta la larghezza massima per essere simile allo slider */
+    margin: 0 auto; /* Centra le card */
 }
 
-.card {
+/* Card base styles */
+.card, .casa-info-card {
     background-color: #ffffff;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     padding: 20px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; /* Assicura che la card riempia l'intera larghezza del contenitore */
+    box-sizing: border-box; /* Include il padding nella larghezza */
 }
 
-.card h2 {
-    font-family: 'Poppins', sans-serif;  /* Applica il font Poppins */
-    font-weight: 300; /* Usa Poppins Light 300 per i titoli delle card */
-    font-size: 1.5rem; /* Dimensione del font per i titoli delle card */
-    color: #2c3e50; /* Colore del titolo */
+/* Layout responsivo per desktop */
+@media (min-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(3, 1fr); /* Tre colonne di card su desktop */
+        gap: 20px;
+        max-width: 75%; /* Larghezza massima su desktop */
+    }
+
+    .card, .casa-info-card {
+        max-width: 100%; /* Occupa tutta la larghezza disponibile */
+    }
 }
 
-.card p {
+/* Card hover effects */
+.card:hover, .casa-info-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Card heading styles */
+.card h2, .casa-info-card h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 1.5rem;
+    color: #2c3e50;
+}
+
+/* Card paragraph styles */
+.card p, .casa-info-card p {
     font-family: 'Poppins', sans-serif;
     font-weight: 100;
     font-size: 1rem;
     color: #5F6A74;
-    text-align: justify; /* Giustifica il testo per una migliore leggibilità */
-    word-wrap: break-word; /* Impedisce che il testo esca dalla card */
-    height: auto; /* Lascia che l'altezza della card si adatti al contenuto */
+    text-align: justify;
+    word-wrap: break-word;
+    height: auto;
 }
 
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+/* Centra il pulsante e contenuto della card */
+.card {
+    display: flex;
+    flex-direction: column; /* Organizza gli elementi verticalmente */
+    justify-content: space-between; /* Distribuisce gli elementi in modo uniforme */
+    align-items: center;
 }
+
+
 
 /* Stili per i pulsanti "Info" nelle card */
 .card-info-button {
