@@ -323,7 +323,7 @@ body {
 }
 
 /* Stile del pulsante Airbnb */
-.airbnb-button {
+.airbnb-button, .airbnb-button-mobile {
     background: linear-gradient(135deg, #FF4E50, #FF6B6B); /* Mantieni il gradiente */
     color: white; /* Testo bianco per contrasto */
     text-decoration: none;
@@ -334,6 +334,7 @@ body {
     border-radius: 10px; /* Mantieni la stondatura del pulsante */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombra leggera per profondità */
     transition: background 0.3s ease, transform 0.2s ease;
+    text-align: center;
 }
 
 /* Hover effect per desktop */
@@ -353,21 +354,23 @@ body {
 /* Mostra il pulsante nella card "INFORMAZIONI SULLA CASA" su mobile */
 .airbnb-button-mobile {
     display: none; /* Nascondi su desktop */
-}
 
+   }
+
+/* Mostra il pulsante Airbnb dentro la card su mobile */
 @media (max-width: 768px) {
     .airbnb-button-mobile {
-        display: block; /* Mostra su mobile */
+        display: block; /* Mostra il pulsante dentro la card su mobile */
         width: 100%;
         font-size: 1rem;
         padding: 12px 24px;
-        background-color: #FF4E50;
-        color: white;
-        text-align: center;
-        text-decoration: none;
-        border-radius: 10px;
         margin-top: 20px;
     }
+}
+
+/* Stile per il pulsante dentro la card su desktop, solo per mobile */
+.airbnb-button-mobile {
+    display: none; /* Nascondi su desktop */
 }
 
 
