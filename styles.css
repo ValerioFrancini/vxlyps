@@ -16,10 +16,10 @@ body {
     justify-content: space-between; /* Distribuisce il logo e il titolo correttamente */
     background-color: #ffffff;
     padding: 5px 0px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0; /* Posiziona l'header in cima alla pagina */
-    width: 100%; /* Assicura che l'header occupi tutta la larghezza */
+    width: 99%; /* Assicura che l'header occupi tutta la larghezza */
     z-index: 999; /* Assicura che l'header sia sempre sopra gli altri elementi della pagina */
 }
 
@@ -90,8 +90,8 @@ body {
 
 @media (max-width: 768px) {
     .burger-menu {
-        top: 34px; /* Adjusts the vertical position of the burger menu */
-        right: 20px; /* Adjusts the horizontal position of the burger menu */
+        top: 37px; /* Adjusts the vertical position of the burger menu */
+        right: 22px; /* Adjusts the horizontal position of the burger menu */
     }
 }
 
@@ -262,7 +262,7 @@ body {
 @media (max-width: 768px) {
     .slider-container {
         max-width: 92%;
-        height: 28vh;
+        height: 30vh;
     }
 }
 
@@ -270,7 +270,7 @@ body {
 @media (min-width: 1024px) {
     .slider-container {
         max-width: 75%;
-        height: 75vh;
+        height: 74vh;
     }
 }
 
