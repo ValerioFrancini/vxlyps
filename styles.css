@@ -621,6 +621,7 @@ body {
     color: #ffffff;
     padding: 20px 0;
     text-align: center;
+    border-radius: 5px;
 }
 
 .footer-content {
