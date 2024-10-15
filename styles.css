@@ -15,13 +15,14 @@ body {
     align-items: center;
     justify-content: space-between; /* Distribuisce il logo e il titolo correttamente */
     background-color: #ffffff;
-    padding: 5px 0px;
+    border-radius: 5px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0; /* Posiziona l'header in cima alla pagina */
     width: 99%; /* Assicura che l'header occupi tutta la larghezza */
     z-index: 999; /* Assicura che l'header sia sempre sopra gli altri elementi della pagina */
 }
+
 
 .logo-title {
     display: flex;
@@ -61,6 +62,7 @@ body {
     .header {
         display: flex;
         justify-content: center; /* Centra tutto il contenuto all'interno dell'header */
+        width: 96%; /* Assicura che l'header occupi tutta la larghezza */
     }
 
     .logo-title {
@@ -84,14 +86,14 @@ body {
     padding: 10px;
     position: absolute; /* Imposta la posizione del burger menu */
     right: 50px; /* Posiziona il menu a 20px dal bordo destro */
-    top: 40px; /* Posiziona il menu a 40px dall'alto */
+    top: 33px; /* Posiziona il menu a 40px dall'alto */
     z-index: 1001;
 }
 
 @media (max-width: 768px) {
     .burger-menu {
         top: 37px; /* Adjusts the vertical position of the burger menu */
-        right: 22px; /* Adjusts the horizontal position of the burger menu */
+        right: 18px; /* Adjusts the horizontal position of the burger menu */
     }
 }
 
