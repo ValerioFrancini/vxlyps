@@ -359,16 +359,26 @@ body {
 
    }
 
-/* Mostra il pulsante Airbnb dentro la card su mobile */
+/* Mostra il pulsante Airbnb su mobile */
 @media (max-width: 768px) {
     .airbnb-button-mobile {
-        display: block; /* Mostra il pulsante dentro la card su mobile */
-        width: 100%;
+        display: block; /* Mostra il pulsante su mobile */
+        width: 83%; /* Larghezza simile a quella del contenitore slider */
         font-size: 1rem;
         padding: 12px 24px;
-        margin-top: 20px;
+        margin: 20px auto; /* Centra il pulsante orizzontalmente e aggiunge margine sopra/sotto */
+        max-width: 400px; /* Imposta una larghezza massima per evitare che diventi troppo largo */
+        text-align: center; /* Assicura che il testo all'interno sia centrato */
     }
 }
+
+/* Regola la distanza tra il pulsante e lo slider */
+.airbnb-button-mobile {
+    margin-top: 13px; /* Aggiusta questo valore per aumentare o ridurre la distanza */
+    margin-bottom: 13px;
+}
+
+
 
 /* =========================
    CARD STYLES
@@ -439,6 +449,8 @@ body {
     justify-content: space-between; /* Distribuisce gli elementi in modo uniforme */
     align-items: center;
 }
+
+
 
 
 
@@ -692,25 +704,6 @@ body {
     }
 }
 
-/* Nasconde il pulsante Info e mostra Airbnb su mobile solo nella card con classe casa-info-card */
-@media (max-width: 768px) {
-    .casa-info-card .card-info-button {
-        display: block; /* mostra il pulsante Info di questa card */
-    }
-
-    .casa-info-card .airbnb-button-mobile {
-        display: none; /* nasconde il pulsante Airbnb solo su questa card */
-        width: 80%;
-        font-size: 1rem;
-        padding: 12px 24px;
-        background-color: #FF4E50;
-        color: white;
-        text-align: center;
-        text-decoration: none;
-        border-radius: 10px;
-        margin-top: 20px;
-
-    }
 
     /* Card promozionale */
 .promo-card {
