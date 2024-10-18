@@ -370,12 +370,6 @@ body {
     }
 }
 
-/* Stile per il pulsante dentro la card su desktop, solo per mobile */
-.airbnb-button-mobile {
-    display: none; /* Nascondi su desktop */
-}
-
-
 /* =========================
    CARD STYLES
 ========================= */
@@ -701,11 +695,11 @@ body {
 /* Nasconde il pulsante Info e mostra Airbnb su mobile solo nella card con classe casa-info-card */
 @media (max-width: 768px) {
     .casa-info-card .card-info-button {
-        display: none; /* Nasconde solo il pulsante Info di questa card */
+        display: block; /* mostra il pulsante Info di questa card */
     }
 
     .casa-info-card .airbnb-button-mobile {
-        display: block; /* Mostra il pulsante Airbnb solo su questa card */
+        display: none; /* nasconde il pulsante Airbnb solo su questa card */
         width: 80%;
         font-size: 1rem;
         padding: 12px 24px;
