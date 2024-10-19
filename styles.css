@@ -4,7 +4,7 @@
 body {
     margin-top: 132.5px; /* Modifica questo valore in base all'altezza effettiva del tuo header */
       font-family: 'Poppins', sans-serif; /* Cambia font in Poppins */
-    font-weight: 100; /* Imposta il peso Thin 100 per i testi e il burger menu */
+    font-weight: 300; /* Imposta il peso Thin 100 per i testi e il burger menu */
 }
 
 /* =========================
@@ -487,7 +487,7 @@ body {
 /* Stili per i pulsanti "Info" nelle card */
 .card-info-button {
     font-family: 'Poppins', sans-serif; /* Stesso font del burger menu */
-    font-weight: 100; /* Peso leggero per lo stile sobrio */
+    font-weight: 300; /* Peso leggero per lo stile sobrio */
     display: inline-block; /* Per gestire padding e margini correttamente */
     text-decoration: none; /* Rimuove la sottolineatura del link */
     color: #5F6A74; /* Colore simile al testo del burger menu */
@@ -570,7 +570,7 @@ body {
     color: #5F6A74; /* Colore del testo come il menu */
     border: 1px solid #5F6A74; /* Bordo simile al menu */
     font-family: 'Poppins', sans-serif;
-    font-weight: 100;
+    font-weight: 300;
     text-align: center;
     padding: 10px 20px;
     border-radius: 12px;
@@ -782,7 +782,7 @@ body {
 
     .nav-menu ul li a {
         font-family: 'Poppins', sans-serif;
-        font-weight: 200; /* Cambia a Poppins ExtraLight 200 per migliorare la leggibilità del menu */
+        font-weight: 300; /* Cambia a Poppins ExtraLight 200 per migliorare la leggibilità del menu */
         font-size: 1rem; /* Imposta una dimensione comoda per il menu su mobile */
         text-align: justify; /* Giustifica il testo */
     }
