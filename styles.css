@@ -774,7 +774,7 @@ body {
 
     .card p {
         font-family: 'Poppins', sans-serif;
-        font-weight: 200; /* Cambia a Poppins ExtraLight 200 per migliorare la leggibilità */
+        font-weight: 300; /* Cambia a Poppins ExtraLight 200 per migliorare la leggibilità */
         font-size: 0.9rem; /* Riduce leggermente la dimensione del testo su mobile */
         text-align: justify; /* Giustifica il testo */
 }
