@@ -450,6 +450,36 @@ body {
     align-items: center;
 }
 
+/* Stili per la sezione delle icone dei servizi */
+.services-icons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Due colonne */
+    gap: 20px; /* Spazio tra le icone */
+    justify-items: center; /* Centra gli elementi */
+    align-items: center;
+    margin-top: 20px;
+}
+
+.service-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.service-item i {
+    font-size: 1.5rem; /* Dimensione delle icone */
+    color: #2c3e50; /* Colore delle icone */
+    margin-bottom: 10px; /* Spazio sotto l'icona */
+}
+
+.service-item p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    color: #5F6A74; /* Colore del testo */
+}
+
 
 
 
@@ -695,12 +725,15 @@ body {
         font-family: 'Poppins', sans-serif;
         font-weight: 200; /* Cambia a Poppins ExtraLight 200 per migliorare la leggibilità */
         font-size: 0.9rem; /* Riduce leggermente la dimensione del testo su mobile */
+        text-align: justify; /* Giustifica il testo */
+}
     }
 
     .nav-menu ul li a {
         font-family: 'Poppins', sans-serif;
         font-weight: 200; /* Cambia a Poppins ExtraLight 200 per migliorare la leggibilità del menu */
         font-size: 1rem; /* Imposta una dimensione comoda per il menu su mobile */
+        text-align: justify; /* Giustifica il testo */
     }
 }
 
