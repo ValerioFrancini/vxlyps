@@ -768,7 +768,7 @@ body {
 
     .card h2 {
         font-family: 'Poppins', sans-serif;
-        font-weight: 300; /* Assicura che il titolo delle card usi Poppins Light 300 su mobile */
+        font-weight: 317; /* Assicura che il titolo delle card usi Poppins Light 300 su mobile */
         font-size: 1.3rem; /* Riduce leggermente la dimensione per il titolo delle card su mobile */
     }
 
