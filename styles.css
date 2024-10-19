@@ -434,7 +434,7 @@ body {
 /* Card paragraph styles */
 .card p, .casa-info-card p {
     font-family: 'Poppins', sans-serif;
-    font-weight: 100;
+    font-weight: 250;
     font-size: 1rem;
     color: #5F6A74;
     text-align: justify;
@@ -513,7 +513,7 @@ body {
 .card p {
     text-align: justify; /* Giustifica il testo delle card */
     font-family: 'Poppins', sans-serif;
-    font-weight: 100; /* Usa lo stesso peso leggero per mantenere coerenza con il design */
+    font-weight: 250; /* Usa lo stesso peso leggero per mantenere coerenza con il design */
     color: #5F6A74; /* Colore del testo */
 }
 
