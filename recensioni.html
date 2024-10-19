@@ -58,42 +58,191 @@
         <!-- Aggiungi altre recensioni qui -->
     </div>
 
-    <!-- Footer della pagina -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-language">
-                <label for="language">Lingua:</label>
-                <select id="language" onchange="changeLanguage(this.value)">
-                    <option value="it">Italiano</option>
-                    <option value="en">English</option>
-                </select>
-            </div>
-            <div class="social-icons">
-                <a href="https://instagram.com/appartamento_ilmoro" target="_blank" class="social-link">
-                    <img src="img/instagram-icon.png" alt="Instagram" class="instagram-icon">
-                </a>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Il Moro Tuscania. All rights reserved.</p>
-            </div>
+    
+
+
+
+
+
+
+
+       <!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="social-icons">
+            <a href="https://instagram.com/appartamento_ilmoro" target="_blank" class="social-link">
+                <img src="img/instagram-icon.png" alt="Instagram" class="instagram-icon">
+            </a>
         </div>
-    </footer>
+        <div class="footer-language">
+            <label for="language-select">Lingua:</label>
+            <select id="language-select" onchange="changeLanguage(this.value)">
+                <option value="it">Italiano</option>
+                <option value="en">English</option>
+            </select>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy;2024 Il Moro Tuscania. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
 
-    <!-- Script JavaScript per le interazioni -->
-    <script>
-        function toggleMenu() {
-            const navbar = document.getElementById("navbar");
-            navbar.classList.toggle("active");
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sconto Promozionale</title>
+    <style>
+        /* Stile card promozionale */
+        .promo-card {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 350px;
+            padding: 20px;
+            background-color: #1e1e3f; /* Colore di sfondo principale del tuo sito */
+            color: white;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            display: none;
+            z-index: 1000;
         }
 
-        function changeLanguage(language) {
-            if (language === 'it') {
-                window.location.href = 'recensioni.html'; // Cambia alla versione italiana
-            } else if (language === 'en') {
-                window.location.href = 'recensioni-en.html'; // Cambia alla versione inglese
-            }
+        /* Input e bottone */
+        .promo-card input, .promo-card button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: none;
+            font-size: 14px;
         }
-    </script>
+
+        .promo-card input {
+            background-color: #292a4b; /* Sfondo input */
+            color: white;
+        }
+
+        .promo-card button {
+            background-color: #ff0048; /* Colore pulsante */
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Pulsante di chiusura */
+        .promo-card .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: transparent;
+            border: none;
+            font-size: 20px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+   <!-- Includi il client di EmailJS -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function(){
+        emailjs.init("c4K6orYiIW64lqj7-");  // Usa la tua API Key EmailJS
+    })();
+</script>
+
+<!-- Card di sconto promozionale -->
+<div class="promo-card" id="promoCard" style="display: none;">
+    <button class="close-btn" id="closeBtn">×</button>
+    <p>Inserisci la tua mail per avere il 10% di sconto</p>
+    <input type="text" id="userName" placeholder="Come ti chiami">  <!-- Aggiunto ID -->
+    <input type="email" id="userEmail" placeholder="La tua mail">  <!-- Aggiunto ID -->
+    <button id="sendBtn">Grazie</button>  <!-- Aggiunto ID -->
+    <p id="closePromo" style="text-align: center; margin-top: 5px; cursor: pointer;">Non mi interessa</p>
+</div>
+
+<script>
+    let hasReachedBottom = false;
+    const promoCard = document.getElementById('promoCard');
+    const closeBtn = document.getElementById('closeBtn');
+    const sendBtn = document.getElementById('sendBtn');
+    const closePromo = document.getElementById('closePromo');
+    const userName = document.getElementById('userName');
+    const userEmail = document.getElementById('userEmail');
+
+    // Mostra la card solo se l'utente non l'ha chiusa e dopo che ha raggiunto il fondo e risale
+    window.addEventListener('scroll', function() {
+        if (localStorage.getItem('promoClosed')) {
+            return;  // Se la card è chiusa, non fare nulla
+        }
+
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+            hasReachedBottom = true;
+        }
+
+        if (hasReachedBottom && window.scrollY < document.body.offsetHeight - 100) {
+            promoCard.style.display = 'block';
+        }
+    });
+
+    // Chiudi la card e salva l'informazione nel localStorage
+    closeBtn.addEventListener('click', function() {
+        promoCard.style.display = 'none';
+        localStorage.setItem('promoClosed', 'true');
+    });
+
+    // Chiudi la card quando l'utente clicca su "Non mi interessa"
+    closePromo.addEventListener('click', function() {
+        promoCard.style.display = 'none';
+        localStorage.setItem('promoClosed', 'true');
+    });
+
+    // Invia le email tramite EmailJS
+    sendBtn.addEventListener('click', function() {
+        // Verifica che i campi siano compilati
+        if (userName.value && userEmail.value) {
+            // Email da inviare a te
+            emailjs.send("service_vg22scj", "template_vwb337n", {  // Corretto il parametro del service ID
+                user_name: userName.value,
+                user_email: userEmail.value,
+                message: `L'utente ${userName.value} è interessato a prenotare e vuole 10% di sconto. Questa è la sua mail: ${userEmail.value}.`
+            }).then(function(response) {
+                console.log('Email inviata a te!', response.status, response.text);
+            }, function(error) {
+                console.log('Errore nell\'invio dell\'email a te...', error);
+            });
+
+            // Email automatica di risposta all'utente
+            emailjs.send("service_vg22scj", "IL_TUO_TEMPLATE_ID_UTENTE", {
+                user_name: userName.value,
+                user_email: userEmail.value,
+                message: `Ciao ${userName.value}, a breve ti contatterò per il 10% di sconto!`
+            }).then(function(response) {
+                console.log('Email inviata all\'utente!', response.status, response.text);
+            }, function(error) {
+                console.log('Errore nell\'invio dell\'email all\'utente...', error);
+            });
+
+            // Chiudi la card
+            promoCard.style.display = 'none';
+            localStorage.setItem('promoClosed', 'true');
+        } else {
+            alert('Per favore, compila tutti i campi.');
+        }
+    });
+</script>
+
+
+</body>
+</html>
+
+
+
+    <!-- Script JavaScript -->
+<script src="script.js"></script>
 
 </body>
 </html>
